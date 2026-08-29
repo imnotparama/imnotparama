@@ -1,32 +1,32 @@
 <!-- ================================================================= -->
-<!-- PARAMESHWARAN S | AI • DATA SCIENCE • FULL STACK • HARDWARE IoT   -->
+<!-- PARAMESHWARAN S // DEX SYSTEM INTERFACE // v4.2 PRO               -->
 <!-- ================================================================= -->
 
 <div align="center">
 
-  <!-- Animated Cyberpunk Header Banner -->
+  <!-- Animated Pokédex Hardware & OLED Screen Header -->
   <a href="https://github.com/imnotparama">
-    <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_header.svg" width="100%" alt="PARAMESHWARAN S - Cyberpunk Header" />
+    <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_header.svg" width="100%" alt="PARAMESHWARAN S - Dex System Interface" />
   </a>
 
   <br/><br/>
 
-  <!-- Dynamic Typing Animation SVG -->
+  <!-- Pokédex LCD Dynamic Typing Subtitle -->
   <a href="https://github.com/imnotparama">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=00FF66&center=true&vCenter=true&multiline=false&width=650&height=45&lines=Building+Intelligent+AI-Powered+Systems;ECE+(Data+Science)+%40+SRM+Institute;Full-Stack+Architect+%7C+Next.js+%7C+React+%7C+Python;Edge+IoT+%2B+Embedded+Hardware+Builder;Autonomous+CI%2FCD+%26+Raid+Engine+Builder" alt="Typing Subtitle" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=900&color=00FF88&center=true&vCenter=true&multiline=false&width=680&height=45&lines=DEX+ENTRY+%23029%3A+PARAMESHWARAN+S;TYPE%3A+AI+ENGINEER+%E2%80%A2+DATA+SCIENCE+%E2%80%A2+FULL+STACK;HABITAT%3A+CHENNAI%2C+IN+(SRM+INSTITUTE+OF+SCIENCE+%26+TECH);PASSIVE%3A+AUTONOMOUS+COMMIT+TELEMETRY+%26+RAID+ENGINE" alt="Dex Subtitle" />
   </a>
 
   <br/>
 
-  <!-- Status Badges & Quick Stats -->
+  <!-- Pokédex Hardware Status Indicators -->
   <p align="center">
-    <img src="https://komarev.com/ghpvc/?username=imnotparama&style=for-the-badge&color=00ff66&label=PROFILE+VIEWS" alt="Profile Views" />
-    <img src="https://img.shields.io/badge/STATUS-READY_TO_SHIP-00FF66?style=for-the-badge&logo=codefactor&logoColor=000000" alt="Status" />
-    <img src="https://img.shields.io/badge/FOCUS-AI_%26_DATA_SCIENCE-00E5FF?style=for-the-badge&logo=scikitlearn&logoColor=000000" alt="Focus" />
-    <img src="https://img.shields.io/badge/LOCATION-CHENNAI%2C_IN-7000FF?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+    <img src="https://komarev.com/ghpvc/?username=imnotparama&style=for-the-badge&color=DC0A2D&label=DEX+SCANS" alt="Dex Scans" />
+    <img src="https://img.shields.io/badge/DEX_ID-%23029--ECE-00E5FF?style=for-the-badge&logo=electron&logoColor=000000" alt="Dex ID" />
+    <img src="https://img.shields.io/badge/STATUS-ACTIVE_%2F_LVL_99-00FF88?style=for-the-badge&logo=codefactor&logoColor=000000" alt="Status" />
+    <img src="https://img.shields.io/badge/REGION-CHENNAI%2C_IN-7000FF?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Region" />
   </p>
 
-  <!-- Animated Connect & Socials Matrix -->
+  <!-- Pokédex Connectivity Hub -->
   <p align="center">
     <a href="https://linkedin.com/in/imnotparama" target="_blank">
       <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -45,74 +45,83 @@
     </a>
   </p>
 
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- ABOUT ME // RETRO TERMINAL HUD                                    -->
+<!-- DEX DATA FILE // ARCHITECT SPECIFICATION                          -->
 <!-- ================================================================= -->
 
-### 🚀 `> sys.fetch_profile_summary()`
+### 📱 `> dex.scan_specimen_entry(#029)`
 
 ```yaml
-identity:
-  name: "Parameshwaran S (Parama)"
-  class: "AI Engineer • Data Scientist • Full-Stack Web Architect • IoT Developer"
-  academy: "B.Tech Electronics & Communication Engineering (Data Science) @ SRMIST"
-  base_coordinates: "Chennai, Tamil Nadu, India 🇮🇳"
-
-combat_specializations:
-  - "Autonomous Neural Agents & Real-Time Computer Vision"
-  - "High-Concurrency Full-Stack Web Systems (Next.js, React, Python, FastAPIs)"
-  - "Edge IoT Hardware, PCB Design, Microcontroller Telemetry & Embedded C++"
-  - "Competitive Hackathon Expeditions & Scalable Open Source Architecture"
-
-prime_directive: "Bridging silicon hardware with neural intelligence and resilient software."
+╔══════════════════════════════════════════════════════════════════════╗
+║ DEX DATA ENTRY #029 // ARCHITECT SPECIFICATION                       ║
+╠══════════════════════════════════════════════════════════════════════╣
+║ NAME: Parameshwaran S (Parama)                                       ║
+║ SPECIES / CLASS: AI Systems Architect • Data Scientist • IoT Maker  ║
+║ ACADEMY: SRM Institute of Science & Technology (B.Tech ECE)           ║
+║ HABITAT / BASE: Chennai, Tamil Nadu, India 🇮🇳                         ║
+║ NATURE: Analytical & Highly Resilient (+Speed / +Multi-Thread)       ║
+╠══════════════════════════════════════════════════════════════════════╣
+║ BASE STATS [TOTAL: 578 / 600]:                                       ║
+║   HP        [Energy & Focus]         : ██████████████████ 98/100     ║
+║   ATTACK    [Algorithmic Velocity]   : █████████████████░ 95/100     ║
+║   DEFENSE   [Architecture Robustness]: ████████████████░░ 92/100     ║
+║   SP. ATK   [Multimodal AI & ML]     : ██████████████████ 99/100     ║
+║   SP. DEF   [Fault Tolerance & Ops]  : █████████████████░ 94/100     ║
+║   SPEED     [Rapid Prototyping]      : ██████████████████ 100/100    ║
+╠══════════════════════════════════════════════════════════════════════╣
+║ ABILITIES:                                                           ║
+║   • SYNAPTIC INFERENCE — Accelerates neural pipelines & AI agents    ║
+║   • SILICON TELEMETRY — Seamless ESP32 edge telemetry to web apps    ║
+║   • [HIDDEN] COMMIT SURGE — Inflicts real-time raid strike damage    ║
+╚══════════════════════════════════════════════════════════════════════╝
 ```
 
 <br/>
 
 <div align="center">
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- THE SIGNATURE FEATURE // REAL-TIME RAID ARENA                     -->
+<!-- THE SIGNATURE FEATURE // DEX COMBAT SIMULATION                    -->
 <!-- ================================================================= -->
 
 <div align="center">
 
-## ⚔️ Real-Time Raid Boss Combat Arena
+## ⚔️ Dex Combat Arena // Real-Time Boss Encounter
 
-> ⚡ **Serverless Combat Simulation:** Every GitHub commit inflicts direct strike damage to daily encounter raid bosses.  
+> ⚡ **Serverless Combat Telemetry:** Every GitHub commit inflicts direct strike damage against daily encounter raid bosses.  
 > Experience points level up your battle companion across ascending tier classes (*Base ➔ Stage I ➔ Stage II ➔ Mega Apex Form*).
 
 <br/>
 
 <!-- Live Animated Battle SVG -->
 <a href="https://github.com/imnotparama/imnotparama">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Real-Time Raid Arena" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Dex Real-Time Raid Arena" />
 </a>
 
 <br/><br/>
 
 <details>
-<summary><b>🎮 Click to reveal Combat Mechanics &amp; CI/CD Engine</b></summary>
+<summary><b>🎮 Click to reveal Dex Combat Mechanics &amp; CI/CD Engine</b></summary>
 
 <br/>
 
-| Combat Mechanic | System Implementation |
+| Dex Engine Metric | System Implementation |
 | :--- | :--- |
-| **Daily Boss Rotation** | Rotates dynamically every 24h (*Rayquaza, Mewtwo, Gengar, Dragonite, Tyranitar, Lucario*) |
+| **Encounter Roster** | Dynamic 24h encounter rotation (*Rayquaza, Mewtwo, Gengar, Dragonite, Tyranitar, Lucario*) |
 | **Strike Power (HP)** | Total commits across 365 days deal proportional damage to the Boss HP gauge |
-| **EXP & Tier Progression**| Commit volume accumulates EXP to level up combat stats and evolve sprite tiers |
+| **EXP & Tier Evolution**| Commit volume accumulates EXP to level up combat stats and evolve sprite tiers |
 | **Autonomous CI/CD** | Automated GitHub Actions workflow executes Python combat engine daily at 00:00 UTC |
 
 </details>
@@ -122,68 +131,68 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
 <br/>
 
 <div align="center">
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- MATRIX GRID TRAVERSAL // SNAKE ANIMATION                          -->
+<!-- DEX HABITAT MAP SCANNER // MATRIX TRAVERSAL                       -->
 <!-- ================================================================= -->
 
-### 🐍 `> git.execute_matrix_traversal()`
+### 🐍 `> dex.render_habitat_scanner()`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="Dex Contribution Snake Animation" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- TECHNICAL ARSENAL // SKILLS & STACK                               -->
+<!-- KNOWN MOVES & TM/HM ARSENAL // TECH STACK                         -->
 <!-- ================================================================= -->
 
-### 🎒 `> sys.load_technical_arsenal()`
+### 🎒 `> dex.load_known_moves_and_tms()`
 
 <br/>
 
-#### 💻 Programming Languages
+#### ⚡ Electric // Core Scripting & Languages
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=python,js,ts,c,cpp,java,html,css,bash,sql&theme=dark" alt="Languages" />
   </a>
 </p>
 
-#### 🤖 AI, Machine Learning & Neural Data Science
+#### 🧠 Psychic // Neural Networks & AI Matrix
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=py,tensorflow,pytorch,opencv,sklearn,pandas,numpy,scipy,matplotlib&theme=dark" alt="AI and ML Stack" />
   </a>
 </p>
 
-#### 🌐 Frontend & UI Engineering
+#### 🌊 Water // Fluid UI & Frontend Engineering
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,redux,vite,threejs,figma&theme=dark" alt="Frontend Stack" />
   </a>
 </p>
 
-#### ⚙️ Backend, Cloud & Database Infrastructure
+#### 🔥 Fire // Backend Architecture & Cloud Infrastructure
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=django,flask,fastapi,nodejs,express,mysql,postgres,mongodb,firebase,docker,linux,aws&theme=dark" alt="Backend & Cloud Stack" />
   </a>
 </p>
 
-#### 🔌 Hardware, Embedded & Edge IoT Telemetry
+#### ⚙️ Steel // Hardware, PCB & Embedded IoT Telemetry
 <p align="left">
   <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
   <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
@@ -193,7 +202,7 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
   <img src="https://img.shields.io/badge/Sensors%20%26%20Telemetry-00E5FF?style=for-the-badge&logo=microgenetics&logoColor=black" alt="Telemetry" />
 </p>
 
-#### 🔧 Developer Tools & Workflows
+#### 🛠️ Normal // Developer Tooling & Guild Workflows
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,github,githubactions,vscode,postman,powershell,linux&theme=dark" alt="Dev Tools" />
@@ -203,26 +212,26 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
 <br/>
 
 <div align="center">
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- FLAGSHIP EXPEDITIONS // FEATURED PROJECTS                         -->
+<!-- REGISTERED EXPEDITIONS // FLAGSHIP SYSTEM BUILDS                  -->
 <!-- ================================================================= -->
 
-### 🌟 `> projects.get_featured()`
+### 📜 `> dex.query_registered_expeditions()`
 
 <br/>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🐾 PawPal AI</h3>
+      <h3 align="left">🐾 ENTRY #01: PawPal AI</h3>
       <p><b>Next-Gen Multimodal Pet Healthcare &amp; Triage Assistant</b></p>
-      <p>Intelligent pet wellness tracking system integrating computer vision and Gemini AI for automated symptom triage, nutritional guidance, and interactive 3D anatomy visualization.</p>
+      <p>Intelligent wellness tracking system integrating computer vision and Gemini AI for automated symptom triage, nutritional guidance, and interactive 3D anatomy visualization.</p>
       <p>
         <img src="https://img.shields.io/badge/Gemini%20AI-4285F4?style=flat-square&logo=google&logoColor=white" />
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -230,11 +239,11 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
         <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Source Code ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">🚗 Smart Parking Matrix</h3>
+      <h3 align="left">🚗 ENTRY #02: Smart Parking Matrix</h3>
       <p><b>Real-Time IoT Parking Telemetry &amp; Analytics Platform</b></p>
       <p>Full-stack smart parking management solution offering live slot occupancy telemetry, automated bay allocation, user reservations, and administrative analytical heatmaps.</p>
       <p>
@@ -244,13 +253,13 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
         <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Source Code ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🚌 BusIt</h3>
+      <h3 align="left">🚌 ENTRY #03: BusIt</h3>
       <p><b>Campus Fleet GPS Telemetry &amp; Intelligent ETA System</b></p>
       <p>High-precision college transit tracking platform featuring live GPS geofencing, sub-second WebSocket updates, automated route optimizations, and student notification dispatch.</p>
       <p>
@@ -260,11 +269,11 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
         <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Source Code ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">💧 AquaSentry</h3>
+      <h3 align="left">💧 ENTRY #04: AquaSentry</h3>
       <p><b>Edge IoT Water Quality Diagnostics &amp; Telemetry</b></p>
       <p>Industrial edge IoT environmental monitoring system utilizing ESP32 microcontrollers and sensors to detect turbidity, pH anomalies, and contaminants in rural reservoirs in real-time.</p>
       <p>
@@ -274,13 +283,13 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
         <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Source Code ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
   </tr>
   <tr>
     <td colspan="2" valign="top">
-      <h3 align="left">🎮 Autonomous Serverless Combat Engine</h3>
+      <h3 align="left">🎮 ENTRY #05: Autonomous Combat Engine</h3>
       <p><b>Pixel Raid Simulation on GitHub Actions</b></p>
       <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss encounter selection, and continuous evolution state machines.</p>
       <p>
@@ -290,7 +299,7 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
         <img src="https://img.shields.io/badge/GraphQL%20API-E10098?style=flat-square&logo=graphql&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama/imnotparama"><b>⚡ View Source Code ➔</b></a>
+        <a href="https://github.com/imnotparama/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
   </tr>
@@ -299,24 +308,24 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
 <br/>
 
 <div align="center">
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- COMBAT METRICS & TELEMETRY DASHBOARD                              -->
+<!-- TRAINER GYM BADGES & TELEMETRY DASHBOARD                          -->
 <!-- ================================================================= -->
 
-### 📊 `> analytics.render_dashboard()`
+### 📊 `> dex.display_gym_badges_and_telemetry()`
 
 <br/>
 
 <!-- Profile Trophies -->
 <div align="center">
   <a href="https://github.com/imnotparama">
-    <img src="https://github-profile-trophy.vercel.app/?username=imnotparama&theme=tokyonight&no-frame=false&no-bg=false&margin_w=4" alt="GitHub Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=imnotparama&theme=tokyonight&no-frame=false&no-bg=false&margin_w=4" alt="Gym Trophies" />
   </a>
 </div>
 
@@ -328,19 +337,19 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
     <tr>
       <td valign="top" align="center">
         <a href="https://github.com/imnotparama">
-          <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00FF66&title_color=00FF66&icon_color=00FF66&text_color=C9D1D9" alt="GitHub Stats" />
+          <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=DC0A2D&title_color=00FF88&icon_color=00E5FF&text_color=C9D1D9" alt="Dex Stats" />
         </a>
       </td>
       <td valign="top" align="center">
         <a href="https://github.com/imnotparama">
-          <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=00FF66&stroke=00FF66&ring=00FF66&fire=00FF66&currStreakLabel=00FF66" alt="Streak Stats" />
+          <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=DC0A2D&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2" align="center">
         <a href="https://github.com/imnotparama">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imnotparama&layout=compact&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00FF66&title_color=00FF66&text_color=C9D1D9" alt="Top Languages" />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imnotparama&layout=compact&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=DC0A2D&title_color=00FF88&text_color=C9D1D9" alt="Top Move Types" />
         </a>
       </td>
     </tr>
@@ -352,21 +361,21 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
 <!-- Interactive Activity Graph -->
 <div align="center">
   <a href="https://github.com/imnotparama">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=imnotparama&theme=github-compact&color=00ff66&line=00ff66&point=ffffff&area=true&hide_border=false&border_color=00ff66&bg_color=0D1117" width="100%" alt="Activity Graph" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=imnotparama&theme=github-compact&color=00ff88&line=00e5ff&point=ff1744&area=true&hide_border=false&border_color=DC0A2D&bg_color=0D1117" width="100%" alt="Dex Activity Graph" />
   </a>
 </div>
 
 <br/>
 
 <div align="center">
-  <!-- Glowing Cyber Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/cyber_divider.svg" width="100%" alt="Section Divider" />
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
 
 <!-- ================================================================= -->
-<!-- FOOTER & SIGNATURE                                                -->
+<!-- DEX SHUTDOWN SEQUENCE & FOOTER                                    -->
 <!-- ================================================================= -->
 
 <div align="center">
@@ -376,7 +385,7 @@ prime_directive: "Bridging silicon hardware with neural intelligence and resilie
   </p>
 
   <p>
-    <b>⚡ Engineered with precision, passion, and neural energy by Parameshwaran S ⚡</b>
+    <b>⚡ DEX SYSTEM // READY FOR NEXT EXPEDITION // ENGINEERED BY PARAMESHWARAN S ⚡</b>
   </p>
 
   <!-- Waving Animated Footer -->

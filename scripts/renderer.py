@@ -182,8 +182,18 @@ CSS = """<style>
 def _build_background(w=580, h=520):
     return f"""
     <defs>
-      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="{COLORS['border']}" stroke-width="0.3" opacity="0.2"/>
+      <linearGradient id="pokedexChassis" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E51B24"/>
+        <stop offset="60%" stop-color="#C60813"/>
+        <stop offset="100%" stop-color="#8B0007"/>
+      </linearGradient>
+      <linearGradient id="lensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00F0FF"/>
+        <stop offset="60%" stop-color="#0080FF"/>
+        <stop offset="100%" stop-color="#002288"/>
+      </linearGradient>
+      <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="{COLORS['border']}" stroke-width="0.3" opacity="0.18"/>
       </pattern>
       <linearGradient id="hpShimmerGrad" x1="0" y1="0" x2="1" y2="0">
         <stop offset="0%" stop-color="white" stop-opacity="0"/>
@@ -195,23 +205,52 @@ def _build_background(w=580, h=520):
         <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
     </defs>
-    <rect width="{w}" height="{h}" rx="12" ry="12" fill="{COLORS['bg']}"/>
-    <rect width="{w}" height="{h}" rx="12" ry="12" fill="url(#grid)"/>
-    <rect x="14" y="2" width="{w-28}" height="2.5" rx="1" fill="{COLORS['accent']}" opacity="0.6"/>
-    <circle cx="18" cy="10" r="3.5" fill="{COLORS['accent']}" opacity="0.4"/>
-    <circle cx="{w-18}" cy="10" r="3.5" fill="{COLORS['accent']}" opacity="0.4"/>
+
+    <!-- Outer Pokédex Chassis -->
+    <rect width="{w}" height="{h}" rx="14" fill="url(#pokedexChassis)" stroke="#5A0005" stroke-width="2"/>
+
+    <!-- Top Hardware Sensors -->
+    <!-- Blue Scanner Lens -->
+    <circle cx="34" cy="24" r="16" fill="#D9DFE5" stroke="#888F96" stroke-width="1.5"/>
+    <circle cx="34" cy="24" r="12" fill="url(#lensGrad)" filter="url(#glow)"/>
+    <ellipse cx="31" cy="21" rx="4" ry="2.5" fill="white" opacity="0.8" transform="rotate(-30 31 21)"/>
+
+    <!-- Tri-Color LEDs -->
+    <circle cx="64" cy="16" r="4.5" fill="#FF1744" stroke="#8B0007" stroke-width="0.8"/>
+    <circle cx="63" cy="15" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="78" cy="16" r="4.5" fill="#FFEA00" stroke="#8B7B00" stroke-width="0.8"/>
+    <circle cx="77" cy="15" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="92" cy="16" r="4.5" fill="#00E676" stroke="#00662A" stroke-width="0.8"/>
+    <circle cx="91" cy="15" r="1.5" fill="white" opacity="0.7"/>
+
+    <!-- Top Model Stamp -->
+    <rect x="{w-145}" y="12" width="130" height="18" rx="4" fill="#600006" stroke="#8B0007" stroke-width="1"/>
+    <text x="{w-80}" y="24" text-anchor="middle" font-size="9" font-family="'Fira Code',monospace" font-weight="bold" fill="#FFA3A8" letter-spacing="1">DEX COMBAT // v4.2</text>
+
+    <!-- Inner LCD Screen Bezel -->
+    <rect x="14" y="44" width="{w-28}" height="{h-58}" rx="10" fill="#D9DFE5" stroke="#9DA3A8" stroke-width="1.5"/>
+    
+    <!-- LCD Arena Screen -->
+    <rect x="22" y="52" width="{w-44}" height="{h-74}" rx="6" fill="{COLORS['bg']}" stroke="#001824" stroke-width="2"/>
+    <rect x="22" y="52" width="{w-44}" height="{h-74}" rx="6" fill="url(#grid)"/>
+
+    <!-- Corner Screws -->
+    <circle cx="20" cy="50" r="2.5" fill="#888F96"/>
+    <circle cx="{w-20}" cy="50" r="2.5" fill="#888F96"/>
+    <circle cx="20" cy="{h-18}" r="2.5" fill="#888F96"/>
+    <circle cx="{w-20}" cy="{h-18}" r="2.5" fill="#888F96"/>
     """
 
 
 def _build_flash(w=580, h=520):
     return f"""
-    <rect width="{w}" height="{h}" rx="12" fill="{COLORS['flash']}" opacity="0" class="flash" pointer-events="none"/>
+    <rect x="22" y="52" width="{w-44}" height="{h-74}" rx="6" fill="{COLORS['flash']}" opacity="0" class="flash" pointer-events="none"/>
     """
 
 
 def _build_header():
     return f"""
-    <text x="290" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="{COLORS['accent']}" class="title-flicker" filter="url(#glow)">
+    <text x="290" y="74" text-anchor="middle" font-size="15" font-weight="bold" fill="{COLORS['accent']}" class="title-flicker" filter="url(#glow)">
       ⚔️ RAID BOSS ENCOUNTER DETECTED
     </text>
     """
@@ -334,7 +373,7 @@ def _build_pokeball():
 def _build_footer():
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return f"""
-    <text x="290" y="478" text-anchor="middle" font-size="9" fill="{COLORS['text_dim']}" opacity="0.4">
+    <text x="290" y="498" text-anchor="middle" font-size="9" fill="{COLORS['text_dim']}" opacity="0.4">
       Live Combat Simulation Engine | Updated {now}
     </text>
     """
@@ -367,8 +406,8 @@ def render_battle_svg(
     repos_count, username,
     output_path="pokemon.svg",
 ):
-    """Render the complete Pokemon battle scene SVG."""
-    w, h = 580, 520
+    """Render the complete battle scene SVG."""
+    w, h = 580, 540
     hp_ratio = round(max(0, 1.0 - (total_contributions / MAX_CONTRIBUTIONS)), 2)
 
     parts = [
