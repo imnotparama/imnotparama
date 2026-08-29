@@ -1,99 +1,75 @@
-# Pokemon Battle SVG Generator
-# ============================
-# Runs daily at midnight UTC to regenerate the Pokemon battle SVG.
-# The SVG shows a Pokemon battle scene where your GitHub contributions
-# deal damage to the enemy Pokemon.
-#
-# How it works:
-#   1. Checks out the main branch
-#   2. Downloads Pokemon sprites (embedded as base64 in SVG)
-#   3. Runs the Python script to fetch contribution data & generate SVG
-#   4. Commits the new SVG to the 'output' branch (at root)
-#   5. README on main branch embeds the SVG from the output branch
+# Pokemon Battle Full Profile SVG Generator
+# ==========================================
+# Runs daily at midnight UTC to regenerate the entire profile as an
+# animated Pokemon game interface SVG.
 #
 # Can also be triggered manually via workflow_dispatch.
 
-name: Update Pokemon Battle
+name: Update Pokemon Profile
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
     - cron: "0 0 * * *"
-
-  # Allow manual trigger
   workflow_dispatch:
 
-# Only one instance at a time
 concurrency:
   group: pokemon-update
   cancel-in-progress: true
 
 jobs:
   generate-svg:
-    name: Generate Pokemon Battle SVG
+    name: Generate Full Profile SVG
     runs-on: ubuntu-latest
 
     permissions:
       contents: write
 
     steps:
-      # Step 1: Checkout the main branch
       - name: Checkout main branch
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
 
-      # Step 2: Set up Python
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
 
-      # Step 3: Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Download Pokemon sprites
       - name: Download Pokemon sprites
         run: python scripts/download_sprites.py
 
-      # Step 5: Generate the Pokemon battle SVG
-      - name: Generate Pokemon battle SVG
+      - name: Generate full profile SVG
         env:
           GITHUB_USERNAME: imnotparama
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/generate_pokemon_svg.py
+        run: python scripts/render_full_profile.py
 
-      # Step 6: Commit and push to output branch
       - name: Commit and push to output branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Save the generated SVG to a temp location
-          cp pokemon.svg /tmp/pokemon.svg
+          cp profile.svg /tmp/profile.svg
 
-          # Create or checkout the output branch (orphan = root only)
           git checkout --orphan output-workflow
           git rm -rf .
 
-          # Restore the SVG at root
-          cp /tmp/pokemon.svg pokemon.svg
-          git add pokemon.svg
+          cp /tmp/profile.svg profile.svg
+          git add profile.svg
 
-          # Check if there are changes
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
-          # Commit with timestamp
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
-          git commit -m "battle: update Pokemon SVG ($TIMESTAMP)"
+          git commit -m "battle: update full profile SVG ($TIMESTAMP)"
 
-          # Force push to output branch
           git push -f origin output-workflow:output
