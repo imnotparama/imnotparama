@@ -22,7 +22,7 @@
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=imnotparama&style=for-the-badge&color=DC0A2D&label=DEX+SCANS" alt="Dex Scans" />
     <img src="https://img.shields.io/badge/DEX_ID-%23029--ECE-00E5FF?style=for-the-badge&logo=electron&logoColor=000000" alt="Dex ID" />
-    <img src="https://img.shields.io/badge/STATUS-ACTIVE_%2F_LVL_99-00FF88?style=for-the-badge&logo=codefactor&logoColor=000000" alt="Status" />
+    <img src="https://img.shields.io/badge/TRAINER_RANK-CHAMPION-FFD700?style=for-the-badge&logo=sublime-text&logoColor=000000" alt="Rank" />
     <img src="https://img.shields.io/badge/REGION-CHENNAI%2C_IN-7000FF?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Region" />
   </p>
 
@@ -48,6 +48,25 @@
   <!-- Animated Pokédex Chassis Divider -->
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 
+</div>
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- OFFICIAL TRAINER CARD & 8 GYM BADGES CASE                         -->
+<!-- ================================================================= -->
+
+### 🪪 `> dex.load_trainer_card()`
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/trainer_card.svg" width="100%" alt="Official Trainer Card" />
+</div>
+
+<br/>
+
+<div align="center">
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 </div>
 
 <br/>
@@ -81,6 +100,22 @@
 ║   • SILICON TELEMETRY — Seamless ESP32 edge telemetry to web apps    ║
 ║   • [HIDDEN] COMMIT SURGE — Inflicts real-time raid strike damage    ║
 ╚══════════════════════════════════════════════════════════════════════╝
+```
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- EVOLUTION CHAIN // CAREER & SKILL PROGRESSION                     -->
+<!-- ================================================================= -->
+
+### 🧬 `> dex.display_evolution_matrix()`
+
+```
+┌─────────────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐
+│     STAGE 1 (BASE)      │      │     STAGE 2 (TIER 1)    │      │     STAGE 3 (TIER 2)    │      │     MEGA APEX FORM      │
+│  Academic Researcher    │ ───► │  Full-Stack & Hardware  │ ───► │  Multimodal AI Architect│ ───► │  Tier-1 Lead Engineer   │
+│  B.Tech ECE Data Science│      │  IoT & Real-Time Web    │      │  Autonomous Agent Matrix│      │  Scalable Production AI │
+└─────────────────────────┘      └─────────────────────────┘      └─────────────────────────┘      └─────────────────────────┘
 ```
 
 <br/>
@@ -141,7 +176,7 @@
 <!-- DEX HABITAT MAP SCANNER // MATRIX TRAVERSAL                       -->
 <!-- ================================================================= -->
 
-### 🐍 `> dex.render_habitat_scanner()`
+### 🗺️ `> dex.render_habitat_scanner()`
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="Dex Contribution Snake Animation" width="100%" />
@@ -157,42 +192,42 @@
 <br/>
 
 <!-- ================================================================= -->
-<!-- KNOWN MOVES & TM/HM ARSENAL // TECH STACK                         -->
+<!-- TRAINER ITEM BAG & TECHNICAL ARSENAL                              -->
 <!-- ================================================================= -->
 
-### 🎒 `> dex.load_known_moves_and_tms()`
+### 🎒 `> dex.open_trainer_bag()`
 
 <br/>
 
-#### ⚡ Electric // Core Scripting & Languages
+#### ⚡ Key Items Pocket // Core Scripting & Languages
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=python,js,ts,c,cpp,java,html,css,bash,sql&theme=dark" alt="Languages" />
   </a>
 </p>
 
-#### 🧠 Psychic // Neural Networks & AI Matrix
+#### 🧠 Neural Machines Pocket // AI & Machine Learning
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=py,tensorflow,pytorch,opencv,sklearn,pandas,numpy,scipy,matplotlib&theme=dark" alt="AI and ML Stack" />
   </a>
 </p>
 
-#### 🌊 Water // Fluid UI & Frontend Engineering
+#### 🌊 Fluid UI Pocket // Frontend Engineering TMs
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,redux,vite,threejs,figma&theme=dark" alt="Frontend Stack" />
   </a>
 </p>
 
-#### 🔥 Fire // Backend Architecture & Cloud Infrastructure
+#### 🔥 Server Machinery Pocket // Backend & Cloud Infrastructure
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=django,flask,fastapi,nodejs,express,mysql,postgres,mongodb,firebase,docker,linux,aws&theme=dark" alt="Backend & Cloud Stack" />
   </a>
 </p>
 
-#### ⚙️ Steel // Hardware, PCB & Embedded IoT Telemetry
+#### ⚙️ Silicon Hardware Pocket // PCB & Embedded Edge IoT
 <p align="left">
   <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
   <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
@@ -202,7 +237,7 @@
   <img src="https://img.shields.io/badge/Sensors%20%26%20Telemetry-00E5FF?style=for-the-badge&logo=microgenetics&logoColor=black" alt="Telemetry" />
 </p>
 
-#### 🛠️ Normal // Developer Tooling & Guild Workflows
+#### 🛠️ Utility Tool Belt // Developer Workflows & CI/CD
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,github,githubactions,vscode,postman,powershell,linux&theme=dark" alt="Dev Tools" />
@@ -230,8 +265,8 @@
   <tr>
     <td width="50%" valign="top">
       <h3 align="left">🐾 ENTRY #01: PawPal AI</h3>
-      <p><b>Next-Gen Multimodal Pet Healthcare &amp; Triage Assistant</b></p>
-      <p>Intelligent wellness tracking system integrating computer vision and Gemini AI for automated symptom triage, nutritional guidance, and interactive 3D anatomy visualization.</p>
+      <p><b>Type: Psychic / Fairy • Multi-Modal Diagnostics Assistant</b></p>
+      <p>Intelligent pet healthcare triage system combining computer vision and Gemini AI for real-time symptom analysis, dietary planning, and interactive 3D anatomy visualization.</p>
       <p>
         <img src="https://img.shields.io/badge/Gemini%20AI-4285F4?style=flat-square&logo=google&logoColor=white" />
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -244,7 +279,7 @@
     </td>
     <td width="50%" valign="top">
       <h3 align="left">🚗 ENTRY #02: Smart Parking Matrix</h3>
-      <p><b>Real-Time IoT Parking Telemetry &amp; Analytics Platform</b></p>
+      <p><b>Type: Steel / Electric • Real-Time IoT Telemetry Platform</b></p>
       <p>Full-stack smart parking management solution offering live slot occupancy telemetry, automated bay allocation, user reservations, and administrative analytical heatmaps.</p>
       <p>
         <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
@@ -260,7 +295,7 @@
   <tr>
     <td width="50%" valign="top">
       <h3 align="left">🚌 ENTRY #03: BusIt</h3>
-      <p><b>Campus Fleet GPS Telemetry &amp; Intelligent ETA System</b></p>
+      <p><b>Type: Electric / Normal • Fleet Telemetry &amp; Live ETA</b></p>
       <p>High-precision college transit tracking platform featuring live GPS geofencing, sub-second WebSocket updates, automated route optimizations, and student notification dispatch.</p>
       <p>
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
@@ -274,7 +309,7 @@
     </td>
     <td width="50%" valign="top">
       <h3 align="left">💧 ENTRY #04: AquaSentry</h3>
-      <p><b>Edge IoT Water Quality Diagnostics &amp; Telemetry</b></p>
+      <p><b>Type: Water / Steel • Edge IoT Quality Diagnostics</b></p>
       <p>Industrial edge IoT environmental monitoring system utilizing ESP32 microcontrollers and sensors to detect turbidity, pH anomalies, and contaminants in rural reservoirs in real-time.</p>
       <p>
         <img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" />
@@ -290,7 +325,7 @@
   <tr>
     <td colspan="2" valign="top">
       <h3 align="left">🎮 ENTRY #05: Autonomous Combat Engine</h3>
-      <p><b>Pixel Raid Simulation on GitHub Actions</b></p>
+      <p><b>Type: Dragon / Dark • Serverless Pixel Simulation Pipeline</b></p>
       <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss encounter selection, and continuous evolution state machines.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />

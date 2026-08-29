@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="320" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A2332" />
+      <stop offset="50%" stop-color="#0E1622" />
+      <stop offset="100%" stop-color="#070C14" />
+    </linearGradient>
+    <linearGradient id="holoShine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="45%" stop-color="#00F0FF" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#FF0055" stop-opacity="0.25" />
+      <stop offset="55%" stop-color="#FFEA00" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#FF6F00" />
+    </linearGradient>
+    <linearGradient id="badgeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FF88" />
+      <stop offset="100%" stop-color="#00B0FF" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="badgeFilter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes holoSweep {
+        0% { transform: translateX(-600px) skewX(-20deg); }
+        50%, 100% { transform: translateX(1200px) skewX(-20deg); }
+      }
+      @keyframes badgePulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #FFD700); }
+        50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #FFD700); }
+      }
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 0.6; transform: rotate(0deg); }
+        50% { opacity: 1; transform: rotate(180deg); }
+      }
+      .holo-layer {
+        animation:中山 holoSweep 5s ease-in-out infinite;
+      }
+      .card-title {
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        font-weight: 900;
+        letter-spacing: 2px;
+      }
+      .card-mono {
+        font-family: 'Fira Code', 'Courier New', monospace;
+      }
+      .badge-anim {
+        transform-origin: center;
+        animation: badgePulse 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- ==================== CARD BASE ==================== -->
+  <!-- Outer Gold/Metallic Bezel -->
+  <rect x="2" y="2" width="896" height="316" rx="18" fill="url(#cardBg)" stroke="url(#goldBorder)" stroke-width="2.5" />
+  
+  <!-- Inner Background Frame -->
+  <rect x="14" y="14" width="872" height="292" rx="14" fill="#0B111A" stroke="#1F2937" stroke-width="1" />
+
+  <!-- Animated Holographic Foil Sweep -->
+  <g class="holo-layer" pointer-events="none">
+    <rect x="0" y="0" width="250" height="320" fill="url(#holoShine)" />
+  </g>
+
+  <!-- ==================== TOP CARD HEADER ==================== -->
+  <rect x="14" y="14" width="872" height="42" rx="14" fill="#DC0A2D" />
+  <!-- Corner Fix -->
+  <rect x="14" y="36" width="872" height="20" fill="#DC0A2D" />
+
+  <!-- Header Title -->
+  <text x="36" y="42" class="card-title" font-size="16" fill="#FFFFFF">OFFICIAL TRAINER CARD</text>
+  <text x="320" y="42" class="card-mono" font-size="12" font-weight="bold" fill="#FFE082">RANK: ★★★★★ CHAMPION ARCHITECT</text>
+  <text x="860" y="42" text-anchor="end" class="card-mono" font-size="13" font-weight="bold" fill="#FFFFFF">IDNo. 94829</text>
+
+  <!-- ==================== LEFT PHOTO / AVATAR BOX ==================== -->
+  <g transform="translate(36, 75)">
+    <!-- Photo Bezel -->
+    <rect x="0" y="0" width="165" height="155" rx="8" fill="#16202C" stroke="#00E5FF" stroke-width="1.5" />
+    
+    <!-- Radar Grid inside Avatar Box -->
+    <circle cx="82" cy="77" r="50" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.4" />
+    <circle cx="82" cy="77" r="30" fill="none" stroke="#00FF88" stroke-width="0.5" opacity="0.5" />
+    
+    <!-- Silhouette / Avatar Avatar Icon -->
+    <circle cx="82" cy="60" r="24" fill="#00E5FF" opacity="0.8" />
+    <path d="M 46 125 C 46 95, 118 95, 118 125 Z" fill="#00E5FF" opacity="0.8" />
+    <circle cx="82" cy="60" r="10" fill="#0B111A" />
+    
+    <!-- Photo Label -->
+    <rect x="10" y="125" width="145" height="20" rx="4" fill="#0B111A" stroke="#30363D" stroke-width="1" />
+    <text x="82" y="139" text-anchor="middle" class="card-mono" font-size="9" font-weight="bold" fill="#00FF88">TRAINER // PARAMA</text>
+  </g>
+
+  <!-- ==================== MAIN TRAINER DATA ==================== -->
+  <g transform="translate(225, 80)">
+    <!-- Name Field -->
+    <text x="0" y="20" class="card-mono" font-size="11" fill="#8B949E">NAME:</text>
+    <text x="70" y="22" class="card-title" font-size="22" fill="#FFFFFF">PARAMESHWARAN S</text>
+
+    <!-- Class / Specialization -->
+    <text x="0" y="52" class="card-mono" font-size="11" fill="#8B949E">CLASS:</text>
+    <text x="70" y="52" class="card-mono" font-size="13" font-weight="bold" fill="#00E5FF">AI &amp; DATA SCIENCE ARCHITECT / EMBEDDED IoT</text>
+
+    <!-- Region / Affiliation -->
+    <text x="0" y="80" class="card-mono" font-size="11" fill="#8B949E">REGION:</text>
+    <text x="70" y="80" class="card-mono" font-size="12" fill="#C9D1D9">CHENNAI, IN • SRM INSTITUTE OF SCIENCE &amp; TECH</text>
+
+    <!-- Money / Commits / Dex Stats -->
+    <text x="0" y="108" class="card-mono" font-size="11" fill="#8B949E">MONEY:</text>
+    <text x="70" y="108" class="card-mono" font-size="12" font-weight="bold" fill="#FFEA00">¥999,999</text>
+
+    <text x="200" y="108" class="card-mono" font-size="11" fill="#8B949E">DEX ENTRIES:</text>
+    <text x="310" y="108" class="card-mono" font-size="12" font-weight="bold" fill="#00FF88">151 / 151</text>
+
+    <text x="440" y="108" class="card-mono" font-size="11" fill="#8B949E">EXP COMMITS:</text>
+    <text x="540" y="108" class="card-mono" font-size="12" font-weight="bold" fill="#FF0055">LVL 99 (MAX)</text>
+  </g>
+
+  <!-- ==================== 8 OFFICIAL GYM BADGES CASE ==================== -->
+  <g transform="translate(36, 245)">
+    <!-- Badge Case Bar -->
+    <rect x="0" y="0" width="828" height="52" rx="8" fill="#121820" stroke="#30363D" stroke-width="1.5" />
+    <text x="14" y="30" class="card-mono" font-size="10" font-weight="bold" fill="#8B949E">GYM BADGES:</text>
+
+    <!-- Badge 1: Neural / AI Badge -->
+    <g transform="translate(130, 26)" class="badge-anim">
+      <circle cx="0" cy="0" r="15" fill="#9C27B0" stroke="#E1BEE7" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <polygon points="0,-9 7,0 0,9 -7,0" fill="#FFFFFF" />
+    </g>
+
+    <!-- Badge 2: Data Science Badge -->
+    <g transform="translate(210, 26)" class="badge-anim">
+      <polygon points="0,-15 14,-5 9,14 -9,14 -14,-5" fill="#0288D1" stroke="#B3E5FC" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
+    </g>
+
+    <!-- Badge 3: React / Frontend Badge -->
+    <g transform="translate(290, 26)" class="badge-anim">
+      <circle cx="0" cy="0" r="15" fill="#00BCD4" stroke="#E0F7FA" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <ellipse cx="0" cy="0" rx="12" ry="4" fill="none" stroke="#FFFFFF" stroke-width="1.2" transform="rotate(30)" />
+      <ellipse cx="0" cy="0" rx="12" ry="4" fill="none" stroke="#FFFFFF" stroke-width="1.2" transform="rotate(-30)" />
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+    </g>
+
+    <!-- Badge 4: Python / Backend Badge -->
+    <g transform="translate(370, 26)" class="badge-anim">
+      <rect x="-13" y="-13" width="26" height="26" rx="6" fill="#388E3C" stroke="#C8E6C9" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <circle cx="-4" cy="-4" r="3" fill="#FFE082" />
+      <circle cx="4" cy="4" r="3" fill="#FFE082" />
+    </g>
+
+    <!-- Badge 5: ESP32 / Hardware Badge -->
+    <g transform="translate(450, 26)" class="badge-anim">
+      <polygon points="0,-16 15,0 0,16 -15,0" fill="#E65100" stroke="#FFE0B2" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <rect x="-4" y="-4" width="8" height="8" fill="#FFFFFF" />
+    </g>
+
+    <!-- Badge 6: Full Stack / Next.js Badge -->
+    <g transform="translate(530, 26)" class="badge-anim">
+      <circle cx="0" cy="0" r="15" fill="#1565C0" stroke="#BBDEFB" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <polygon points="-7,-7 7,-7 0,8" fill="#FFFFFF" />
+    </g>
+
+    <!-- Badge 7: Hackathon Champion Badge -->
+    <g transform="translate(610, 26)" class="badge-anim">
+      <polygon points="0,-16 13,10 -15,-3 15,-3 -13,10" fill="#F57F17" stroke="#FFF59D" stroke-width="1.5" filter="url(#badgeFilter)" />
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+    </g>
+
+    <!-- Badge 8: Earth / Apex Master Badge -->
+    <g transform="translate(690, 26)" class="badge-anim">
+      <circle cx="0" cy="0" r="16" fill="url(#goldBorder)" stroke="#FFFFFF" stroke-width="2" filter="url(#badgeFilter)" />
+      <polygon points="0,-10 9,0 0,10 -9,0" fill="#FFFFFF" />
+    </g>
+
+    <!-- Champion Star -->
+    <text x="750" y="32" class="card-mono" font-size="11" font-weight="bold" fill="#00FF88">8/8 COMPLETE ✓</text>
+  </g>
+</svg>
