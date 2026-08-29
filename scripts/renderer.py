@@ -159,12 +159,12 @@ CSS = """<style>
       100% { transform:translateX(200%); }
     }
 
-    /* Pokeball spin */
-    @keyframes pokeballSpin {
+    /* Core spin */
+    @keyframes coreSpin {
       0% { transform:rotate(0deg); }
       100% { transform:rotate(360deg); }
     }
-    .pokeball-spin { animation: pokeballSpin 8s linear infinite; transform-origin: center; }
+    .core-spin { animation: coreSpin 8s linear infinite; transform-origin: 290px 445px; }
 
     /* Stat number count-up glow */
     @keyframes statGlow {
@@ -211,8 +211,8 @@ def _build_flash(w=580, h=520):
 
 def _build_header():
     return f"""
-    <text x="290" y="42" text-anchor="middle" font-size="17" font-weight="bold" fill="{COLORS['accent']}" class="title-flicker" filter="url(#glow)">
-      Wild Pokemon Appeared!
+    <text x="290" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="{COLORS['accent']}" class="title-flicker" filter="url(#glow)">
+      ⚔️ RAID BOSS ENCOUNTER DETECTED
     </text>
     """
 
@@ -295,11 +295,11 @@ def _build_player(species, level, total_contributions):
     {"".join(pips)}
 
     <!-- Attack -->
-    <text x="180" y="278" font-size="12" fill="{COLORS['text_dim']}">Last Attack:</text>
+    <text x="180" y="278" font-size="12" fill="{COLORS['text_dim']}">Last Strike:</text>
     <text x="180" y="298" font-size="16" font-weight="bold" fill="{COLORS['accent']}" class="attack-pulse" filter="url(#glow)">{attack}</text>
 
     <!-- EXP Bar -->
-    <text x="180" y="322" font-size="10" fill="{COLORS['text_dim']}">EXP to next evolution</text>
+    <text x="180" y="322" font-size="10" fill="{COLORS['text_dim']}">EXP to next tier</text>
     <rect x="180" y="330" width="160" height="7" rx="3.5" fill="{COLORS['hp_empty']}"/>
     <rect x="180" y="330" width="{exp_w}" height="7" rx="3.5" fill="{COLORS['exp_bar']}" class="exp-glow"/>
     """
@@ -324,10 +324,9 @@ def _build_stats(total, today, repos, username):
 
 def _build_pokeball():
     return f"""
-    <g class="pokeball-spin">
-      <circle cx="290" cy="445" r="9" fill="none" stroke="{COLORS['text_dim']}" stroke-width="1.5" opacity="0.35"/>
-      <line x1="281" y1="445" x2="299" y2="445" stroke="{COLORS['text_dim']}" stroke-width="1.5" opacity="0.35"/>
-      <circle cx="290" cy="445" r="3" fill="{COLORS['text_dim']}" opacity="0.4"/>
+    <g class="core-spin">
+      <polygon points="290,437 297,445 290,453 283,445" fill="none" stroke="{COLORS['accent']}" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="290" cy="445" r="2.5" fill="{COLORS['accent']}" opacity="0.8"/>
     </g>
     """
 
@@ -336,7 +335,7 @@ def _build_footer():
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return f"""
     <text x="290" y="478" text-anchor="middle" font-size="9" fill="{COLORS['text_dim']}" opacity="0.4">
-      Pokemon Battle Profile | Updated {now}
+      Live Combat Simulation Engine | Updated {now}
     </text>
     """
 

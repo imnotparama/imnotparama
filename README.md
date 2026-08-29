@@ -13,7 +13,7 @@
 
   <!-- Dynamic Typing Animation SVG -->
   <a href="https://github.com/imnotparama">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=00FF66&center=true&vCenter=true&multiline=false&width=650&height=45&lines=Building+Intelligent+AI-Powered+Systems;ECE+(Data+Science)+%40+SRM+Institute;Full-Stack+Architect+%7C+Next.js+%7C+React+%7C+Python;Edge+IoT+%2B+Embedded+Hardware+Builder;Open+Source+Contributor+%26+Hackathon+Warrior" alt="Typing Subtitle" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=00FF66&center=true&vCenter=true&multiline=false&width=650&height=45&lines=Building+Intelligent+AI-Powered+Systems;ECE+(Data+Science)+%40+SRM+Institute;Full-Stack+Architect+%7C+Next.js+%7C+React+%7C+Python;Edge+IoT+%2B+Embedded+Hardware+Builder;Autonomous+CI%2FCD+%26+Raid+Engine+Builder" alt="Typing Subtitle" />
   </a>
 
   <br/>
@@ -53,7 +53,7 @@
 <br/>
 
 <!-- ================================================================= -->
-<!-- ABOUT ME // HUD TERMINAL                                          -->
+<!-- ABOUT ME // RETRO TERMINAL HUD                                    -->
 <!-- ================================================================= -->
 
 ### 🚀 `> sys.fetch_profile_summary()`
@@ -61,17 +61,17 @@
 ```yaml
 identity:
   name: "Parameshwaran S (Parama)"
-  role: "AI Engineer • Data Scientist • Full-Stack Web Architect • IoT Developer"
-  education: "B.Tech Electronics & Communication Engineering (Data Science) @ SRMIST"
-  location: "Chennai, Tamil Nadu, India 🇮🇳"
+  class: "AI Engineer • Data Scientist • Full-Stack Web Architect • IoT Developer"
+  academy: "B.Tech Electronics & Communication Engineering (Data Science) @ SRMIST"
+  base_coordinates: "Chennai, Tamil Nadu, India 🇮🇳"
 
-core_directives:
-  - "Designing intelligent AI agents and real-time predictive ML systems"
-  - "Building lightning-fast full-stack web applications with Next.js, React & Python"
-  - "Developing edge IoT hardware, embedded sensor telemetry & custom firmware"
-  - "Competing in high-stakes hackathons & contributing to open source"
+combat_specializations:
+  - "Autonomous Neural Agents & Real-Time Computer Vision"
+  - "High-Concurrency Full-Stack Web Systems (Next.js, React, Python, FastAPIs)"
+  - "Edge IoT Hardware, PCB Design, Microcontroller Telemetry & Embedded C++"
+  - "Competitive Hackathon Expeditions & Scalable Open Source Architecture"
 
-motto: "Bridging silicon hardware with neural intelligence and resilient software."
+prime_directive: "Bridging silicon hardware with neural intelligence and resilient software."
 ```
 
 <br/>
@@ -84,36 +84,36 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
 <br/>
 
 <!-- ================================================================= -->
-<!-- THE SIGNATURE FEATURE // POKEMON RPG BATTLE ARENA                 -->
+<!-- THE SIGNATURE FEATURE // REAL-TIME RAID ARENA                     -->
 <!-- ================================================================= -->
 
 <div align="center">
 
-## ⚡ Real-Time Pokemon RPG Battle Arena
+## ⚔️ Real-Time Raid Boss Combat Arena
 
-> ⚔️ **Live Serverless Game Engine:** Every GitHub commit inflicts direct damage against daily wild Boss Pokemon!  
-> Contributions grant **EXP**, scaling player level and triggering sprite evolutions (*Bulbasaur ➔ Ivysaur ➔ Venusaur ➔ Mega*).
+> ⚡ **Serverless Combat Simulation:** Every GitHub commit inflicts direct strike damage to daily encounter raid bosses.  
+> Experience points level up your battle companion across ascending tier classes (*Base ➔ Stage I ➔ Stage II ➔ Mega Apex Form*).
 
 <br/>
 
 <!-- Live Animated Battle SVG -->
 <a href="https://github.com/imnotparama/imnotparama">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Pokemon RPG Live Battle Arena" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Real-Time Raid Arena" />
 </a>
 
 <br/><br/>
 
 <details>
-<summary><b>🎮 Click to reveal Battle Mechanics &amp; CI/CD Engine</b></summary>
+<summary><b>🎮 Click to reveal Combat Mechanics &amp; CI/CD Engine</b></summary>
 
 <br/>
 
-| Mechanic | System Logic |
+| Combat Mechanic | System Implementation |
 | :--- | :--- |
 | **Daily Boss Rotation** | Rotates dynamically every 24h (*Rayquaza, Mewtwo, Gengar, Dragonite, Tyranitar, Lucario*) |
-| **Attack Power (HP)** | Total commits across 365 days deal proportional damage to the Boss HP bar |
-| **Player EXP & Level** | Higher commit volume levels up player Pokemon and advances evolution stages |
-| **Autonomous CI/CD** | Automated GitHub Actions workflow executes Python engine daily at 00:00 UTC |
+| **Strike Power (HP)** | Total commits across 365 days deal proportional damage to the Boss HP gauge |
+| **EXP & Tier Progression**| Commit volume accumulates EXP to level up combat stats and evolve sprite tiers |
+| **Autonomous CI/CD** | Automated GitHub Actions workflow executes Python combat engine daily at 00:00 UTC |
 
 </details>
 
@@ -129,10 +129,10 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
 <br/>
 
 <!-- ================================================================= -->
-<!-- CONTRIBUTION SNAKE ANIMATION                                      -->
+<!-- MATRIX GRID TRAVERSAL // SNAKE ANIMATION                          -->
 <!-- ================================================================= -->
 
-### 🐍 `> git.render_contribution_matrix()`
+### 🐍 `> git.execute_matrix_traversal()`
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
@@ -151,7 +151,7 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
 <!-- TECHNICAL ARSENAL // SKILLS & STACK                               -->
 <!-- ================================================================= -->
 
-### 🛠️ `> sys.load_technical_arsenal()`
+### 🎒 `> sys.load_technical_arsenal()`
 
 <br/>
 
@@ -162,7 +162,7 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
   </a>
 </p>
 
-#### 🤖 AI, Machine Learning & Data Science
+#### 🤖 AI, Machine Learning & Neural Data Science
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=py,tensorflow,pytorch,opencv,sklearn,pandas,numpy,scipy,matplotlib&theme=dark" alt="AI and ML Stack" />
@@ -176,14 +176,14 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
   </a>
 </p>
 
-#### ⚙️ Backend, Cloud & Databases
+#### ⚙️ Backend, Cloud & Database Infrastructure
 <p align="left">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=django,flask,fastapi,nodejs,express,mysql,postgres,mongodb,firebase,docker,linux,aws&theme=dark" alt="Backend & Cloud Stack" />
   </a>
 </p>
 
-#### 🔌 Hardware, Embedded & Edge IoT
+#### 🔌 Hardware, Embedded & Edge IoT Telemetry
 <p align="left">
   <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
   <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
@@ -210,7 +210,7 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
 <br/>
 
 <!-- ================================================================= -->
-<!-- FEATURED ENGINEERING PROJECTS                                     -->
+<!-- FLAGSHIP EXPEDITIONS // FEATURED PROJECTS                         -->
 <!-- ================================================================= -->
 
 ### 🌟 `> projects.get_featured()`
@@ -280,14 +280,14 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
   </tr>
   <tr>
     <td colspan="2" valign="top">
-      <h3 align="left">🎮 Pokémon Battle Engine</h3>
-      <p><b>Autonomous Serverless SVG RPG Game Engine on GitHub Actions</b></p>
-      <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss selection, and continuous evolution state machines.</p>
+      <h3 align="left">🎮 Autonomous Serverless Combat Engine</h3>
+      <p><b>Pixel Raid Simulation on GitHub Actions</b></p>
+      <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss encounter selection, and continuous evolution state machines.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
         <img src="https://img.shields.io/badge/SVG%20Animations-FFB13B?style=flat-square&logo=svg&logoColor=black" />
-        <img src="https://img.shields.io/badge/PokeAPI-EF5350?style=flat-square&logo=pokemon&logoColor=white" />
+        <img src="https://img.shields.io/badge/GraphQL%20API-E10098?style=flat-square&logo=graphql&logoColor=white" />
       </p>
       <p>
         <a href="https://github.com/imnotparama/imnotparama"><b>⚡ View Source Code ➔</b></a>
@@ -306,7 +306,7 @@ motto: "Bridging silicon hardware with neural intelligence and resilient softwar
 <br/>
 
 <!-- ================================================================= -->
-<!-- GITHUB METRICS & ANALYTICS MATRIX                                 -->
+<!-- COMBAT METRICS & TELEMETRY DASHBOARD                              -->
 <!-- ================================================================= -->
 
 ### 📊 `> analytics.render_dashboard()`

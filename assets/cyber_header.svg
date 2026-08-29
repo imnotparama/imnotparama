@@ -151,6 +151,6 @@
     <text x="345" y="15" text-anchor="middle" class="badge-text" fill="#8B5CF6">🔌 EMBEDDED IoT</text>
 
     <rect x="420" y="0" width="145" height="22" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1" />
-    <text x="492" y="15" text-anchor="middle" class="badge-text" fill="#FFC107">🎮 POKEMON RPG BATTLE</text>
+    <text x="492" y="15" text-anchor="middle" class="badge-text" fill="#FFC107">⚔️ REAL-TIME RAID ARENA</text>
   </g>
 </svg>

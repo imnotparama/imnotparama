@@ -220,10 +220,10 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
 
 <!-- ===================== HEADER ===================== -->
 <text x="300" y="50" text-anchor="middle" font-size="22" font-weight="bold" fill="{C['accent']}" class="tf" filter="url(#sh)">
-  Wild Pokemon Appeared!
+  ⚔️ RAID BOSS ENCOUNTER
 </text>
 <text x="300" y="72" text-anchor="middle" font-size="12" fill="{C['dim']}">
-  Your GitHub contributions deal damage to wild Pokemon
+  Real-time GitHub commit telemetry fuels combat strikes
 </text>
 
 <!-- ===================== BATTLE SCENE ===================== -->
@@ -258,7 +258,7 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
 <text x="190" y="334" font-size="17" font-weight="bold" fill="{C['accent']}" class="ap" filter="url(#sh)">{attack}</text>
 
 <!-- EXP -->
-<text x="190" y="360" font-size="10" fill="{C['dim']}">EXP to next evolution</text>
+<text x="190" y="360" font-size="10" fill="{C['dim']}">EXP to next tier</text>
 <rect x="190" y="368" width="160" height="7" rx="3.5" fill="{C['empty']}"/>
 <rect x="190" y="368" width="{exp_w}" height="7" rx="3.5" fill="{C['purple']}" class="eg"/>
 
@@ -278,9 +278,8 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
 
 <!-- ===================== DIVIDER ===================== -->
 <g class="ps">
-  <circle cx="300" cy="490" r="10" fill="none" stroke="{C['dim']}" stroke-width="1.5" opacity=".3"/>
-  <line x1="290" y1="490" x2="310" y2="490" stroke="{C['dim']}" stroke-width="1.5" opacity=".3"/>
-  <circle cx="300" cy="490" r="3.5" fill="{C['dim']}" opacity=".35"/>
+  <polygon points="300,482 308,490 300,498 292,490" fill="none" stroke="{C['accent']}" stroke-width="1.5" opacity=".5"/>
+  <circle cx="300" cy="490" r="2.5" fill="{C['accent']}" opacity=".7"/>
 </g>
 
 <!-- ===================== ABOUT ME ===================== -->
@@ -356,7 +355,7 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
 <!-- ===================== FOOTER ===================== -->
 <rect x="20" y="1310" width="560" height="1" fill="{C['border']}" opacity=".25"/>
 <text x="300" y="1335" text-anchor="middle" font-size="10" fill="{C['dim']}" opacity=".4">
-  Pokemon Battle Profile | Updated {now}
+  Live Combat Telemetry HUD | Updated {now}
 </text>
 
 <!-- Particles -->
