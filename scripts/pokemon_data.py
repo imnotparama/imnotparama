@@ -215,17 +215,48 @@ def get_enemy_pokemon(day_of_week: int) -> str:
     return ENEMY_ROSTER[day_of_week % len(ENEMY_ROSTER)]
 
 
+_sprite_cache = None
+
+
+def _load_sprite_cache():
+    """Load base64 sprite data from sprite_data.json (downloaded by download_sprites.py)."""
+    global _sprite_cache
+    if _sprite_cache is not None:
+        return _sprite_cache
+
+    import json as _json
+    import os as _os
+
+    data_path = _os.path.join(_os.path.dirname(__file__), "sprite_data.json")
+    try:
+        with open(data_path, "r") as f:
+            _sprite_cache = _json.load(f)
+    except FileNotFoundError:
+        print("  [WARN] sprite_data.json not found, using URLs")
+        _sprite_cache = {}
+    return _sprite_cache
+
+
 def get_sprite_url(species: str) -> str:
     """
-    Get the official artwork URL for a Pokemon species.
+    Get the Pokemon sprite. Returns base64 data URI if available,
+    otherwise falls back to the PokeAPI URL.
 
     Args:
         species: Pokemon species name
 
     Returns:
-        URL to the Pokemon's sprite image
+        Base64 data URI or URL to the Pokemon's sprite image
     """
-    return SPRITES.get(species, SPRITES["pikachu"])
+    cache = _load_sprite_cache()
+    if species in cache:
+        return cache[species]
+    # Fallback to base form if mega not available
+    if "-mega" in species:
+        base = species.split("-")[0]
+        if base in cache:
+            return cache[base]
+    return cache.get("pikachu", SPRITES.get(species, SPRITES["pikachu"]))
 
 
 def get_attack_name(pokemon_type: str) -> str:

@@ -6,9 +6,10 @@
 #
 # How it works:
 #   1. Checks out the main branch
-#   2. Runs the Python script to fetch contribution data & generate SVG
-#   3. Commits the new SVG to the 'output' branch (at root)
-#   4. README on main branch embeds the SVG from the output branch
+#   2. Downloads Pokemon sprites (embedded as base64 in SVG)
+#   3. Runs the Python script to fetch contribution data & generate SVG
+#   4. Commits the new SVG to the 'output' branch (at root)
+#   5. README on main branch embeds the SVG from the output branch
 #
 # Can also be triggered manually via workflow_dispatch.
 
@@ -56,15 +57,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Step 4: Generate the Pokemon battle SVG
+      # Step 4: Download Pokemon sprites
+      - name: Download Pokemon sprites
+        run: python scripts/download_sprites.py
+
+      # Step 5: Generate the Pokemon battle SVG
       - name: Generate Pokemon battle SVG
         env:
           GITHUB_USERNAME: imnotparama
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/generate_pokemon_svg.py
+        run: python scripts/generate_pokemon_svg.py
 
-      # Step 5: Commit and push to output branch
+      # Step 6: Commit and push to output branch
       - name: Commit and push to output branch
         run: |
           git config user.name "github-actions[bot]"
