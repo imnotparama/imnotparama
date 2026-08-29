@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 30" width="100%" height="30" fill="none">
+  <defs>
+    <linearGradient id="neonLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00FF66" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#00FF66" stop-opacity="1" />
+      <stop offset="75%" stop-color="#00E5FF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <style>
+      @keyframes laserMove {
+        0% { transform: translateX(-300px); }
+        50%, 100% { transform: translateX(1000px); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.15); }
+      }
+      @keyframes diamondRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .laser {
+        animation: laserMove 4s ease-in-out infinite;
+      }
+      .center-diamond {
+        transform-origin: 450px 15px;
+        animation: diamondRotate 12s linear infinite;
+      }
+      .pulsing-node {
+        animation: pulseGlow 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base Track -->
+  <line x1="50" y1="15" x2="850" y2="15" stroke="#30363D" stroke-width="1" stroke-dasharray="4 6" opacity="0.4" />
+  
+  <!-- Glowing Neon Main Line -->
+  <line x1="80" y1="15" x2="820" y2="15" stroke="url(#neonLine)" stroke-width="2" filter="url(#glowEffect)" />
+
+  <!-- Laser beam sweep effect -->
+  <g class="laser">
+    <rect x="0" y="13.5" width="120" height="3" fill="url(#laserBeam)" rx="1.5" filter="url(#glowEffect)" />
+  </g>
+
+  <!-- Side Tech Accents -->
+  <circle cx="100" cy="15" r="3" fill="#00FF66" class="pulsing-node" filter="url(#glowEffect)" />
+  <rect x="120" y="13" width="15" height="4" rx="2" fill="#00FF66" opacity="0.6" />
+  <rect x="765" y="13" width="15" height="4" rx="2" fill="#00E5FF" opacity="0.6" />
+  <circle cx="800" cy="15" r="3" fill="#00E5FF" class="pulsing-node" filter="url(#glowEffect)" />
+
+  <!-- Center Hex/Diamond Ornament -->
+  <g class="center-diamond">
+    <rect x="444" y="9" width="12" height="12" fill="none" stroke="#00FF66" stroke-width="1.5" rx="2" filter="url(#glowEffect)" />
+  </g>
+  <circle cx="450" cy="15" r="2.5" fill="#FFFFFF" class="pulsing-node" filter="url(#glowEffect)" />
+</svg>

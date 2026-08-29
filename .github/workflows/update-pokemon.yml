@@ -1,11 +1,11 @@
-# Pokemon Battle Full Profile SVG Generator
-# ==========================================
-# Runs daily at midnight UTC to regenerate the entire profile as an
-# animated Pokemon game interface SVG.
+# Pokemon Battle Profile & Snake SVG Generator
+# ===============================================
+# Runs daily at midnight UTC to regenerate the animated Pokemon battle
+# interface SVG and contribution snake animation.
 #
 # Can also be triggered manually via workflow_dispatch.
 
-name: Update Pokemon Profile
+name: Update Profile SVGs & Game Engine
 
 on:
   schedule:
@@ -17,8 +17,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  generate-svg:
-    name: Generate Full Profile SVG
+  generate-assets:
+    name: Generate Animated Profile Assets
     runs-on: ubuntu-latest
 
     permissions:
@@ -45,24 +45,38 @@ jobs:
       - name: Download Pokemon sprites
         run: python scripts/download_sprites.py
 
-      - name: Generate full profile SVG
+      - name: Generate Pokemon Battle SVGs
         env:
           GITHUB_USERNAME: imnotparama
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/render_full_profile.py
+        run: |
+          python scripts/render_full_profile.py
+          python scripts/generate_pokemon_svg.py
+
+      - name: Generate Contribution Snake Animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: imnotparama
+          outputs: |
+            github-contribution-grid-snake.svg
+            github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00ff66&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
       - name: Commit and push to output branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          cp profile.svg /tmp/profile.svg
+          mkdir -p /tmp/output-assets
+          [ -f profile.svg ] && cp profile.svg /tmp/output-assets/
+          [ -f pokemon.svg ] && cp pokemon.svg /tmp/output-assets/
+          [ -f github-contribution-grid-snake.svg ] && cp github-contribution-grid-snake.svg /tmp/output-assets/
+          [ -f github-contribution-grid-snake-dark.svg ] && cp github-contribution-grid-snake-dark.svg /tmp/output-assets/
 
           git checkout --orphan output-workflow
           git rm -rf .
 
-          cp /tmp/profile.svg profile.svg
-          git add profile.svg
+          cp /tmp/output-assets/* .
+          git add -A
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -70,6 +84,6 @@ jobs:
           fi
 
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
-          git commit -m "battle: update full profile SVG ($TIMESTAMP)"
+          git commit -m "chore(assets): update battle & snake SVGs ($TIMESTAMP)"
 
           git push -f origin output-workflow:output
