@@ -16,7 +16,7 @@ Usage:
 Environment Variables:
   GITHUB_USERNAME  - GitHub username (default: imnotparama)
   GITHUB_TOKEN     - Optional GitHub token for higher API rate limits
-  OUTPUT_PATH      - Output path for the SVG (default: output/pokemon.svg)
+  OUTPUT_PATH      - Output path for the SVG (default: pokemon.svg)
 """
 
 import os
@@ -41,7 +41,7 @@ from renderer import render_battle_svg
 # Configuration
 # ---------------------------------------------------------------------------
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "imnotparama")
-OUTPUT_PATH = os.environ.get("OUTPUT_PATH", "output/pokemon.svg")
+OUTPUT_PATH = os.environ.get("OUTPUT_PATH", "pokemon.svg")
 
 
 def main():
@@ -49,9 +49,6 @@ def main():
     print("=" * 50)
     print("  Pokemon Battle SVG Generator")
     print("=" * 50)
-
-    # Ensure output directory exists
-    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
 
     # Step 1: Fetch contribution data
     print("\n[1/4] Fetching GitHub data...")

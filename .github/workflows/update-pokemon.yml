@@ -7,7 +7,7 @@
 # How it works:
 #   1. Checks out the main branch
 #   2. Runs the Python script to fetch contribution data & generate SVG
-#   3. Commits the new SVG to the 'output' branch
+#   3. Commits the new SVG to the 'output' branch (at root)
 #   4. README on main branch embeds the SVG from the output branch
 #
 # Can also be triggered manually via workflow_dispatch.
@@ -62,7 +62,6 @@ jobs:
           GITHUB_USERNAME: imnotparama
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p output
           python scripts/generate_pokemon_svg.py
 
       # Step 5: Commit and push to output branch
@@ -71,11 +70,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Create or checkout the output branch
-          git checkout -B output
+          # Save the generated SVG to a temp location
+          cp pokemon.svg /tmp/pokemon.svg
 
-          # Stage only the generated SVG
-          git add output/pokemon.svg
+          # Create or checkout the output branch (orphan = root only)
+          git checkout --orphan output-workflow
+          git rm -rf .
+
+          # Restore the SVG at root
+          cp /tmp/pokemon.svg pokemon.svg
+          git add pokemon.svg
 
           # Check if there are changes
           if git diff --cached --quiet; then
@@ -87,5 +91,5 @@ jobs:
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
           git commit -m "battle: update Pokemon SVG ($TIMESTAMP)"
 
-          # Push to output branch
-          git push origin output --force
+          # Force push to output branch
+          git push -f origin output-workflow:output
