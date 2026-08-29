@@ -110,13 +110,9 @@
 
 ### 🧬 `> dex.display_evolution_matrix()`
 
-```
-┌─────────────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐      ┌─────────────────────────┐
-│     STAGE 1 (BASE)      │      │     STAGE 2 (TIER 1)    │      │     STAGE 3 (TIER 2)    │      │     MEGA APEX FORM      │
-│  Academic Researcher    │ ───► │  Full-Stack & Hardware  │ ───► │  Multimodal AI Architect│ ───► │  Tier-1 Lead Engineer   │
-│  B.Tech ECE Data Science│      │  IoT & Real-Time Web    │      │  Autonomous Agent Matrix│      │  Scalable Production AI │
-└─────────────────────────┘      └─────────────────────────┘      └─────────────────────────┘      └─────────────────────────┘
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/evolution_tree.svg" width="100%" alt="Pokédex Evolution Tree" />
+</div>
 
 <br/>
 
@@ -142,7 +138,7 @@
 
 <!-- Live Animated Battle SVG -->
 <a href="https://github.com/imnotparama/imnotparama">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Dex Real-Time Raid Arena" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokemon_battle.svg" width="85%" alt="Dex Real-Time Raid Arena" />
 </a>
 
 <br/><br/>
@@ -179,7 +175,7 @@
 ### 🗺️ `> dex.render_habitat_scanner()`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="Dex Contribution Snake Animation" width="100%" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/contribution_snake.svg" alt="Dex Contribution Snake Scanner" width="100%" />
 </div>
 
 <br/>
@@ -334,7 +330,7 @@
         <img src="https://img.shields.io/badge/GraphQL%20API-E10098?style=flat-square&logo=graphql&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
   </tr>
