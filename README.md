@@ -52,10 +52,28 @@
 
 <br/>
 
+<div align="center">
+  <h3>⚡ Building production-ready AI, IoT, and full-stack systems with a signature Pokédex aesthetic.</h3>
+  <p><i>From edge telemetry to intelligent applications — engineered for performance, reliability, and real-world impact.</i></p>
+</div>
+
+<table align="center">
+  <tr>
+    <td align="center"><a href="#trainer-card"><b>Trainer Card</b></a></td>
+    <td align="center"><a href="#combat-arena"><b>Combat Arena</b></a></td>
+    <td align="center"><a href="#tech-arsenal"><b>Tech Arsenal</b></a></td>
+    <td align="center"><a href="#flagship-builds"><b>Flagship Builds</b></a></td>
+    <td align="center"><a href="#telemetry"><b>Telemetry</b></a></td>
+  </tr>
+</table>
+
+<br/>
+
 <!-- ================================================================= -->
 <!-- OFFICIAL TRAINER CARD & 8 GYM BADGES CASE                         -->
 <!-- ================================================================= -->
 
+<a id="trainer-card"></a>
 ### 🪪 `> dex.load_trainer_card()`
 
 <div align="center">
@@ -129,6 +147,7 @@
 
 <div align="center">
 
+<a id="combat-arena"></a>
 ## ⚔️ Dex Combat Arena // Real-Time Boss Encounter
 
 > ⚡ **Serverless Combat Telemetry:** Every GitHub commit inflicts direct strike damage against daily encounter raid bosses.  
@@ -191,6 +210,7 @@
 <!-- TRAINER ITEM BAG & TECHNICAL ARSENAL                              -->
 <!-- ================================================================= -->
 
+<a id="tech-arsenal"></a>
 ### 🎒 `> dex.open_trainer_bag()`
 
 <br/>
@@ -253,6 +273,7 @@
 <!-- REGISTERED EXPEDITIONS // FLAGSHIP SYSTEM BUILDS                  -->
 <!-- ================================================================= -->
 
+<a id="flagship-builds"></a>
 ### 📜 `> dex.query_registered_expeditions()`
 
 <br/>
@@ -270,7 +291,7 @@
         <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama/PawPal"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -284,7 +305,7 @@
         <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama/smart_parking"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
   </tr>
@@ -300,7 +321,7 @@
         <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama/Busit_app"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -314,7 +335,7 @@
         <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama/Aquasentry"><b>⚡ View Dex Spec ➔</b></a>
       </p>
     </td>
   </tr>
@@ -349,6 +370,7 @@
 <!-- TRAINER GYM BADGES & TELEMETRY DASHBOARD                          -->
 <!-- ================================================================= -->
 
+<a id="telemetry"></a>
 ### 📊 `> dex.display_gym_badges_and_telemetry()`
 
 <br/>
