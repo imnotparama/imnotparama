@@ -131,14 +131,15 @@
 
 ## ⚔️ Dex Combat Arena // Real-Time Boss Encounter
 
-> ⚡ **Serverless Combat Telemetry:** Every GitHub commit inflicts direct strike damage against daily encounter raid bosses.  
-> Experience points level up your battle companion across ascending tier classes (*Base ➔ Stage I ➔ Stage II ➔ Mega Apex Form*).
+> ⚡ **Serverless Combat Telemetry:** Every GitHub commit inflicts direct strike damage against the daily raid boss.  
+> Experience points level up your battle companion across ascending tier classes (*Base ➔ Stage I ➔ Stage II ➔ Mega Apex Form*).  
+> 🌟 **Legendary Weekend Raids:** Ho-Oh and Lugia descend only on Saturdays & Sundays.
 
 <br/>
 
-<!-- Live Animated Battle SVG -->
+<!-- Live Animated Battle SVG (served fresh from the output branch) -->
 <a href="https://github.com/imnotparama/imnotparama">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokemon_battle.svg" width="85%" alt="Dex Real-Time Raid Arena" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Dex Real-Time Raid Arena" />
 </a>
 
 <br/><br/>
@@ -150,10 +151,13 @@
 
 | Dex Engine Metric | System Implementation |
 | :--- | :--- |
-| **Encounter Roster** | Dynamic 24h encounter rotation (*Rayquaza, Mewtwo, Gengar, Dragonite, Tyranitar, Lucario*) |
-| **Strike Power (HP)** | Total commits across 365 days deal proportional damage to the Boss HP gauge |
+| **Encounter Roster** | Weekly rotation (*Gengar, Charizard, Dragonite, Tyranitar, Lucario, Rayquaza, Mewtwo*) on a two-week parity cycle |
+| **Legendary Weekend Raids** | Ho-Oh (Sat) & Lugia (Sun) descend with golden glow — weekend check-ins rewarded |
+| **Strike Power (HP)** | Exact 365-day contribution telemetry (GitHub GraphQL) deals proportional damage to the Boss HP gauge |
+| **Boss Tier Scaling** | The raid never ends: past 500 commits the next tier summons a fresh boss with a bigger HP pool (*Rookie ➔ Elite ➔ Champion ➔ Mega ➔ Legend*) |
 | **EXP & Tier Evolution**| Commit volume accumulates EXP to level up combat stats and evolve sprite tiers |
-| **Autonomous CI/CD** | Automated GitHub Actions workflow executes Python combat engine daily at 00:00 UTC |
+| **Pixel Combat Engine** | Retro Gen-V animated sprites rendered crisp via CSS `image-rendering: pixelated` |
+| **Autonomous CI/CD** | Automated GitHub Actions workflow executes the Python combat engine every 6 hours |
 
 </details>
 
@@ -175,7 +179,7 @@
 ### 🗺️ `> dex.render_habitat_scanner()`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/contribution_snake.svg" alt="Dex Contribution Snake Scanner" width="100%" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="Dex Contribution Snake Scanner" width="100%" />
 </div>
 
 <br/>
@@ -228,9 +232,9 @@
   <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
   <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
   <img src="https://img.shields.io/badge/Raspberry%20Pi-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" />
-  <img src="https://img.shields.io/badge/PCB%20Design-00FF66?style=for-the-badge&logo=altiumdesigner&logoColor=black" alt="PCB Design" />
+  <img src="https://img.shields.io/badge/PCB%20Design-00FF66?style=for-the-badge" alt="PCB Design" />
   <img src="https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=mqtt&logoColor=white" alt="MQTT Protocol" />
-  <img src="https://img.shields.io/badge/Sensors%20%26%20Telemetry-00E5FF?style=for-the-badge&logo=microgenetics&logoColor=black" alt="Telemetry" />
+  <img src="https://img.shields.io/badge/Sensors%20%26%20Telemetry-00E5FF?style=for-the-badge" alt="Telemetry" />
 </p>
 
 #### 🛠️ Utility Tool Belt // Developer Workflows & CI/CD

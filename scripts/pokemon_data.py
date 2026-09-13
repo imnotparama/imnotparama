@@ -10,6 +10,8 @@ Customization:
   - Adjust ENEMY_ROSTER for weekly rotations
 """
 
+from datetime import datetime, timezone
+
 # ---------------------------------------------------------------------------
 # Player Pokemon - Evolution Chains
 # ---------------------------------------------------------------------------
@@ -54,6 +56,8 @@ ENEMY_LEVELS = {
     "lucario": 43,
     "rayquaza": 70,
     "mewtwo": 80,
+    "ho-oh": 72,
+    "lugia": 78,
 }
 
 # ---------------------------------------------------------------------------
@@ -67,7 +71,33 @@ ENEMY_TYPES = {
     "lucario": "Fighting/Steel",
     "rayquaza": "Dragon/Flying",
     "mewtwo": "Psychic",
+    "ho-oh": "Fire/Flying",
+    "lugia": "Psychic/Flying",
 }
+
+# ---------------------------------------------------------------------------
+# Boss Tier System - the raid never ends
+# ---------------------------------------------------------------------------
+# Every commit milestone the trainer crosses summons a NEW boss with a
+# bigger max-HP pool. The arena never goes stale, no matter how active
+# the trainer becomes.
+
+BOSS_TIERS = [
+    {"threshold": 0,    "max_hp": 500,   "title": "ROOKIE RAID"},
+    {"threshold": 500,  "max_hp": 1000,  "title": "ELITE RAID"},
+    {"threshold": 1500, "max_hp": 2000,  "title": "CHAMPION RAID"},
+    {"threshold": 3000, "max_hp": 3500,  "title": "MEGA RAID"},
+    {"threshold": 5000, "max_hp": 6000,  "title": "LEGEND RAID"},
+]
+
+# Signature species-specific attacks (checked before type-based lookup)
+SPECIES_ATTACKS = {
+    "ho-oh": "Sacred Fire \U0001F525",
+    "lugia": "Aeroblast \U0001F32A",
+}
+
+# Legendary raids that only appear on weekends
+WEEKEND_RAIDS = {5: "ho-oh", 6: "lugia"}  # 5=Saturday, 6=Sunday
 
 # Player Pokemon default type (overridden by evolution)
 PLAYER_TYPE_DEFAULT = "Electric"
@@ -124,7 +154,7 @@ SPRITES = {
     "ralts": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/280.png",
     "kirlia": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/281.png",
     "gardevoir": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
-    "gardevoir-mega": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282-mega.png",
+    "gardevoir-mega": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
     # Player default
     "pikachu": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     # Enemies
@@ -135,6 +165,8 @@ SPRITES = {
     "lucario": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
     "rayquaza": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png",
     "mewtwo": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+    "ho-oh": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png",
+    "lugia": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png",
 }
 
 # ---------------------------------------------------------------------------
@@ -202,17 +234,52 @@ def get_player_level(total_contributions: int) -> int:
     return max(5, level)
 
 
-def get_enemy_pokemon(day_of_week: int) -> str:
+def get_enemy_pokemon(day_of_week: int, day_of_year: int = None) -> str:
     """
-    Select the enemy Pokemon based on the day of the week.
+    Select the enemy Pokemon. Weekends summon exclusive legendary raids
+    (Ho-Oh on Saturday, Lugia on Sunday). Weekdays rotate through the full
+    7-species roster on a two-week parity cycle so every boss stays visible
+    even though weekends are reserved.
 
     Args:
         day_of_week: 0=Monday, 6=Sunday
+        day_of_year: Optional day-of-year override for deterministic tests
 
     Returns:
         Enemy Pokemon species name
     """
-    return ENEMY_ROSTER[day_of_week % len(ENEMY_ROSTER)]
+    weekend = WEEKEND_RAIDS.get(day_of_week)
+    if weekend:
+        return weekend
+
+    if day_of_year is None:
+        day_of_year = datetime.now(timezone.utc).timetuple().tm_yday
+    week_parity = (day_of_year // 7) % 2
+    return ENEMY_ROSTER[(day_of_week + 7 * week_parity) % len(ENEMY_ROSTER)]
+
+
+def get_boss_tier(total_contributions: int) -> dict:
+    """
+    Resolve the active boss tier for the trainer's lifetime commit count.
+    Higher tiers summon bosses with bigger max-HP pools, so the HP bar
+    never flatlines at zero.
+
+    Args:
+        total_contributions: Total contributions in the last 365 days
+
+    Returns:
+        Dict with keys: threshold, max_hp, title
+    """
+    tier = BOSS_TIERS[0]
+    for t in BOSS_TIERS:
+        if total_contributions >= t["threshold"]:
+            tier = t
+    return tier
+
+
+def is_weekend_raid(day_of_week: int) -> bool:
+    """True when the given weekday summons a legendary weekend raid boss."""
+    return day_of_week in WEEKEND_RAIDS
 
 
 _sprite_cache = None
@@ -259,14 +326,18 @@ def get_sprite_url(species: str) -> str:
     return cache.get("pikachu", SPRITES.get(species, SPRITES["pikachu"]))
 
 
-def get_attack_name(pokemon_type: str) -> str:
+def get_attack_name(pokemon_type: str, species: str = "") -> str:
     """
-    Get a themed attack name based on Pokemon type.
+    Get a themed attack name. Signature species attacks take priority,
+    then type-based lookup.
 
     Args:
         pokemon_type: Pokemon type string (e.g., "Electric")
+        species: Optional species name for signature moves (e.g., "ho-oh")
 
     Returns:
         Attack name with emoji
     """
+    if species and species in SPECIES_ATTACKS:
+        return SPECIES_ATTACKS[species]
     return ATTACKS.get(pokemon_type, "Tackle 💫")

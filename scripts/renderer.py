@@ -23,6 +23,8 @@ from pokemon_data import (
     PLAYER_MAX_HP,
     get_sprite_url,
     get_attack_name,
+    get_boss_tier,
+    is_weekend_raid,
 )
 
 
@@ -58,6 +60,9 @@ def _hp_color(ratio: float) -> str:
 # ---------------------------------------------------------------------------
 CSS = """<style>
     text { font-family: 'Segoe UI', 'SF Pro Display', -apple-system, sans-serif; }
+
+    /* Crisp retro pixels for embedded sprites */
+    image { image-rendering: pixelated; }
 
     /* Lightning flash across entire scene */
     @keyframes flash {
@@ -248,21 +253,30 @@ def _build_flash(w=580, h=520):
     """
 
 
-def _build_header():
+def _build_header(weekend_raid=False, tier_title="ROOKIE RAID"):
+    if weekend_raid:
+        title = f"\U0001F31F LEGENDARY WEEKEND RAID \u2014 {tier_title}"
+        color = "#FFD700"
+    else:
+        title = f"\u2694\uFE0F RAID BOSS ENCOUNTER \u2014 {tier_title}"
+        color = COLORS["accent"]
     return f"""
-    <text x="290" y="74" text-anchor="middle" font-size="15" font-weight="bold" fill="{COLORS['accent']}" class="title-flicker" filter="url(#glow)">
-      ⚔️ RAID BOSS ENCOUNTER DETECTED
+    <text x="290" y="74" text-anchor="middle" font-size="15" font-weight="bold" fill="{color}" class="title-flicker" filter="url(#glow)">
+      {title}
     </text>
     """
 
 
-def _build_enemy(species, level, hp_ratio):
+def _build_enemy(species, level, hp_ratio, max_hp=None, dmg="-1", dmg_color=None, raid=False):
     sprite = get_sprite_url(species)
     name = species.replace("-", " ").title()
     color = _hp_color(hp_ratio)
     filled = max(0, round(hp_ratio * HP_BAR_SEGMENTS))
-    hp_val = filled * (MAX_CONTRIBUTIONS // HP_BAR_SEGMENTS)
-    hp_text = f"{hp_val}/{MAX_CONTRIBUTIONS}"
+    max_hp = max_hp or MAX_CONTRIBUTIONS
+    hp_val = filled * (max_hp // HP_BAR_SEGMENTS)
+    hp_text = f"{hp_val}/{max_hp}"
+    dmg_color = dmg_color or COLORS["hp_low"]
+    glow = ' filter="url(#glow)"' if raid else ""
 
     pips = []
     for i in range(HP_BAR_SEGMENTS):
@@ -273,7 +287,7 @@ def _build_enemy(species, level, hp_ratio):
 
     return f"""
     <!-- Enemy -->
-    <g class="enemy-blink">
+    <g class="enemy-blink"{glow}>
       <image x="30" y="55" width="140" height="140" href="{sprite}" preserveAspectRatio="xMidYMid meet"/>
     </g>
     <text x="180" y="82" font-size="19" font-weight="bold" fill="{COLORS['text']}">{name}</text>
@@ -281,7 +295,7 @@ def _build_enemy(species, level, hp_ratio):
     <text x="180" y="97" font-size="11" fill="{COLORS['text_dim']}">HP {hp_text}</text>
     {"".join(pips)}
     <!-- Damage indicator -->
-    <text x="100" y="75" font-size="14" font-weight="bold" fill="{COLORS['hp_low']}" class="dmg-float" opacity="0.8">-1</text>
+    <text x="100" y="75" font-size="14" font-weight="bold" fill="{dmg_color}" class="dmg-float" opacity="0.8">{dmg}</text>
     """
 
 
@@ -397,6 +411,7 @@ def _build_particles():
 
 # ---------------------------------------------------------------------------
 # Main Render
+# Main Render
 # ---------------------------------------------------------------------------
 
 def render_battle_svg(
@@ -404,19 +419,35 @@ def render_battle_svg(
     player_species, player_level,
     total_contributions, contributions_today,
     repos_count, username,
+    weekday=None,
     output_path="pokemon.svg",
 ):
     """Render the complete battle scene SVG."""
+    from datetime import datetime as _dt, timezone as _tz
+    if weekday is None:
+        weekday = _dt.now(_tz.utc).weekday()
+
     w, h = 580, 540
-    hp_ratio = round(max(0, 1.0 - (total_contributions / MAX_CONTRIBUTIONS)), 2)
+
+    # Boss tier scaling: max HP grows with the trainer's commit milestones
+    tier = get_boss_tier(total_contributions)
+    max_hp = tier["max_hp"]
+    hp_ratio = round(max(0, 1.0 - (total_contributions / max_hp)), 2)
+
+    # Weekend legendary raids glow gold; today's commits drive strike damage
+    weekend = is_weekend_raid(weekday)
+    crit = contributions_today >= 10
+    dmg = f"-{contributions_today}" if contributions_today > 0 else "-1"
+    dmg_color = COLORS["exp_bar"] if crit else COLORS["hp_low"]
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">',
         CSS,
         _build_background(w, h),
         _build_flash(w, h),
-        _build_header(),
-        _build_enemy(enemy_species, enemy_level, hp_ratio),
+        _build_header(weekend, tier["title"]),
+        _build_enemy(enemy_species, enemy_level, hp_ratio, max_hp=max_hp,
+                     dmg=dmg, dmg_color=dmg_color, raid=weekend),
         _build_vs(),
         _build_player(player_species, player_level, total_contributions),
         _build_stats(total_contributions, contributions_today, repos_count, username),
@@ -429,6 +460,5 @@ def render_battle_svg(
     svg = "\n".join(parts)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(svg)
-
-    print(f"  SVG written to {output_path}")
+    print(f"  SVG written to {output_path} ({len(svg) / 1024:.1f} KB)")
     return svg

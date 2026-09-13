@@ -1,6 +1,6 @@
 # Pokemon Battle Profile & Snake SVG Generator
 # ===============================================
-# Runs daily at midnight UTC to regenerate the animated Pokemon battle
+# Runs every 6 hours to regenerate the animated Pokemon battle
 # interface SVG and contribution snake animation.
 #
 # Can also be triggered manually via workflow_dispatch.
@@ -9,7 +9,9 @@ name: Update Profile SVGs & Game Engine
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Every 6 hours: keeps "Commits Today" meaningful instead of
+    # reading 0 at a once-daily midnight run.
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -42,16 +44,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Download Pokemon sprites
+      - name: Download Pokemon pixel sprites
         run: python scripts/download_sprites.py
 
-      - name: Generate Pokemon Battle SVGs
+      - name: Generate Pokemon Battle SVG
         env:
           GITHUB_USERNAME: imnotparama
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/render_full_profile.py
-          python scripts/generate_pokemon_svg.py
+        run: python scripts/generate_pokemon_svg.py
 
       - name: Generate Contribution Snake Animation
         uses: Platane/snk/svg-only@v3
@@ -61,21 +61,35 @@ jobs:
             github-contribution-grid-snake.svg
             github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00ff66&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
-      - name: Commit and push to output branch
+      - name: Publish to output branch (incremental, no-change safe)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           mkdir -p /tmp/output-assets
-          [ -f profile.svg ] && cp profile.svg /tmp/output-assets/
           [ -f pokemon.svg ] && cp pokemon.svg /tmp/output-assets/
           [ -f github-contribution-grid-snake.svg ] && cp github-contribution-grid-snake.svg /tmp/output-assets/
           [ -f github-contribution-grid-snake-dark.svg ] && cp github-contribution-grid-snake-dark.svg /tmp/output-assets/
 
-          git checkout --orphan output-workflow
-          git rm -rf .
+          # Remove generated files so switching branches never conflicts
+          rm -f pokemon.svg github-contribution-grid-snake.svg github-contribution-grid-snake-dark.svg
+
+          # Track the real output branch so "no changes" detection works.
+          # (The old orphan-branch approach always saw a diff vs main's tree
+          #  and committed daily even when nothing changed.)
+          if git ls-remote --exit-code --heads origin output > /dev/null; then
+            git fetch origin output --depth=1
+            git checkout output
+          else
+            git checkout --orphan output
+            git rm -rf .
+          fi
 
           cp /tmp/output-assets/* .
+
+          # Drop legacy pycache blobs that were accidentally committed to output
+          rm -rf scripts/__pycache__ 2>/dev/null || true
+
           git add -A
 
           if git diff --cached --quiet; then
@@ -86,4 +100,4 @@ jobs:
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
           git commit -m "chore(assets): update battle & snake SVGs ($TIMESTAMP)"
 
-          git push -f origin output-workflow:output
+          git push origin output

@@ -21,7 +21,6 @@ Environment Variables:
 
 import os
 import sys
-import random
 from datetime import datetime, timezone
 
 # Ensure scripts directory is in path for imports
@@ -63,22 +62,27 @@ def main():
     player_level = get_player_level(total)
 
     # Enemy rotates by day of week (Monday=0, Sunday=6)
+    # Weekends summon legendary raid bosses (Ho-Oh / Lugia)
     day_of_week = datetime.now(timezone.utc).weekday()
     enemy_species = get_enemy_pokemon(day_of_week)
 
-    # Add a tiny bit of randomness to enemy level
-    from pokemon_data import ENEMY_LEVELS
+    # Deterministic daily level jitter: same day = same SVG (stable diffs)
+    from pokemon_data import ENEMY_LEVELS, get_boss_tier, is_weekend_raid
     base_level = ENEMY_LEVELS.get(enemy_species, 45)
-    enemy_level = base_level + random.randint(-2, 2)
+    day_seed = int(datetime.now(timezone.utc).strftime("%Y%m%d"))
+    enemy_level = base_level + (day_seed % 5) - 2
 
+    tier = get_boss_tier(total)
     print(f"  Player: {player_species.title()} Lv.{player_level}")
-    print(f"  Enemy:  {enemy_species.title()} Lv.{enemy_level}")
-    print(f"  Enemy HP ratio: {max(0, 1.0 - (total / 500)):.1%}")
+    print(f"  Enemy:  {enemy_species.title()} Lv.{enemy_level}"
+          f"{' (LEGENDARY RAID)' if is_weekend_raid(day_of_week) else ''}")
+    print(f"  Boss tier: {tier['title']} (max HP {tier['max_hp']})")
+    print(f"  Enemy HP ratio: {max(0, 1.0 - (total / tier['max_hp'])):.1%}")
 
     # Step 3: Calculate stats
     print("\n[3/4] Calculating battle stats...")
-    hp_remaining = max(0, 500 - total)
-    print(f"  Enemy HP remaining: {hp_remaining}/500")
+    hp_remaining = max(0, tier["max_hp"] - total)
+    print(f"  Enemy HP remaining: {hp_remaining}/{tier['max_hp']}")
     print(f"  Player EXP: {total} total contributions")
 
     # Step 4: Render SVG
@@ -92,6 +96,7 @@ def main():
         contributions_today=today,
         repos_count=repos,
         username=GITHUB_USERNAME,
+        weekday=day_of_week,
         output_path=OUTPUT_PATH,
     )
 

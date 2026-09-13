@@ -3,3 +3,10 @@ __pycache__/
 *.pyo
 .env
 .DS_Store
+
+# Generated artifacts
+profile.svg
+pokemon.svg
+preview.html
+scripts/sprite_data.json
+profile.svg

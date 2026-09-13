@@ -11,7 +11,6 @@ The profile becomes a Pokemon game menu screen.
 
 import os
 import sys
-import json
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -30,6 +29,8 @@ from pokemon_data import (
     PLAYER_MAX_HP,
     DEFAULT_CHAIN_INDEX,
     ENEMY_LEVELS,
+    get_boss_tier,
+    is_weekend_raid,
 )
 
 
@@ -145,12 +146,19 @@ text{font-family:'Segoe UI','SF Pro Display',-apple-system,sans-serif}
 
 
 def build_svg(username, contrib_data, enemy_species, enemy_level,
-              player_species, player_level, total, today, repos):
+              player_species, player_level, total, today, repos,
+              day_of_week=None):
     """Build the entire profile as one animated SVG."""
 
-    hp_ratio = round(max(0, 1.0 - (total / MAX_CONTRIBUTIONS)), 2)
+    if day_of_week is None:
+        day_of_week = datetime.now(timezone.utc).weekday()
+
+    # Boss tier scaling keeps the HP bar alive as commits grow
+    tier = get_boss_tier(total)
+    max_hp = tier["max_hp"]
+    hp_ratio = round(max(0, 1.0 - (total / max_hp)), 2)
     hp_filled = max(0, round(hp_ratio * HP_BAR_SEGMENTS))
-    hp_val = hp_filled * (MAX_CONTRIBUTIONS // HP_BAR_SEGMENTS)
+    hp_val = hp_filled * (max_hp // HP_BAR_SEGMENTS)
     player_hp = min(total, PLAYER_MAX_HP)
     p_filled = max(1, round((player_hp / PLAYER_MAX_HP) * HP_BAR_SEGMENTS))
 
@@ -161,6 +169,12 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
     player_sprite = get_sprite_url(player_species)
     enemy_name = enemy_species.replace("-", " ").title()
     player_name = player_species.replace("-", " ").title()
+
+    # Weekend raids get the gold legendary header
+    weekend = is_weekend_raid(day_of_week)
+    raid_title = f"\U0001F31F LEGENDARY WEEKEND RAID \u2014 {tier['title']}" if weekend \
+        else f"\u2694\uFE0F RAID BOSS ENCOUNTER \u2014 {tier['title']}"
+    raid_color = "#FFD700" if weekend else C["accent"]
 
     # EXP bar
     exp_pct = 0
@@ -219,8 +233,8 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
 <rect width="600" height="1350" rx="12" fill="{C['yellow']}" opacity="0" class="fl" pointer-events="none"/>
 
 <!-- ===================== HEADER ===================== -->
-<text x="300" y="50" text-anchor="middle" font-size="22" font-weight="bold" fill="{C['accent']}" class="tf" filter="url(#sh)">
-  ⚔️ RAID BOSS ENCOUNTER
+<text x="300" y="50" text-anchor="middle" font-size="22" font-weight="bold" fill="{raid_color}" class="tf" filter="url(#sh)">
+  {raid_title}
 </text>
 <text x="300" y="72" text-anchor="middle" font-size="12" fill="{C['dim']}">
   Real-time GitHub commit telemetry fuels combat strikes
@@ -233,11 +247,11 @@ def build_svg(username, contrib_data, enemy_species, enemy_level,
 </g>
 <text x="190" y="110" font-size="20" font-weight="bold" fill="{C['text']}">{enemy_name}</text>
 <text x="{195 + len(enemy_name) * 12}" y="110" font-size="14" fill="{C['dim']}"> Lv.{enemy_level}</text>
-<text x="190" y="128" font-size="11" fill="{C['dim']}">HP {hp_val}/{MAX_CONTRIBUTIONS}</text>
+<text x="190" y="128" font-size="11" fill="{C['dim']}">HP {hp_val}/{max_hp}</text>
 {"".join(enemy_pips)}
 
 <!-- Damage float -->
-<text x="105" y="100" font-size="16" font-weight="bold" fill="{C['hp_low']}" class="df" opacity=".9">-1</text>
+<text x="105" y="100" font-size="16" font-weight="bold" fill="{C['purple'] if today >= 10 else C['red']}" class="df" opacity=".9">-{today if today > 0 else 1}</text>
 
 <!-- VS -->
 <line x1="300" y1="155" x2="300" y2="185" stroke="{C['border']}" stroke-width="1" opacity=".35"/>
@@ -392,18 +406,22 @@ def main():
     print("\n[2/3] Selecting Pokemon...")
     player = get_player_pokemon(total, DEFAULT_CHAIN_INDEX)
     player_lv = get_player_level(total)
-    from datetime import datetime, timezone
     day = datetime.now(timezone.utc).weekday()
     enemy = get_enemy_pokemon(day)
-    import random
-    enemy_lv = ENEMY_LEVELS.get(enemy, 45) + random.randint(-2, 2)
 
+    # Deterministic daily level jitter: same day = same SVG (stable diffs)
+    day_seed = int(datetime.now(timezone.utc).strftime("%Y%m%d"))
+    enemy_lv = ENEMY_LEVELS.get(enemy, 45) + (day_seed % 5) - 2
+
+    tier = get_boss_tier(total)
     print(f"  Player: {player.title()} Lv.{player_lv}")
-    print(f"  Enemy:  {enemy.title()} Lv.{enemy_lv}")
+    print(f"  Enemy:  {enemy.title()} Lv.{enemy_lv}"
+          f"{' (LEGENDARY RAID)' if is_weekend_raid(day) else ''}")
+    print(f"  Boss tier: {tier['title']} (max HP {tier['max_hp']})")
 
     # Generate
     print("\n[3/3] Rendering full profile SVG...")
-    svg = build_svg(username, data, enemy, enemy_lv, player, player_lv, total, today, repos)
+    svg = build_svg(username, data, enemy, enemy_lv, player, player_lv, total, today, repos, day)
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(svg)
