@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" width="100%" height="290" fill="none">
+  <defs>
+    <!-- Background & Container Gradients -->
+    <linearGradient id="specimenCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1722" />
+      <stop offset="50%" stop-color="#0A0F17" />
+      <stop offset="100%" stop-color="#05080D" />
+    </linearGradient>
+    <linearGradient id="specimenBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#30363D" />
+      <stop offset="100%" stop-color="#00FF88" />
+    </linearGradient>
+
+    <!-- Stat Bar Gradients -->
+    <linearGradient id="hpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0099FF" />
+      <stop offset="100%" stop-color="#00F0FF" />
+    </linearGradient>
+    <linearGradient id="atkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FFEA00" />
+    </linearGradient>
+    <linearGradient id="defGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1F6FEB" />
+      <stop offset="100%" stop-color="#58A6FF" />
+    </linearGradient>
+    <linearGradient id="spAtkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8957E5" />
+      <stop offset="100%" stop-color="#D2A8FF" />
+    </linearGradient>
+    <linearGradient id="spDefGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#238636" />
+      <stop offset="100%" stop-color="#3FB950" />
+    </linearGradient>
+    <linearGradient id="spdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DA3633" />
+      <stop offset="100%" stop-color="#FF7B72" />
+    </linearGradient>
+
+    <!-- Subtle Scanline Pattern -->
+    <pattern id="specimenScan" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1" opacity="0.22" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes statPulse {
+        0%, 100% { opacity: 0.92; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.4)); }
+      }
+      @keyframes sweepScan {
+        0% { transform: translateY(0); opacity: 0.8; }
+        50% { opacity: 0.3; }
+        100% { transform: translateY(270px); opacity: 0.8; }
+      }
+      .stat-glow {
+        animation: statPulse 3s ease-in-out infinite;
+      }
+      .spec-title {
+        font-family: 'Segoe UI', -apple-system, system-ui, sans-serif;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+      }
+      .spec-mono {
+        font-family: 'Fira Code', 'Courier New', monospace;
+      }
+      .laser-line {
+        animation: sweepScan 6s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Glassmorphic Container -->
+  <rect x="2" y="2" width="896" height="286" rx="14" fill="url(#specimenCardBg)" stroke="url(#specimenBorder)" stroke-width="1.8" />
+  <rect x="2" y="2" width="896" height="286" rx="14" fill="url(#specimenScan)" pointer-events="none" />
+
+  <!-- Laser Scan Sweep Line -->
+  <g class="laser-line" pointer-events="none">
+    <line x1="10" y1="5" x2="890" y2="5" stroke="#00FF88" stroke-width="1.2" opacity="0.35" filter="url(#neonGlow)" />
+  </g>
+
+  <!-- Top Decorative Header Bar -->
+  <rect x="2" y="2" width="896" height="34" rx="14" fill="#131D2A" />
+  <rect x="2" y="16" width="896" height="20" fill="#131D2A" />
+  <line x1="2" y1="36" x2="898" y2="36" stroke="#21262D" stroke-width="1" />
+
+  <!-- Header Text -->
+  <circle cx="20" cy="19" r="5" fill="#00FF88" filter="url(#neonGlow)" />
+  <text x="34" y="23" class="spec-mono" font-size="11" font-weight="bold" fill="#00FF88" letter-spacing="1">DEX SPECIFICATION MATRIX // ENTRY #029</text>
+  <text x="880" y="23" text-anchor="end" class="spec-mono" font-size="10" fill="#8B949E">CLEARANCE: LEVEL-5 CHAMPION</text>
+
+  <!-- ==================== LEFT COLUMN: ARCHITECT METRICS ==================== -->
+  <g transform="translate(24, 52)">
+    <!-- Specimen Identity -->
+    <text x="0" y="18" class="spec-title" font-size="18" fill="#FFFFFF">PARAMESHWARAN S</text>
+    <rect x="210" y="4" width="75" height="18" rx="4" fill="#003B46" stroke="#00E5FF" stroke-width="1" />
+    <text x="247" y="16" text-anchor="middle" class="spec-mono" font-size="9" font-weight="bold" fill="#00E5FF">ID: #029</text>
+
+    <!-- Subtitle Role -->
+    <text x="0" y="38" class="spec-mono" font-size="10.5" font-weight="bold" fill="#00E5FF">AI SYSTEMS ARCHITECT • DATA SCIENTIST • IoT</text>
+
+    <!-- Divider Line -->
+    <line x1="0" y1="48" x2="310" y2="48" stroke="#21262D" stroke-width="1" />
+
+    <!-- Spec Meta Rows -->
+    <text x="0" y="68" class="spec-mono" font-size="10" fill="#8B949E">ACADEMY:</text>
+    <text x="80" y="68" class="spec-mono" font-size="10" font-weight="bold" fill="#E6EDF3">SRMIST Chennai (B.Tech ECE)</text>
+
+    <text x="0" y="90" class="spec-mono" font-size="10" fill="#8B949E">HABITAT:</text>
+    <text x="80" y="90" class="spec-mono" font-size="10" fill="#C9D1D9">Chennai, Tamil Nadu, India 🇮🇳</text>
+
+    <text x="0" y="112" class="spec-mono" font-size="10" fill="#8B949E">NATURE:</text>
+    <text x="80" y="112" class="spec-mono" font-size="10" fill="#FFD700">Analytical (+Speed / +Multi-Thread)</text>
+
+    <text x="0" y="134" class="spec-mono" font-size="10" fill="#8B949E">PASSIVE:</text>
+    <text x="80" y="134" class="spec-mono" font-size="10" fill="#00FF88">Autonomous Commit Telemetry Engine</text>
+
+    <!-- Capabilities / Abilities Box -->
+    <rect x="0" y="148" width="310" height="74" rx="8" fill="#0E1724" stroke="#1F2937" stroke-width="1" />
+    <text x="12" y="166" class="spec-mono" font-size="9.5" font-weight="bold" fill="#58A6FF">CORE ENGINEERING ABILITIES:</text>
+    <text x="12" y="184" class="spec-mono" font-size="9" fill="#00FF88">⚡ SYNAPTIC INFERENCE — Accelerates neural pipelines</text>
+    <text x="12" y="200" class="spec-mono" font-size="9" fill="#00E5FF">🔌 SILICON TELEMETRY — Real-time ESP32 edge telemetry</text>
+    <text x="12" y="214" class="spec-mono" font-size="8.5" fill="#FFA3A8">🔥 [HIDDEN] COMMIT SURGE — Inflicts serverless raid damage</text>
+  </g>
+
+  <!-- Vertical Divider with Center Node -->
+  <line x1="360" y1="46" x2="360" y2="280" stroke="#21262D" stroke-width="1.5" />
+  <circle cx="360" cy="163" r="4" fill="#00FF88" filter="url(#neonGlow)" />
+
+  <!-- ==================== RIGHT COLUMN: BASE STATS MATRIX ==================== -->
+  <g transform="translate(385, 52)">
+    <!-- Section Title & Total Score -->
+    <text x="0" y="16" class="spec-mono" font-size="11" font-weight="bold" fill="#58A6FF" letter-spacing="1">BASE STATS MATRIX</text>
+    <rect x="360" y="2" width="120" height="20" rx="4" fill="#1C2128" stroke="#30363D" stroke-width="1" />
+    <text x="420" y="15" text-anchor="middle" class="spec-mono" font-size="9.5" font-weight="bold" fill="#00FF88">TOTAL: 578 / 600</text>
+
+    <!-- Stat 1: HP -->
+    <g transform="translate(0, 32)">
+      <text x="0" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#8B949E">HP [Energy &amp; Focus]</text>
+      <text x="440" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#00F0FF" text-anchor="end">98 / 100</text>
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="#161B22" />
+      <rect x="0" y="17" width="470" height="10" rx="5" fill="url(#hpGrad)" class="stat-glow" />
+    </g>
+
+    <!-- Stat 2: ATTACK -->
+    <g transform="translate(0, 66)">
+      <text x="0" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#8B949E">ATTACK [Algorithmic Velocity]</text>
+      <text x="440" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#FFEA00" text-anchor="end">95 / 100</text>
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="#161B22" />
+      <rect x="0" y="17" width="456" height="10" rx="5" fill="url(#atkGrad)" class="stat-glow" />
+    </g>
+
+    <!-- Stat 3: DEFENSE -->
+    <g transform="translate(0, 100)">
+      <text x="0" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#8B949E">DEFENSE [Architecture Robustness]</text>
+      <text x="440" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#58A6FF" text-anchor="end">92 / 100</text>
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="#161B22" />
+      <rect x="0" y="17" width="441" height="10" rx="5" fill="url(#defGrad)" class="stat-glow" />
+    </g>
+
+    <!-- Stat 4: SP. ATK -->
+    <g transform="translate(0, 134)">
+      <text x="0" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#8B949E">SP. ATK [Multimodal AI &amp; ML]</text>
+      <text x="440" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#D2A8FF" text-anchor="end">99 / 100</text>
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="#161B22" />
+      <rect x="0" y="17" width="475" height="10" rx="5" fill="url(#spAtkGrad)" class="stat-glow" />
+    </g>
+
+    <!-- Stat 5: SP. DEF -->
+    <g transform="translate(0, 168)">
+      <text x="0" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#8B949E">SP. DEF [Fault Tolerance &amp; Ops]</text>
+      <text x="440" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#3FB950" text-anchor="end">94 / 100</text>
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="#161B22" />
+      <rect x="0" y="17" width="451" height="10" rx="5" fill="url(#spDefGrad)" class="stat-glow" />
+    </g>
+
+    <!-- Stat 6: SPEED -->
+    <g transform="translate(0, 202)">
+      <text x="0" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#8B949E">SPEED [Rapid Prototyping]</text>
+      <text x="440" y="12" class="spec-mono" font-size="10" font-weight="bold" fill="#FF7B72" text-anchor="end">100 / 100</text>
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="#161B22" />
+      <rect x="0" y="17" width="480" height="10" rx="5" fill="url(#spdGrad)" class="stat-glow" />
+    </g>
+  </g>
+</svg>

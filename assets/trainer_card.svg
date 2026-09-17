@@ -46,7 +46,7 @@
         50% { opacity: 1; transform: rotate(180deg); }
       }
       .holo-layer {
-        animation:中山 holoSweep 5s ease-in-out infinite;
+        animation: holoSweep 5s ease-in-out infinite;
       }
       .card-title {
         font-family: 'Segoe UI', system-ui, sans-serif;

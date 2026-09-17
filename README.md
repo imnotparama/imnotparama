@@ -45,6 +45,21 @@
     </a>
   </p>
 
+  <!-- Quick-Jump Anchor Navigation Bar -->
+  <p align="center">
+    <code>
+      <a href="#-executive-dossier--recruiter-summary">📋 Executive Dossier</a> •
+      <a href="#-dexload_trainer_card">🪪 Trainer Card</a> •
+      <a href="#-dexscan_specimen_entry029">📱 Specimen Matrix</a> •
+      <a href="#-dexdisplay_evolution_matrix">🧬 Evolution Matrix</a> •
+      <a href="#️-dex-combat-arena--real-time-boss-encounter">⚔️ Combat Arena</a> •
+      <a href="#️-dexrender_habitat_scanner">🗺️ Habitat Scanner</a> •
+      <a href="#-dexopen_trainer_bag">🎒 Arsenal</a> •
+      <a href="#-dexquery_registered_expeditions">📜 Projects</a> •
+      <a href="#-dexdisplay_gym_badges_and_telemetry">📊 Telemetry</a>
+    </code>
+  </p>
+
   <!-- Animated Pokédex Chassis Divider -->
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
 
@@ -53,9 +68,60 @@
 <br/>
 
 <!-- ================================================================= -->
+<!-- EXECUTIVE DOSSIER // RECRUITER 30-SECOND SUMMARY                  -->
+<!-- ================================================================= -->
+
+<a name="-executive-dossier--recruiter-summary"></a>
+### 📋 `> dex.open_executive_dossier()`
+
+<details open>
+<summary><b>⚡ Click to toggle Executive Dossier // 30-Second Recruiter Summary</b></summary>
+
+<br/>
+
+> **Candidate:** **Parameshwaran S (Parama)**  
+> **Specialization:** **AI Systems Architect • Data Scientist • Full-Stack Engineer • Embedded IoT Maker**  
+> **Education:** **B.Tech in Electronics & Communication Engineering (Specialization: Data Science)**  
+> **Institution:** **SRM Institute of Science & Technology, Chennai, India** (Graduating 2026)  
+> **Status:** Open to Full-Time Roles, AI/ML Engineering & High-Impact Software Engineering Opportunities.
+
+| Domain | Core Technical Capabilities |
+| :--- | :--- |
+| **🧠 Artificial Intelligence & ML** | Multimodal AI Agents, Gemini API, PyTorch, OpenCV, TensorFlow, Scikit-learn, Neural Pipeline Engineering, Feature Engineering |
+| **🌐 Full-Stack Web Development** | Next.js, React.js, FastAPI, Django, Node.js, Express, TailwindCSS, TypeScript, JavaScript, REST APIs, WebSockets |
+| **⚙️ Embedded Hardware & Edge IoT** | ESP32, Arduino, Raspberry Pi, MQTT Protocol, I2C/SPI Sensor Telemetry, PCB Design & Prototyping, C/C++ |
+| **🗄️ Database & Cloud Infrastructure**| PostgreSQL, MySQL, MongoDB, Firebase, Docker, Linux Systems, Git & GitHub Actions CI/CD |
+
+<div align="center">
+  <p>
+    <a href="mailto:imnotparama@gmail.com?subject=Opportunity%20Inquiry%20-%20Parameshwaran%20S">
+      <img src="https://img.shields.io/badge/📄%20Request%20Resume%20(PDF)-00FF88?style=for-the-badge&logoColor=000000" alt="Request Resume" />
+    </a>
+    <a href="https://linkedin.com/in/imnotparama" target="_blank">
+      <img src="https://img.shields.io/badge/💼%20LinkedIn%20Profile-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    </a>
+    <a href="mailto:imnotparama@gmail.com">
+      <img src="https://img.shields.io/badge/✉️%20Email%20Directly-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    </a>
+  </p>
+</div>
+
+</details>
+
+<br/>
+
+<div align="center">
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
+</div>
+
+<br/>
+
+<!-- ================================================================= -->
 <!-- OFFICIAL TRAINER CARD & 8 GYM BADGES CASE                         -->
 <!-- ================================================================= -->
 
+<a name="-dexload_trainer_card"></a>
 ### 🪪 `> dex.load_trainer_card()`
 
 <div align="center">
@@ -75,7 +141,17 @@
 <!-- DEX DATA FILE // ARCHITECT SPECIFICATION                          -->
 <!-- ================================================================= -->
 
+<a name="-dexscan_specimen_entry029"></a>
 ### 📱 `> dex.scan_specimen_entry(#029)`
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/specimen_card.svg" width="100%" alt="Dex Specimen Entry #029" />
+</div>
+
+<br/>
+
+<details>
+<summary><b>📋 View raw terminal specimen specification (Text Format)</b></summary>
 
 ```yaml
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -102,12 +178,22 @@
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
+</details>
+
+<br/>
+
+<div align="center">
+  <!-- Animated Pokédex Chassis Divider -->
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
+</div>
+
 <br/>
 
 <!-- ================================================================= -->
 <!-- EVOLUTION CHAIN // CAREER & SKILL PROGRESSION                     -->
 <!-- ================================================================= -->
 
+<a name="-dexdisplay_evolution_matrix"></a>
 ### 🧬 `> dex.display_evolution_matrix()`
 
 <div align="center">
@@ -127,6 +213,7 @@
 <!-- THE SIGNATURE FEATURE // DEX COMBAT SIMULATION                    -->
 <!-- ================================================================= -->
 
+<a name="️-dex-combat-arena--real-time-boss-encounter"></a>
 <div align="center">
 
 ## ⚔️ Dex Combat Arena // Real-Time Boss Encounter
@@ -137,9 +224,9 @@
 
 <br/>
 
-<!-- Live Animated Battle SVG (served fresh from the output branch) -->
+<!-- Live Animated Battle SVG -->
 <a href="https://github.com/imnotparama/imnotparama">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/pokemon.svg" width="85%" alt="Dex Real-Time Raid Arena" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokemon_battle.svg" width="85%" alt="Dex Real-Time Raid Arena" />
 </a>
 
 <br/><br/>
@@ -176,10 +263,11 @@
 <!-- DEX HABITAT MAP SCANNER // MATRIX TRAVERSAL                       -->
 <!-- ================================================================= -->
 
+<a name="️-dexrender_habitat_scanner"></a>
 ### 🗺️ `> dex.render_habitat_scanner()`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/output/github-contribution-grid-snake-dark.svg" alt="Dex Contribution Snake Scanner" width="100%" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/contribution_snake.svg" alt="Dex Contribution Snake Scanner" width="100%" />
 </div>
 
 <br/>
@@ -195,6 +283,7 @@
 <!-- TRAINER ITEM BAG & TECHNICAL ARSENAL                              -->
 <!-- ================================================================= -->
 
+<a name="-dexopen_trainer_bag"></a>
 ### 🎒 `> dex.open_trainer_bag()`
 
 <br/>
@@ -257,6 +346,7 @@
 <!-- REGISTERED EXPEDITIONS // FLAGSHIP SYSTEM BUILDS                  -->
 <!-- ================================================================= -->
 
+<a name="-dexquery_registered_expeditions"></a>
 ### 📜 `> dex.query_registered_expeditions()`
 
 <br/>
@@ -264,9 +354,14 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🐾 ENTRY #01: PawPal AI</h3>
-      <p><b>Type: Psychic / Fairy • Multi-Modal Diagnostics Assistant</b></p>
-      <p>Intelligent pet healthcare triage system combining computer vision and Gemini AI for real-time symptom analysis, dietary planning, and interactive 3D anatomy visualization.</p>
+      <h3 align="left">🐾 PawPal AI</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AFFINITY-PSYCHIC%20%2F%20NEURAL-9C27B0?style=flat-square" />
+        <img src="https://img.shields.io/badge/LATENCY-%3C50ms%20INFERENCE-00FF88?style=flat-square" />
+      </p>
+      <p><b>Multi-Modal Pet Healthcare Diagnostics Assistant</b></p>
+      <p>Intelligent triage pipeline combining real-time computer vision and Google Gemini AI for pet symptom analysis, autonomous dietary planning, and interactive 3D anatomy inspection.</p>
+      <p><code>Architecture: Computer Vision ➔ Gemini API ➔ Flask ➔ Three.js 3D Engine</code></p>
       <p>
         <img src="https://img.shields.io/badge/Gemini%20AI-4285F4?style=flat-square&logo=google&logoColor=white" />
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -274,13 +369,19 @@
         <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">🚗 ENTRY #02: Smart Parking Matrix</h3>
-      <p><b>Type: Steel / Electric • Real-Time IoT Telemetry Platform</b></p>
-      <p>Full-stack smart parking management solution offering live slot occupancy telemetry, automated bay allocation, user reservations, and administrative analytical heatmaps.</p>
+      <h3 align="left">🚗 Smart Parking Matrix</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AFFINITY-STEEL%20%2F%20ELECTRIC-0288D1?style=flat-square" />
+        <img src="https://img.shields.io/badge/ACCURACY-99.4%25%20DETECTION-00FF88?style=flat-square" />
+      </p>
+      <p><b>Real-Time IoT Bay Telemetry &amp; Allocation Platform</b></p>
+      <p>Full-stack parking infrastructure management solution offering sub-second slot occupancy telemetry, automated bay allocation, user reservation locks, and administrative heatmaps.</p>
+      <p><code>Architecture: Ultrasonic Nodes ➔ MySQL Backend ➔ Django Core ➔ Chart.js Visualizer</code></p>
       <p>
         <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
         <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
@@ -288,15 +389,21 @@
         <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🚌 ENTRY #03: BusIt</h3>
-      <p><b>Type: Electric / Normal • Fleet Telemetry &amp; Live ETA</b></p>
+      <h3 align="left">🚌 BusIt</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AFFINITY-ELECTRIC%20%2F%20REACT-FFB300?style=flat-square" />
+        <img src="https://img.shields.io/badge/UPDATE-SUB--SECOND%20SYNC-00E5FF?style=flat-square" />
+      </p>
+      <p><b>Campus Fleet Telemetry &amp; Live Transit ETA Engine</b></p>
       <p>High-precision college transit tracking platform featuring live GPS geofencing, sub-second WebSocket updates, automated route optimizations, and student notification dispatch.</p>
+      <p><code>Architecture: Mobile GPS Stream ➔ Firebase Realtime DB ➔ React Client ➔ Maps API</code></p>
       <p>
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
         <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" />
@@ -304,13 +411,19 @@
         <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="left">💧 ENTRY #04: AquaSentry</h3>
-      <p><b>Type: Water / Steel • Edge IoT Quality Diagnostics</b></p>
-      <p>Industrial edge IoT environmental monitoring system utilizing ESP32 microcontrollers and sensors to detect turbidity, pH anomalies, and contaminants in rural reservoirs in real-time.</p>
+      <h3 align="left">💧 AquaSentry</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AFFINITY-WATER%20%2F%20HARDWARE-00BCD4?style=flat-square" />
+        <img src="https://img.shields.io/badge/RELIABILITY-99.98%25%20MQTT%20PKT-00FF88?style=flat-square" />
+      </p>
+      <p><b>Industrial Edge IoT Environmental Quality Diagnostics</b></p>
+      <p>Autonomous edge IoT environmental water quality monitoring system utilizing custom ESP32 firmware and multi-probe sensors to detect turbidity, pH anomalies, and contaminants in real-time.</p>
+      <p><code>Architecture: Analog Sensor Probes ➔ ESP32 Microcontroller ➔ MQTT Broker ➔ Web Dashboard</code></p>
       <p>
         <img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" />
         <img src="https://img.shields.io/badge/Edge%20AI-00FF66?style=flat-square&logo=cpu&logoColor=black" />
@@ -318,15 +431,21 @@
         <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
   </tr>
   <tr>
     <td colspan="2" valign="top">
-      <h3 align="left">🎮 ENTRY #05: Autonomous Combat Engine</h3>
-      <p><b>Type: Dragon / Dark • Serverless Pixel Simulation Pipeline</b></p>
-      <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss encounter selection, and continuous evolution state machines.</p>
+      <h3 align="left">🎮 Autonomous Combat Engine</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AFFINITY-DRAGON%20%2F%20CI--CD-E91E63?style=flat-square" />
+        <img src="https://img.shields.io/badge/ARCHITECTURE-100%25%20SERVERLESS-00E5FF?style=flat-square" />
+      </p>
+      <p><b>Serverless Pixel Simulation &amp; Real-Time SVG Telemetry Pipeline</b></p>
+      <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss encounter selection, and continuous evolution state machines running autonomously via GitHub Actions every 6 hours.</p>
+      <p><code>Architecture: GitHub GraphQL API ➔ Python Vector Engine ➔ GitHub Actions Cron ➔ SVG Artifacts</code></p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
@@ -334,7 +453,8 @@
         <img src="https://img.shields.io/badge/GraphQL%20API-E10098?style=flat-square&logo=graphql&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ View Dex Spec ➔</b></a>
+        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
   </tr>
@@ -353,6 +473,7 @@
 <!-- TRAINER GYM BADGES & TELEMETRY DASHBOARD                          -->
 <!-- ================================================================= -->
 
+<a name="-dexdisplay_gym_badges_and_telemetry"></a>
 ### 📊 `> dex.display_gym_badges_and_telemetry()`
 
 <br/>
@@ -372,19 +493,19 @@
     <tr>
       <td valign="top" align="center">
         <a href="https://github.com/imnotparama">
-          <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=DC0A2D&title_color=00FF88&icon_color=00E5FF&text_color=C9D1D9" alt="Dex Stats" />
+          <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00E5FF&title_color=00FF88&icon_color=00E5FF&text_color=C9D1D9" alt="Dex Stats" />
         </a>
       </td>
       <td valign="top" align="center">
         <a href="https://github.com/imnotparama">
-          <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=DC0A2D&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
+          <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=00E5FF&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
         </a>
       </td>
     </tr>
     <tr>
       <td colspan="2" align="center">
         <a href="https://github.com/imnotparama">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imnotparama&layout=compact&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=DC0A2D&title_color=00FF88&text_color=C9D1D9" alt="Top Move Types" />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imnotparama&layout=compact&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00E5FF&title_color=00FF88&text_color=C9D1D9" alt="Top Move Types" />
         </a>
       </td>
     </tr>
@@ -396,7 +517,7 @@
 <!-- Interactive Activity Graph -->
 <div align="center">
   <a href="https://github.com/imnotparama">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=imnotparama&theme=github-compact&color=00ff88&line=00e5ff&point=ff1744&area=true&hide_border=false&border_color=DC0A2D&bg_color=0D1117" width="100%" alt="Dex Activity Graph" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=imnotparama&theme=github-compact&color=00ff88&line=00e5ff&point=ff1744&area=true&hide_border=false&border_color=00E5FF&bg_color=0D1117" width="100%" alt="Dex Activity Graph" />
   </a>
 </div>
 

@@ -145,6 +145,31 @@
   <circle cx="175" cy="22" r="6" fill="#00E676" class="led-green" />
   <circle cx="173" cy="20" r="2" fill="#FFFFFF" opacity="0.7" />
 
+  <!-- Hardware Status Telemetry Readouts -->
+  <g transform="translate(202, 12)">
+    <!-- Battery Level -->
+    <rect x="0" y="0" width="102" height="20" rx="4" fill="#550005" stroke="#88000B" stroke-width="1" />
+    <text x="8" y="14" class="dex-mono" font-size="9" font-weight="bold" fill="#00FF88">BAT: 98% ⚡</text>
+    <rect x="68" y="6" width="24" height="8" rx="2" fill="#1C2128" />
+    <rect x="70" y="8" width="18" height="4" rx="1" fill="#00FF88" />
+
+    <!-- RF Telemetry -->
+    <rect x="110" y="0" width="118" height="20" rx="4" fill="#550005" stroke="#88000B" stroke-width="1" />
+    <text x="118" y="14" class="dex-mono" font-size="9" font-weight="bold" fill="#00E5FF">RF: 5.8GHz 📶</text>
+
+    <!-- Buffer / RAM -->
+    <rect x="236" y="0" width="128" height="20" rx="4" fill="#550005" stroke="#88000B" stroke-width="1" />
+    <text x="244" y="14" class="dex-mono" font-size="9" font-weight="bold" fill="#FFE082">RAM: 64MB // LOCKED</text>
+  </g>
+
+  <!-- PCB Hardware Traces on Chassis (ECE Styling) -->
+  <g stroke="#660007" stroke-width="1.2" opacity="0.5" fill="none">
+    <path d="M 580 14 L 600 32 L 640 32" />
+    <circle cx="640" cy="32" r="2" fill="#660007" />
+    <path d="M 660 14 L 680 32 L 710 32" />
+    <circle cx="710" cy="32" r="2" fill="#660007" />
+  </g>
+
   <!-- Top Right Model Badge -->
   <rect x="730" y="8" width="145" height="22" rx="4" fill="#660007" stroke="#99000D" stroke-width="1" />
   <text x="802" y="23" text-anchor="middle" class="dex-mono" font-size="10" font-weight="bold" fill="#FFA3A8" letter-spacing="1.5">DEX OS // v4.2 PRO</text>
