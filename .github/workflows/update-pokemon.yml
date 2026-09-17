@@ -61,6 +61,21 @@ jobs:
             github-contribution-grid-snake.svg
             github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00ff66&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
+      - name: Sync updated telemetry assets to main branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          [ -f pokemon.svg ] && cp pokemon.svg assets/pokemon_battle.svg
+          [ -f github-contribution-grid-snake-dark.svg ] && cp github-contribution-grid-snake-dark.svg assets/contribution_snake.svg
+
+          git add assets/pokemon_battle.svg assets/contribution_snake.svg
+          if ! git diff --cached --quiet; then
+            TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
+            git commit -m "chore(telemetry): auto-sync battle and snake assets ($TIMESTAMP) [skip ci]"
+            git push origin main
+          fi
+
       - name: Publish to output branch (incremental, no-change safe)
         run: |
           git config user.name "github-actions[bot]"
@@ -75,8 +90,6 @@ jobs:
           rm -f pokemon.svg github-contribution-grid-snake.svg github-contribution-grid-snake-dark.svg
 
           # Track the real output branch so "no changes" detection works.
-          # (The old orphan-branch approach always saw a diff vs main's tree
-          #  and committed daily even when nothing changed.)
           if git ls-remote --exit-code --heads origin output > /dev/null; then
             git fetch origin output --depth=1
             git checkout output
@@ -93,7 +106,7 @@ jobs:
           git add -A
 
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit on output branch"
             exit 0
           fi
 

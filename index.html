@@ -514,6 +514,16 @@
             <p style="font-size: 13px; color: var(--text-muted); margin: 4px 0;">ESP32 + C++ + MQTT Protocol + Analog Probes</p>
             <p style="font-size: 14px; margin-top: 4px;">99.98% packet delivery reliability with autonomous contaminant alerting.</p>
           </div>
+          <div class="project-card">
+            <h4 style="color: #FFB300; font-size: 18px;">🚌 BusIt // Campus Transit Telemetry &amp; Live ETA Engine</h4>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 4px 0;">React.js + Firebase Realtime DB + Google Maps + WebSockets</p>
+            <p style="font-size: 14px; margin-top: 4px;">Sub-second coordinate synchronization with 800m polygon geofencing.</p>
+          </div>
+          <div class="project-card">
+            <h4 style="color: #FF007F; font-size: 18px;">🎮 Autonomous Combat Engine // Serverless Telemetry Pipeline</h4>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 4px 0;">Python 3.11 + GitHub Actions Cron + GraphQL API + SVG</p>
+            <p style="font-size: 14px; margin-top: 4px;">Procedural boss rotation with continuous evolution state machines.</p>
+          </div>
         </div>
 
         <!-- ==================== TAB 5: EXECUTIVE RESUME ==================== -->
@@ -560,24 +570,33 @@
   </div>
 
   <script>
-    // Web Audio Synthesizer for genuine 8-bit retro sound effects
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    // Web Audio Synthesizer - initialized lazily on user interaction to prevent browser warnings
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
 
     function playTone(freq, duration, type = 'square') {
       try {
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
         osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
         osc.connect(gain);
-        gain.connect(audioCtx.destination);
+        gain.connect(ctx.destination);
         osc.start();
-        osc.stop(audioCtx.currentTime + duration);
+        osc.stop(ctx.currentTime + duration);
       } catch (e) {
-        console.warn('Audio not initialized yet');
+        console.warn('Audio note skipped:', e);
       }
     }
 

@@ -61,16 +61,17 @@
   <!-- Quick-Jump Anchor Navigation Bar -->
   <p align="center">
     <code>
-      <a href="#-executive-dossier--recruiter-summary">📋 Executive Dossier</a> •
-      <a href="#-dexget_active_quest">🎯 Active Quest</a> •
-      <a href="#-dexload_trainer_card">🪪 Trainer Card</a> •
-      <a href="#-dexscan_specimen_entry029">📱 Specimen Matrix</a> •
-      <a href="#-dexdisplay_evolution_matrix">🧬 Evolution Matrix</a> •
-      <a href="#️-dex-combat-arena--real-time-boss-encounter">⚔️ Combat Arena</a> •
-      <a href="#-dexopen_trainer_bag">🎒 Arsenal</a> •
-      <a href="#-dexquery_registered_expeditions">📜 Projects</a> •
-      <a href="#-dexanalyze_engineering_synergies">⚡ Synergies</a> •
-      <a href="#-dexdisplay_gym_badges_and_telemetry">📊 Telemetry</a>
+      <a href="#executive-dossier">📋 Executive Dossier</a> •
+      <a href="#active-quest">🎯 Active Quest</a> •
+      <a href="#trainer-card">🪪 Trainer Card</a> •
+      <a href="#specimen-matrix">📱 Specimen Matrix</a> •
+      <a href="#evolution-matrix">🧬 Evolution Matrix</a> •
+      <a href="#combat-arena">⚔️ Combat Arena</a> •
+      <a href="#habitat-scanner">🗺️ Habitat Scanner</a> •
+      <a href="#arsenal">🎒 Arsenal</a> •
+      <a href="#projects">📜 Projects</a> •
+      <a href="#synergies">⚡ Synergies</a> •
+      <a href="#telemetry">📊 Telemetry</a>
     </code>
   </p>
 
@@ -85,7 +86,7 @@
 <!-- EXECUTIVE DOSSIER // RECRUITER 30-SECOND SUMMARY                  -->
 <!-- ================================================================= -->
 
-<a name="-executive-dossier--recruiter-summary"></a>
+<a name="executive-dossier"></a>
 ### 📋 `> dex.open_executive_dossier()`
 
 <details open>
@@ -128,7 +129,7 @@
 <!-- REAL-TIME ACTIVE QUEST TERMINAL                                   -->
 <!-- ================================================================= -->
 
-<a name="-dexget_active_quest"></a>
+<a name="active-quest"></a>
 ### 🎯 `> dex.get_active_quest()`
 
 ```yaml
@@ -156,7 +157,7 @@
 <!-- OFFICIAL TRAINER CARD & 8 GYM BADGES CASE                         -->
 <!-- ================================================================= -->
 
-<a name="-dexload_trainer_card"></a>
+<a name="trainer-card"></a>
 ### 🪪 `> dex.load_trainer_card()`
 
 <div align="center">
@@ -176,7 +177,7 @@
 <!-- DEX DATA FILE // ARCHITECT SPECIFICATION                          -->
 <!-- ================================================================= -->
 
-<a name="-dexscan_specimen_entry029"></a>
+<a name="specimen-matrix"></a>
 ### 📱 `> dex.scan_specimen_entry(#029)`
 
 <div align="center">
@@ -228,7 +229,7 @@
 <!-- EVOLUTION CHAIN // CAREER & SKILL PROGRESSION                     -->
 <!-- ================================================================= -->
 
-<a name="-dexdisplay_evolution_matrix"></a>
+<a name="evolution-matrix"></a>
 ### 🧬 `> dex.display_evolution_matrix()`
 
 <div align="center">
@@ -248,7 +249,7 @@
 <!-- THE SIGNATURE FEATURE // DEX COMBAT SIMULATION                    -->
 <!-- ================================================================= -->
 
-<a name="️-dex-combat-arena--real-time-boss-encounter"></a>
+<a name="combat-arena"></a>
 <div align="center">
 
 ## ⚔️ Dex Combat Arena // Real-Time Boss Encounter
@@ -298,7 +299,7 @@
 <!-- DEX HABITAT MAP SCANNER // MATRIX TRAVERSAL                       -->
 <!-- ================================================================= -->
 
-<a name="️-dexrender_habitat_scanner"></a>
+<a name="habitat-scanner"></a>
 ### 🗺️ `> dex.render_habitat_scanner()`
 
 <div align="center">
@@ -318,7 +319,7 @@
 <!-- TRAINER ITEM BAG & TECHNICAL ARSENAL                              -->
 <!-- ================================================================= -->
 
-<a name="-dexopen_trainer_bag"></a>
+<a name="arsenal"></a>
 ### 🎒 `> dex.open_trainer_bag()`
 
 <br/>
@@ -381,7 +382,7 @@
 <!-- REGISTERED EXPEDITIONS // FLAGSHIP SYSTEM BUILDS                  -->
 <!-- ================================================================= -->
 
-<a name="-dexquery_registered_expeditions"></a>
+<a name="projects"></a>
 ### 📜 `> dex.query_registered_expeditions()`
 
 <br/>
@@ -501,7 +502,7 @@
 <!-- SYSTEM ARCHITECTURE SYNERGIES // TYPE MATCHUP MATRIX              -->
 <!-- ================================================================= -->
 
-<a name="-dexanalyze_engineering_synergies"></a>
+<a name="synergies"></a>
 ### ⚔️ `> dex.analyze_engineering_synergies()`
 
 <br/>
@@ -527,7 +528,7 @@
 <!-- TRAINER GYM BADGES & TELEMETRY DASHBOARD                          -->
 <!-- ================================================================= -->
 
-<a name="-dexdisplay_gym_badges_and_telemetry"></a>
+<a name="telemetry"></a>
 ### 📊 `> dex.display_gym_badges_and_telemetry()`
 
 <br/>
