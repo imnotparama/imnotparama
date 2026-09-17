@@ -45,17 +45,25 @@
     </a>
   </p>
 
+  <!-- Tactile Handheld Gamepad Action Bar -->
+  <a href="#-executive-dossier--recruiter-summary">
+    <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/gamepad_nav.svg" width="100%" alt="Tactile Handheld Gamepad Navigation" />
+  </a>
+
+  <br/><br/>
+
   <!-- Quick-Jump Anchor Navigation Bar -->
   <p align="center">
     <code>
       <a href="#-executive-dossier--recruiter-summary">📋 Executive Dossier</a> •
+      <a href="#-dexget_active_quest">🎯 Active Quest</a> •
       <a href="#-dexload_trainer_card">🪪 Trainer Card</a> •
       <a href="#-dexscan_specimen_entry029">📱 Specimen Matrix</a> •
       <a href="#-dexdisplay_evolution_matrix">🧬 Evolution Matrix</a> •
       <a href="#️-dex-combat-arena--real-time-boss-encounter">⚔️ Combat Arena</a> •
-      <a href="#️-dexrender_habitat_scanner">🗺️ Habitat Scanner</a> •
       <a href="#-dexopen_trainer_bag">🎒 Arsenal</a> •
       <a href="#-dexquery_registered_expeditions">📜 Projects</a> •
+      <a href="#-dexanalyze_engineering_synergies">⚡ Synergies</a> •
       <a href="#-dexdisplay_gym_badges_and_telemetry">📊 Telemetry</a>
     </code>
   </p>
@@ -107,6 +115,27 @@
 </div>
 
 </details>
+
+<br/>
+
+<!-- ================================================================= -->
+<!-- REAL-TIME ACTIVE QUEST TERMINAL                                   -->
+<!-- ================================================================= -->
+
+<a name="-dexget_active_quest"></a>
+### 🎯 `> dex.get_active_quest()`
+
+```yaml
+╔══════════════════════════════════════════════════════════════════════╗
+║ ACTIVE EXPEDITION // REAL-TIME SYSTEM QUEST                          ║
+╠══════════════════════════════════════════════════════════════════════╣
+║ CURRENT QUEST  : Autonomous Multimodal Edge AI Diagnostics Pipeline  ║
+║ LOCATION       : SRMIST IoT & Embedded Systems Lab // Chennai, IN 🇮🇳 ║
+║ CORE OBJECTIVE : Sub-30ms On-Device Neural Inference on Edge Silicon  ║
+║ ACTIVE STACK   : ESP32 • TensorFlow Lite • MQTT • Python • FastAPI   ║
+║ PROTOCOL STATUS: 94.8% SYSTEM LOAD // ALL SYNAPTIC CORES ENGAGED      ║
+╚══════════════════════════════════════════════════════════════════════╝
+```
 
 <br/>
 
@@ -462,6 +491,25 @@
 
 <br/>
 
+<!-- ================================================================= -->
+<!-- SYSTEM ARCHITECTURE SYNERGIES // TYPE MATCHUP MATRIX              -->
+<!-- ================================================================= -->
+
+<a name="-dexanalyze_engineering_synergies"></a>
+### ⚔️ `> dex.analyze_engineering_synergies()`
+
+<br/>
+
+| Technology Synergy | Affinity Types | Matchup Effectiveness | System Impact & Real-World Application |
+| :--- | :--- | :--- | :--- |
+| **`Python + PyTorch + OpenCV`** | `🔮 PSYCHIC / NEURAL` | 💥 **SUPER EFFECTIVE** vs Raw Visual Data | Real-time computer vision inference & multimodal pet healthcare diagnostics (*PawPal AI*) |
+| **`ESP32 + MQTT + C++`** | `🔌 SILICON / ELECTRIC`| 💥 **SUPER EFFECTIVE** vs Edge Latency | Sub-second telemetry & industrial reservoir contaminant monitoring (*AquaSentry*) |
+| **`Next.js + Tailwind + Three.js`**| `🌊 FLUID / REACT` | 💥 **SUPER EFFECTIVE** vs Static Web UX | Dynamic responsive UI, interactive 3D anatomy inspection & WebGL acceleration |
+| **`Django + MySQL + Redis`** | `🛡️ STEEL / SCHEMA` | 💥 **SUPER EFFECTIVE** vs High Concurrency | Automated parking slot allocation & sub-second reservation locks (*Smart Parking Matrix*) |
+| **`Docker + GitHub Actions`** | `🐉 DRAGON / CI-CD` | 🛡️ **IMMUNE** to Deployment Regressions | Autonomous 6-hour cron pipelines, serverless battle telemetry & automated asset rendering |
+
+<br/>
+
 <div align="center">
   <!-- Animated Pokédex Chassis Divider -->
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
@@ -478,16 +526,21 @@
 
 <br/>
 
-<!-- Profile Trophies -->
+<!-- Native Verified Achievement Trophy Cabinet -->
 <div align="center">
-  <a href="https://github.com/imnotparama">
-    <img src="https://github-profile-trophy.vercel.app/?username=imnotparama&theme=tokyonight&no-frame=false&no-bg=false&margin_w=4" alt="Gym Trophies" />
-  </a>
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/trophies.svg" width="100%" alt="Dex Achievement Trophies" />
 </div>
 
 <br/>
 
-<!-- Stats Grid -->
+<!-- Native Language Energy Core & Runtime Matrix -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/tech_matrix.svg" width="100%" alt="Dex Tech Energy Matrix" />
+</div>
+
+<br/>
+
+<!-- Live GitHub Stats & Streak Telemetry -->
 <div align="center">
   <table border="0">
     <tr>
@@ -499,13 +552,6 @@
       <td valign="top" align="center">
         <a href="https://github.com/imnotparama">
           <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=00E5FF&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center">
-        <a href="https://github.com/imnotparama">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=imnotparama&layout=compact&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00E5FF&title_color=00FF88&text_color=C9D1D9" alt="Top Move Types" />
         </a>
       </td>
     </tr>

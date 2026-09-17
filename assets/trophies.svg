@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="100%" height="140" fill="none">
+  <defs>
+    <!-- Background & Container Gradients -->
+    <linearGradient id="trophyCabinetBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101726" />
+      <stop offset="50%" stop-color="#0B101B" />
+      <stop offset="100%" stop-color="#060910" />
+    </linearGradient>
+    <linearGradient id="trophyBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="35%" stop-color="#00F0FF" />
+      <stop offset="70%" stop-color="#A371F7" />
+      <stop offset="100%" stop-color="#00FF88" />
+    </linearGradient>
+
+    <!-- Metal Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3B0" />
+      <stop offset="50%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0FFFF" />
+      <stop offset="50%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00838F" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5F5" />
+      <stop offset="50%" stop-color="#BA68C8" />
+      <stop offset="100%" stop-color="#6A1B9A" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F5E9" />
+      <stop offset="50%" stop-color="#00E676" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E3F2FD" />
+      <stop offset="50%" stop-color="#2196F3" />
+      <stop offset="100%" stop-color="#0D47A1" />
+    </linearGradient>
+    <linearGradient id="apexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF80AB" />
+      <stop offset="50%" stop-color="#FF1744" />
+      <stop offset="100%" stop-color="#D50000" />
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="trophyScan" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1" opacity="0.2" />
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="trophyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes gleamPulse {
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4)); transform: translateY(0); }
+        50% { filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.7)); transform: translateY(-3px); }
+      }
+      .trophy-item {
+        animation: gleamPulse 4s ease-in-out infinite;
+      }
+      .trophy-item:nth-child(2) { animation-delay: 0.7s; }
+      .trophy-item:nth-child(3) { animation-delay: 1.4s; }
+      .trophy-item:nth-child(4) { animation-delay: 2.1s; }
+      .trophy-item:nth-child(5) { animation-delay: 2.8s; }
+      .trophy-item:nth-child(6) { animation-delay: 3.5s; }
+      .trophy-title {
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+      .trophy-mono {
+        font-family: 'Fira Code', 'Courier New', monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer Glass Frame -->
+  <rect x="2" y="2" width="896" height="136" rx="12" fill="url(#trophyCabinetBg)" stroke="url(#trophyBorder)" stroke-width="1.8" />
+  <rect x="2" y="2" width="896" height="136" rx="12" fill="url(#trophyScan)" pointer-events="none" />
+
+  <!-- Top Cabinet Header -->
+  <rect x="2" y="2" width="896" height="24" rx="12" fill="#141E2E" />
+  <rect x="2" y="14" width="896" height="12" fill="#141E2E" />
+  <line x1="2" y1="26" x2="898" y2="26" stroke="#212A38" stroke-width="1" />
+  <text x="20" y="17" class="trophy-mono" font-size="10" font-weight="bold" fill="#FFD700" letter-spacing="1">🏆 DEX HALL OF FAME // VERIFIED ACHIEVEMENTS CABINET</text>
+  <text x="880" y="17" text-anchor="end" class="trophy-mono" font-size="9.5" fill="#00FF88">TIER: S-RANK MASTER (6/6 UNLOCKED)</text>
+
+  <!-- ==================== 6 TROPHY PODIUMS ==================== -->
+
+  <!-- Trophy 1: Hackathon Victor -->
+  <g transform="translate(30, 36)" class="trophy-item">
+    <!-- Pedestal Base -->
+    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#FFD700" stroke-width="1" opacity="0.6" />
+    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#FFD700" stroke-width="1" />
+    <!-- Icon: Trophy Cup -->
+    <path d="M 50 42 L 80 42 L 77 62 C 77 70, 53 70, 53 62 Z" fill="url(#goldGrad)" />
+    <path d="M 50 46 C 42 46, 42 56, 51 58" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+    <path d="M 80 46 C 88 46, 88 56, 79 58" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+    <rect x="62" y="68" width="6" height="12" fill="url(#goldGrad)" />
+    <!-- Label -->
+    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">HACKATHON</text>
+    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#FFD700">VICTOR</text>
+  </g>
+
+  <!-- Trophy 2: Commit Striker -->
+  <g transform="translate(175, 36)" class="trophy-item">
+    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#00E5FF" stroke-width="1" opacity="0.6" />
+    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#00E5FF" stroke-width="1" />
+    <!-- Icon: Lightning Strike -->
+    <polygon points="68,36 54,58 64,58 60,74 76,52 66,52" fill="url(#cyanGrad)" filter="url(#trophyGlow)" />
+    <!-- Label -->
+    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">COMMIT</text>
+    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#00E5FF">STRIKER</text>
+  </g>
+
+  <!-- Trophy 3: Neural Pioneer -->
+  <g transform="translate(320, 36)" class="trophy-item">
+    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#BA68C8" stroke-width="1" opacity="0.6" />
+    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#BA68C8" stroke-width="1" />
+    <!-- Icon: Synaptic Nodes -->
+    <circle cx="65" cy="46" r="7" fill="url(#purpleGrad)" />
+    <circle cx="52" cy="62" r="5" fill="url(#purpleGrad)" />
+    <circle cx="78" cy="62" r="5" fill="url(#purpleGrad)" />
+    <line x1="65" y1="46" x2="52" y2="62" stroke="#BA68C8" stroke-width="2" />
+    <line x1="65" y1="46" x2="78" y2="62" stroke="#BA68C8" stroke-width="2" />
+    <line x1="52" y1="62" x2="78" y2="62" stroke="#BA68C8" stroke-width="2" />
+    <!-- Label -->
+    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">NEURAL</text>
+    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#BA68C8">PIONEER</text>
+  </g>
+
+  <!-- Trophy 4: Silicon Crafter -->
+  <g transform="translate(465, 36)" class="trophy-item">
+    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#00E676" stroke-width="1" opacity="0.6" />
+    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#00E676" stroke-width="1" />
+    <!-- Icon: Microchip -->
+    <rect x="52" y="44" width="26" height="26" rx="4" fill="url(#greenGrad)" />
+    <rect x="58" y="50" width="14" height="14" rx="2" fill="#062912" />
+    <line x1="48" y1="50" x2="52" y2="50" stroke="#00E676" stroke-width="2" />
+    <line x1="48" y1="57" x2="52" y2="57" stroke="#00E676" stroke-width="2" />
+    <line x1="48" y1="64" x2="52" y2="64" stroke="#00E676" stroke-width="2" />
+    <line x1="78" y1="50" x2="82" y2="50" stroke="#00E676" stroke-width="2" />
+    <line x1="78" y1="57" x2="82" y2="57" stroke="#00E676" stroke-width="2" />
+    <line x1="78" y1="64" x2="82" y2="64" stroke="#00E676" stroke-width="2" />
+    <!-- Label -->
+    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">SILICON</text>
+    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#00E676">CRAFTER</text>
+  </g>
+
+  <!-- Trophy 5: Full-Stack Architect -->
+  <g transform="translate(610, 36)" class="trophy-item">
+    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#2196F3" stroke-width="1" opacity="0.6" />
+    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#2196F3" stroke-width="1" />
+    <!-- Icon: Orbital Layers -->
+    <circle cx="65" cy="57" r="10" fill="url(#blueGrad)" />
+    <ellipse cx="65" cy="57" rx="18" ry="6" fill="none" stroke="#64B5F6" stroke-width="1.5" transform="rotate(-25 65 57)" />
+    <ellipse cx="65" cy="57" rx="18" ry="6" fill="none" stroke="#64B5F6" stroke-width="1.5" transform="rotate(35 65 57)" />
+    <!-- Label -->
+    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">FULL-STACK</text>
+    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#2196F3">ARCHITECT</text>
+  </g>
+
+  <!-- Trophy 6: Apex Dex Master -->
+  <g transform="translate(755, 36)" class="trophy-item">
+    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#FF1744" stroke-width="1" opacity="0.6" />
+    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#FF1744" stroke-width="1" />
+    <!-- Icon: Apex Crown -->
+    <polygon points="50,66 50,48 57,56 65,42 73,56 80,48 80,66" fill="url(#apexGrad)" filter="url(#trophyGlow)" />
+    <circle cx="50" cy="48" r="2" fill="#FFD700" />
+    <circle cx="65" cy="42" r="2.5" fill="#FFD700" />
+    <circle cx="80" cy="48" r="2" fill="#FFD700" />
+    <!-- Label -->
+    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">APEX DEX</text>
+    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#FF1744">MASTER</text>
+  </g>
+</svg>
