@@ -1,0 +1,62 @@
+name: Profile Asset Health & Pipeline Smoke Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate-assets:
+    name: Validate Vector SVGs & Python Pipelines
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate SVG XML Well-Formedness
+        run: |
+          python -c "
+          import xml.etree.ElementTree as ET
+          import glob, sys
+
+          errors = 0
+          for svg in glob.glob('assets/*.svg'):
+              try:
+                  ET.parse(svg)
+                  print(f'  [PASS] {svg} is valid XML')
+              except Exception as e:
+                  print(f'  [FAIL] {svg}: {e}')
+                  errors += 1
+          if errors > 0:
+              sys.exit(1)
+          "
+
+      - name: Smoke Test Python Battle Generator
+        env:
+          GITHUB_USERNAME: imnotparama
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/generate_pokemon_svg.py
+          test -s pokemon.svg && echo "  [PASS] pokemon.svg generated successfully"
+
+      - name: Smoke Test Full Profile Renderer
+        env:
+          GITHUB_USERNAME: imnotparama
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/render_full_profile.py
+          test -s profile.svg && echo "  [PASS] profile.svg generated successfully"

@@ -74,7 +74,7 @@
   <!-- RIGHT: A, B, X, Y ACTION BUTTONS -->
   <g transform="translate(630, 10)">
     <!-- (X) Button: Resume -->
-    <a href="mailto:imnotparama@gmail.com?subject=Resume%20Inquiry%20-%20Parameshwaran%20S" class="ctrl-btn">
+    <a href="https://github.com/imnotparama/imnotparama/blob/main/RESUME.md" target="_blank" class="ctrl-btn">
       <circle cx="35" cy="14" r="11" fill="url(#btnBlue)" stroke="#E0F2FE" stroke-width="1" />
       <text x="35" y="18" text-anchor="middle" class="nav-mono" font-size="10" font-weight="bold" fill="#031024">X</text>
       <text x="35" y="36" text-anchor="middle" class="nav-mono" font-size="7" fill="#BAE6FD">RESUME</text>

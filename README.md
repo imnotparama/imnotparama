@@ -102,8 +102,8 @@
 
 <div align="center">
   <p>
-    <a href="mailto:imnotparama@gmail.com?subject=Opportunity%20Inquiry%20-%20Parameshwaran%20S">
-      <img src="https://img.shields.io/badge/📄%20Request%20Resume%20(PDF)-00FF88?style=for-the-badge&logoColor=000000" alt="Request Resume" />
+    <a href="https://github.com/imnotparama/imnotparama/blob/main/RESUME.md" target="_blank">
+      <img src="https://img.shields.io/badge/📄%20View%20Full%20Resume%20(CV)-00FF88?style=for-the-badge&logoColor=000000" alt="View Resume" />
     </a>
     <a href="https://linkedin.com/in/imnotparama" target="_blank">
       <img src="https://img.shields.io/badge/💼%20LinkedIn%20Profile-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -398,7 +398,7 @@
         <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="docs/projects/pawpal-ai.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
         <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
@@ -418,7 +418,7 @@
         <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="docs/projects/smart-parking.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
         <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
@@ -460,7 +460,7 @@
         <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="docs/projects/aquasentry.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
         <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>

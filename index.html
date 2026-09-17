@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PARAMESHWARAN S // DEX SYSTEM INTERFACE // v4.2 PRO</title>
+  <meta name="description" content="Official Dex System & Interactive Engineering Portfolio of Parameshwaran S - AI Systems Architect, Full-Stack Engineer, and Embedded IoT Maker." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Rajdhani:wght@600;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --dex-red: #DC0A2D;
+      --dex-dark-red: #8B0007;
+      --bg-dark: #0A0E14;
+      --card-bg: #111822;
+      --neon-cyan: #00F0FF;
+      --neon-green: #00FF88;
+      --neon-yellow: #FFEA00;
+      --neon-pink: #FF0055;
+      --text-main: #E6EDF3;
+      --text-muted: #8B949E;
+      --border-glow: #1F2E40;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Rajdhani', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(220, 10, 45, 0.15) 0%, transparent 60%),
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 30px 30px, 30px 30px;
+    }
+
+    /* Hardware Dex Container */
+    .dex-chassis {
+      width: 100%;
+      max-width: 960px;
+      background: linear-gradient(135deg, #E51B24 0%, #C60813 50%, #7A0006 100%);
+      border-radius: 24px;
+      border: 3px solid #5A0005;
+      box-shadow: 0 20px 60px rgba(220, 10, 45, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Top Hardware Header */
+    .dex-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .lens-array {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .main-scanner-lens {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, #00F0FF 40%, #0044AA 80%, #001144 100%);
+      border: 4px solid #DCE0E6;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), 0 4px 10px rgba(0, 0, 0, 0.5);
+      animation: lensGlow 3s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes lensGlow {
+      0%, 100% { box-shadow: 0 0 12px #00F0FF; }
+      50% { box-shadow: 0 0 28px #00F0FF, 0 0 40px rgba(0, 240, 255, 0.5); }
+    }
+
+    .mini-leds {
+      display: flex;
+      gap: 8px;
+    }
+
+    .led {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    .led-red { background: #FF1744; box-shadow: 0 0 8px #FF1744; animation: blink 1.8s infinite; }
+    .led-yellow { background: #FFEA00; box-shadow: 0 0 8px #FFEA00; animation: blink 2.2s infinite; }
+    .led-green { background: #00E676; box-shadow: 0 0 8px #00E676; animation: blink 1.5s infinite; }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .dex-hardware-info {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      background: #550005;
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid #88000B;
+      color: #FFA3A8;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Inner Screen Frame */
+    .screen-bezel {
+      background: #CBD2D9;
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 16px;
+      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
+      border: 2px solid #9DA3A8;
+    }
+
+    .oled-screen {
+      background: #090E17;
+      border-radius: 10px;
+      border: 2px solid #001824;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Scanlines */
+    .oled-screen::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.25) 3px, rgba(0, 0, 0, 0.25) 4px);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Sound Notification */
+    .sound-hint {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      color: var(--neon-green);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Navigation Tabs */
+    .dex-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .dex-tab-btn {
+      background: #16202C;
+      color: var(--text-muted);
+      border: 1px solid var(--border-glow);
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .dex-tab-btn:hover, .dex-tab-btn.active {
+      background: #003B46;
+      color: var(--neon-cyan);
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    }
+
+    /* Tab Content */
+    .tab-content {
+      display: none;
+      position: relative;
+      z-index: 20;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Specimen Hero */
+    .specimen-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .spec-title {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+    }
+
+    .spec-subtitle {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--neon-cyan);
+      font-weight: 600;
+    }
+
+    /* Base Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 650px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+
+    .stat-row {
+      margin-bottom: 10px;
+    }
+
+    .stat-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    .stat-track {
+      width: 100%;
+      height: 8px;
+      background: #161B22;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .stat-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s ease-out;
+    }
+
+    /* Combat Simulation Box */
+    .combat-box {
+      background: #070B10;
+      border: 1px solid var(--border-glow);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .boss-hp-bar {
+      width: 100%;
+      max-width: 400px;
+      height: 14px;
+      background: #161B22;
+      border-radius: 7px;
+      margin: 12px auto;
+      overflow: hidden;
+      border: 1px solid #30363D;
+    }
+
+    .boss-hp-fill {
+      width: 99.6%;
+      height: 100%;
+      background: linear-gradient(90deg, #00FF88, #00E5FF);
+      transition: width 0.3s ease;
+    }
+
+    .combat-btn {
+      background: linear-gradient(135deg, #FF1744 0%, #B71C1C 100%);
+      color: #FFFFFF;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 23, 68, 0.5);
+      transition: all 0.2s ease;
+      margin-top: 14px;
+    }
+
+    .combat-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 23, 68, 0.8);
+    }
+
+    /* Projects Grid */
+    .project-card {
+      background: #0E1520;
+      border: 1px solid #1F2937;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s ease;
+    }
+    .project-card:hover {
+      border-color: var(--neon-cyan);
+    }
+
+    /* Controls Bay */
+    .dex-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    .dpad {
+      display: grid;
+      grid-template-columns: 24px 24px 24px;
+      grid-template-rows: 24px 24px 24px;
+      gap: 2px;
+    }
+
+    .dpad-btn {
+      background: #1A202C;
+      border: 1px solid #4A5568;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .dpad-btn:hover { background: #2D3748; }
+
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .round-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.1s ease;
+    }
+    .round-btn:active { transform: translateY(2px); }
+    .btn-a { background: #FF1744; }
+    .btn-b { background: #FFD700; color: #111; }
+    .btn-x { background: #00E5FF; color: #111; }
+    .btn-y { background: #00E676; color: #111; }
+
+    /* Print styling */
+    @media print {
+      body { background: white; color: black; }
+      .dex-chassis { box-shadow: none; border: 1px solid #ccc; max-width: 100%; }
+      .dex-tabs, .dex-controls, .sound-hint, .combat-btn { display: none; }
+      #tab-resume { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== MAIN DEX CHASSIS ==================== -->
+  <div class="dex-chassis">
+
+    <!-- Top Hardware Sensors -->
+    <div class="dex-top-bar">
+      <div class="lens-array">
+        <div class="main-scanner-lens" id="mainLens" title="Click to play Dex startup chime"></div>
+        <div class="mini-leds">
+          <div class="led led-red"></div>
+          <div class="led led-yellow"></div>
+          <div class="led led-green"></div>
+        </div>
+      </div>
+      <div class="dex-hardware-info">
+        DEX OS // v4.2 PRO • 5.8 GHz
+      </div>
+    </div>
+
+    <!-- Screen Bezel & Display -->
+    <div class="screen-bezel">
+      <div class="oled-screen">
+
+        <div class="sound-hint">
+          <span>🔊 WEB AUDIO: ACTIVE (CLICK CONTROLS FOR 8-BIT SOUND EFFECTS)</span>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="dex-tabs">
+          <button class="dex-tab-btn active" data-tab="tab-spec">SPECIMEN #029</button>
+          <button class="dex-tab-btn" data-tab="tab-trainer">TRAINER CARD</button>
+          <button class="dex-tab-btn" data-tab="tab-combat">COMBAT ARENA</button>
+          <button class="dex-tab-btn" data-tab="tab-projects">FLAGSHIP PROJECTS</button>
+          <button class="dex-tab-btn" data-tab="tab-resume">EXECUTIVE RESUME</button>
+        </div>
+
+        <!-- ==================== TAB 1: SPECIMEN SPEC ==================== -->
+        <div class="tab-content active" id="tab-spec">
+          <div class="specimen-header">
+            <div>
+              <div class="spec-title">PARAMESHWARAN S</div>
+              <div class="spec-subtitle">AI SYSTEMS ARCHITECT • DATA SCIENTIST • IoT MAKER</div>
+            </div>
+            <div style="font-family: 'Fira Code', monospace; font-size: 11px; color: var(--neon-green);">
+              SRMIST CHENNAI (B.TECH ECE)
+            </div>
+          </div>
+
+          <div style="font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted); margin-bottom: 12px;">
+            NATURE: Analytical (+Speed / +Multi-Thread) • PASSIVE: Autonomous Commit Telemetry
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-row">
+              <div class="stat-meta"><span>HP [Energy &amp; Focus]</span><span style="color:var(--neon-cyan)">98 / 100</span></div>
+              <div class="stat-track"><div class="stat-fill" style="width: 98%; background: var(--neon-cyan);"></div></div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-meta"><span>ATTACK [Algorithms]</span><span style="color:var(--neon-yellow)">95 / 100</span></div>
+              <div class="stat-track"><div class="stat-fill" style="width: 95%; background: var(--neon-yellow);"></div></div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-meta"><span>DEFENSE [Robustness]</span><span style="color:#58A6FF">92 / 100</span></div>
+              <div class="stat-track"><div class="stat-fill" style="width: 92%; background: #58A6FF;"></div></div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-meta"><span>SP. ATK [Multimodal AI]</span><span style="color:#D2A8FF">99 / 100</span></div>
+              <div class="stat-track"><div class="stat-fill" style="width: 99%; background: #D2A8FF;"></div></div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-meta"><span>SP. DEF [Fault Tolerance]</span><span style="color:var(--neon-green)">94 / 100</span></div>
+              <div class="stat-track"><div class="stat-fill" style="width: 94%; background: var(--neon-green);"></div></div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-meta"><span>SPEED [Prototyping]</span><span style="color:var(--neon-pink)">100 / 100</span></div>
+              <div class="stat-track"><div class="stat-fill" style="width: 100%; background: var(--neon-pink);"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 2: TRAINER CARD ==================== -->
+        <div class="tab-content" id="tab-trainer">
+          <div style="text-align: center; margin-bottom: 12px;">
+            <img src="assets/trainer_card.svg" style="width: 100%; max-width: 800px; border-radius: 12px;" alt="Trainer Card" />
+          </div>
+        </div>
+
+        <!-- ==================== TAB 3: COMBAT ARENA ==================== -->
+        <div class="tab-content" id="tab-combat">
+          <div class="combat-box">
+            <h3 style="color: var(--neon-cyan); letter-spacing: 1px; margin-bottom: 6px;">DAILY RAID BOSS: TYRANITAR [LVL 48]</h3>
+            <p style="font-family: 'Fira Code', monospace; font-size: 11px; color: var(--text-muted);">
+              Serverless Commit Telemetry • Click Strike to inflict live raid damage
+            </p>
+
+            <div class="boss-hp-bar">
+              <div class="boss-hp-fill" id="bossHp"></div>
+            </div>
+            <div style="font-family: 'Fira Code', monospace; font-size: 12px; color: var(--neon-green);" id="bossHpText">
+              BOSS HP: 498 / 500 (99.6%)
+            </div>
+
+            <button class="combat-btn" id="strikeBtn">⚔️ EXECUTE COMMIT STRIKE!</button>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 4: FLAGSHIP PROJECTS ==================== -->
+        <div class="tab-content" id="tab-projects">
+          <div class="project-card">
+            <h4 style="color: #BA68C8; font-size: 18px;">🐾 PawPal AI // Multi-Modal Pet Healthcare Diagnostics</h4>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 4px 0;">Google Gemini Vision + Python + Flask + Three.js 3D</p>
+            <p style="font-size: 14px; margin-top: 4px;">Sub-50ms diagnostic triage with interactive 3D canine/feline anatomical mapping.</p>
+          </div>
+          <div class="project-card">
+            <h4 style="color: #00E5FF; font-size: 18px;">🚗 Smart Parking Matrix // Real-Time Bay Telemetry</h4>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 4px 0;">Django + MySQL + Ultrasonic Sensor Grid + Chart.js</p>
+            <p style="font-size: 14px; margin-top: 4px;">99.4% detection accuracy with automated slot allocation and analytical heatmaps.</p>
+          </div>
+          <div class="project-card">
+            <h4 style="color: var(--neon-green); font-size: 18px;">💧 AquaSentry // Edge IoT Reservoir Quality Diagnostics</h4>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 4px 0;">ESP32 + C++ + MQTT Protocol + Analog Probes</p>
+            <p style="font-size: 14px; margin-top: 4px;">99.98% packet delivery reliability with autonomous contaminant alerting.</p>
+          </div>
+        </div>
+
+        <!-- ==================== TAB 5: EXECUTIVE RESUME ==================== -->
+        <div class="tab-content" id="tab-resume">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="color: var(--neon-green);">EXECUTIVE RESUME // PARAMESHWARAN S</h3>
+            <button onclick="window.print()" style="background:#16202C; border:1px solid var(--neon-cyan); color:var(--neon-cyan); padding:6px 12px; border-radius:4px; font-family:'Fira Code',monospace; cursor:pointer;">
+              🖨️ PRINT / SAVE PDF
+            </button>
+          </div>
+          <p style="font-family:'Fira Code',monospace; font-size:12px; color:var(--text-muted); margin-bottom:12px;">
+            B.Tech in Electronics &amp; Communication Engineering (Data Science) @ SRMIST Chennai (2022–2026)
+          </p>
+          <div style="background:#0D1117; padding:16px; border-radius:8px; border:1px solid #30363D; font-family:'Fira Code',monospace; font-size:11px; line-height:1.6;">
+            <strong>CORE DISCIPLINES:</strong><br/>
+            • AI &amp; Machine Learning: Multimodal Vision, Google Gemini, PyTorch, Deep Learning<br/>
+            • Full-Stack Web: Next.js, React, Node.js, FastAPI, Django, TailwindCSS<br/>
+            • Embedded Systems: ESP32, Arduino, Raspberry Pi, MQTT, PCB Schematics, C++<br/>
+            • Databases &amp; Cloud: PostgreSQL, MySQL, Docker, Linux, GitHub Actions CI/CD<br/>
+            <br/>
+            <strong>CONTACT:</strong> imnotparama@gmail.com | linkedin.com/in/imnotparama | github.com/imnotparama
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Handheld Controls Bay -->
+    <div class="dex-controls">
+      <div class="dpad">
+        <div></div><button class="dpad-btn" id="dpadUp">▲</button><div></div>
+        <button class="dpad-btn" id="dpadLeft">◀</button><div style="background:#111827"></div><button class="dpad-btn" id="dpadRight">▶</button>
+        <div></div><button class="dpad-btn" id="dpadDown">▼</button><div></div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="round-btn btn-x" title="Resume" onclick="switchTab('tab-resume')">X</button>
+        <button class="round-btn btn-y" title="Combat" onclick="switchTab('tab-combat')">Y</button>
+        <button class="round-btn btn-b" title="Trainer" onclick="switchTab('tab-trainer')">B</button>
+        <button class="round-btn btn-a" title="Specimen" onclick="switchTab('tab-spec')">A</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Web Audio Synthesizer for genuine 8-bit retro sound effects
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTone(freq, duration, type = 'square') {
+      try {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        console.warn('Audio not initialized yet');
+      }
+    }
+
+    function playChirp() {
+      playTone(523.25, 0.08);
+      setTimeout(() => playTone(659.25, 0.08), 80);
+    }
+
+    function playStrike() {
+      playTone(220, 0.06, 'sawtooth');
+      setTimeout(() => playTone(110, 0.15, 'sawtooth'), 60);
+    }
+
+    // Tab Navigation Logic
+    const tabs = document.querySelectorAll('.dex-tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    function switchTab(targetId) {
+      playChirp();
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === targetId));
+      contents.forEach(c => c.classList.toggle('active', c.id === targetId));
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+
+    document.getElementById('mainLens').addEventListener('click', () => {
+      playTone(440, 0.1);
+      setTimeout(() => playTone(880, 0.2), 100);
+    });
+
+    // Combat Simulation Interactive Logic
+    let bossHp = 498;
+    const maxHp = 500;
+    const strikeBtn = document.getElementById('strikeBtn');
+    const bossHpBar = document.getElementById('bossHp');
+    const bossHpText = document.getElementById('bossHpText');
+
+    strikeBtn.addEventListener('click', () => {
+      playStrike();
+      const damage = Math.floor(Math.random() * 25) + 15;
+      bossHp = Math.max(0, bossHp - damage);
+      const pct = ((bossHp / maxHp) * 100).toFixed(1);
+      bossHpBar.style.width = pct + '%';
+      bossHpText.innerText = `BOSS HP: ${bossHp} / ${maxHp} (${pct}%) — CRITICAL STRIKE -${damage}!`;
+      if (bossHp <= 0) {
+        bossHpText.innerText = 'VICTORY! TYRANITAR DEFEATED! RAID APEX CLEARED!';
+        strikeBtn.innerText = '👑 RAID MASTERED';
+        strikeBtn.disabled = true;
+      }
+    });
+
+    // D-Pad Quick Switcher
+    const tabList = ['tab-spec', 'tab-trainer', 'tab-combat', 'tab-projects', 'tab-resume'];
+    let currentIdx = 0;
+    document.getElementById('dpadRight').addEventListener('click', () => {
+      currentIdx = (currentIdx + 1) % tabList.length;
+      switchTab(tabList[currentIdx]);
+    });
+    document.getElementById('dpadLeft').addEventListener('click', () => {
+      currentIdx = (currentIdx - 1 + tabList.length) % tabList.length;
+      switchTab(tabList[currentIdx]);
+    });
+  </script>
+</body>
+</html>
