@@ -20,6 +20,12 @@
 
   <!-- Pokédex Hardware Status Indicators -->
   <p align="center">
+    <a href="https://github.com/imnotparama/imnotparama/actions/workflows/ci-health.yml">
+      <img src="https://github.com/imnotparama/imnotparama/actions/workflows/ci-health.yml/badge.svg" alt="CI Pipeline Health" />
+    </a>
+    <a href="https://imnotparama.github.io/imnotparama/" target="_blank">
+      <img src="https://img.shields.io/badge/LIVE_TERMINAL-ONLINE%20%E2%96%B6-00FF88?style=for-the-badge&logo=googlechrome&logoColor=000000" alt="Live Dex Terminal" />
+    </a>
     <img src="https://komarev.com/ghpvc/?username=imnotparama&style=for-the-badge&color=DC0A2D&label=DEX+SCANS" alt="Dex Scans" />
     <img src="https://img.shields.io/badge/DEX_ID-%23029--ECE-00E5FF?style=for-the-badge&logo=electron&logoColor=000000" alt="Dex ID" />
     <img src="https://img.shields.io/badge/TRAINER_RANK-CHAMPION-FFD700?style=for-the-badge&logo=sublime-text&logoColor=000000" alt="Rank" />
@@ -440,7 +446,7 @@
         <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="docs/projects/busit.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
         <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
@@ -482,7 +488,7 @@
         <img src="https://img.shields.io/badge/GraphQL%20API-E10098?style=flat-square&logo=graphql&logoColor=white" />
       </p>
       <p>
-        <a href="https://github.com/imnotparama"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
+        <a href="docs/projects/combat-engine.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
         <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
       </p>
     </td>
