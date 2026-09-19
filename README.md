@@ -56,7 +56,7 @@
     <a href="#executive-dossier"><img src="https://img.shields.io/badge/📋_Dossier-161B22?style=flat-square&logoColor=white" alt="Dossier" /></a>
     <a href="#active-quest"><img src="https://img.shields.io/badge/🎯_Quest-161B22?style=flat-square&logoColor=white" alt="Quest" /></a>
     <a href="#trainer-card"><img src="https://img.shields.io/badge/🪪_Trainer_Card-161B22?style=flat-square&logoColor=white" alt="Trainer Card" /></a>
-    <a href="#specimen-matrix"><img src="https://img.shields.io/badge/📱_Specimen-161B22?style=flat-square&logoColor=white" alt="Specimen" /></a>
+    <a href="#architect-profile"><img src="https://img.shields.io/badge/🏛️_Architect-161B22?style=flat-square&logoColor=white" alt="Architect" /></a>
     <a href="#evolution-matrix"><img src="https://img.shields.io/badge/🧬_Evolution-161B22?style=flat-square&logoColor=white" alt="Evolution" /></a>
     <a href="#habitat-scanner"><img src="https://img.shields.io/badge/🗺️_Scanner-161B22?style=flat-square&logoColor=white" alt="Scanner" /></a>
     <a href="#arsenal"><img src="https://img.shields.io/badge/🎒_Arsenal-161B22?style=flat-square&logoColor=white" alt="Arsenal" /></a>
@@ -172,43 +172,43 @@
 <br/>
 
 <!-- ================================================================= -->
-<!-- DEX DATA FILE // ARCHITECT SPECIFICATION                          -->
+<!-- DEX ARCHITECT PROFILE // SYSTEMS SPECIFICATION                     -->
 <!-- ================================================================= -->
 
-<a name="specimen-matrix"></a>
-### 📱 `> dex.scan_specimen_entry(#029)`
+<a name="architect-profile"></a>
+### 🏛️ `> dex.load_architect_profile()`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/specimen_card.svg" width="100%" alt="Dex Specimen Entry #029" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/specimen_card.svg" width="100%" alt="Dex Architect Specification #029" />
 </div>
 
 <br/>
 
 <details>
-<summary><b>📋 View raw terminal specimen specification (Text Format)</b></summary>
+<summary><b>📋 View raw terminal architect specification (Text Format)</b></summary>
 
 ```yaml
 ╔══════════════════════════════════════════════════════════════════════╗
-║ DEX DATA ENTRY #029 // ARCHITECT SPECIFICATION                       ║
+║ DEX ARCHITECT SPECIFICATION // PARAMESHWARAN S                      ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║ NAME: Parameshwaran S (Parama)                                       ║
-║ SPECIES / CLASS: AI Systems Architect • Data Scientist • IoT Maker  ║
-║ ACADEMY: SRM Institute of Science & Technology (B.Tech ECE)           ║
-║ HABITAT / BASE: Chennai, Tamil Nadu, India 🇮🇳                         ║
-║ NATURE: Analytical & Highly Resilient (+Speed / +Multi-Thread)       ║
+║ CANDIDATE : Parameshwaran S (Parama)                                 ║
+║ ROLE      : AI Systems Architect • Data Scientist • Full-Stack      ║
+║ ACADEMY   : SRM Institute of Science & Technology (B.Tech ECE)       ║
+║ LOCATION  : Chennai, Tamil Nadu, India 🇮🇳                            ║
+║ STATUS    : Open to Full-Time & Summer 2025/2026 Opportunities       ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║ BASE STATS [TOTAL: 578 / 600]:                                       ║
-║   HP        [Energy & Focus]         : ██████████████████ 98/100     ║
-║   ATTACK    [Algorithmic Velocity]   : █████████████████░ 95/100     ║
-║   DEFENSE   [Architecture Robustness]: ████████████████░░ 92/100     ║
-║   SP. ATK   [Multimodal AI & ML]     : ██████████████████ 99/100     ║
-║   SP. DEF   [Fault Tolerance & Ops]  : █████████████████░ 94/100     ║
-║   SPEED     [Rapid Prototyping]      : ██████████████████ 100/100    ║
+║ DOMAIN PROFICIENCY INDEX:                                            ║
+║   • Multimodal AI & Neural Systems     : ██████████████████ 98%      ║
+║   • Embedded IoT & Microcontrollers    : █████████████████░ 95%      ║
+║   • Full-Stack Web & API Architecture  : █████████████████░ 94%      ║
+║   • Cloud, CI/CD & DevOps Automation   : ████████████████░░ 92%      ║
+║   • Data Science & Neural Engineering  : ██████████████████ 99%      ║
+║   • Rapid Prototyping & Systems Design : ██████████████████ 100%     ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║ ABILITIES:                                                           ║
-║   • SYNAPTIC INFERENCE — Accelerates neural pipelines & AI agents    ║
-║   • SILICON TELEMETRY — Seamless ESP32 edge telemetry to web apps    ║
-║   • [HIDDEN] COMMIT SURGE — Inflicts real-time raid strike damage    ║
+║ CORE ARCHITECTURE PILLARS:                                           ║
+║   • NEURAL INFERENCE — Real-time Gemini Vision & PyTorch pipelines   ║
+║   • EDGE TELEMETRY — Sub-30ms ESP32 embedded MQTT data streams       ║
+║   • CLOUD & CI/CD — Serverless automation & Docker microservices     ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
 
