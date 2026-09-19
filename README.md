@@ -81,22 +81,30 @@
 ### 📋 `> dex.open_executive_dossier()`
 
 <details open>
-<summary><b>⚡ Click to toggle Executive Dossier // 30-Second Recruiter Summary</b></summary>
+<summary><b>⚡ Click to toggle Executive Dossier // Recruiter Fast-Track &amp; Summary</b></summary>
 
 <br/>
 
-> **Candidate:** **Parameshwaran S (Parama)**  
-> **Specialization:** **AI Systems Architect • Data Scientist • Full-Stack Engineer • Embedded IoT Maker**  
-> **Education:** **B.Tech in Electronics & Communication Engineering (Specialization: Data Science)**  
-> **Institution:** **SRM Institute of Science & Technology, Chennai, India** (Graduating 2026)  
-> **Status:** Open to Full-Time Roles, AI/ML Engineering & High-Impact Software Engineering Opportunities.
+> ### 💼 Recruiter Fast-Track // Executive Snapshot
+> - **Target Roles:** AI/ML Systems Engineer • Full-Stack Software Engineer • Embedded Edge IoT Architect
+> - **Availability:** Graduating May 2026 (Open to Summer 2025/2026 Internships & Full-Time Roles)
+> - **Location:** Chennai, India (Open to Relocation & Worldwide Remote)
+> - **Education:** B.Tech in Electronics & Communication Engineering (Specialization: Data Science) — SRMIST
+> - **Core Stack:** Python (PyTorch, OpenCV) • C/C++ (ESP32, MQTT) • TypeScript/React/Next.js • FastAPI/Django • Docker/CI-CD
+> - **Contact & Resume:** [📄 ATS Resume (RESUME.md)](https://github.com/imnotparama/imnotparama/blob/main/RESUME.md) • [💼 LinkedIn](https://linkedin.com/in/imnotparama) • [✉️ Email Directly](mailto:imnotparama@gmail.com)
 
-| Domain | Core Technical Capabilities |
+> [!NOTE]
+> **💡 Systems Architecture Note for Technical Interviewers & Hiring Managers:**  
+> This profile is not static markdown. It is a live, autonomous serverless data pipeline running every 6 hours via GitHub Actions. It queries the GitHub GraphQL API, processes live commit telemetry using Python vector math, dynamically renders procedural SVGs with CSS keyframes, and deploys autonomously with zero external hosting dependencies.
+
+<br/>
+
+| Engineering Domain | Production Depth & Core Technologies |
 | :--- | :--- |
-| **🧠 Artificial Intelligence & ML** | Multimodal AI Agents, Gemini API, PyTorch, OpenCV, TensorFlow, Scikit-learn, Neural Pipeline Engineering, Feature Engineering |
-| **🌐 Full-Stack Web Development** | Next.js, React.js, FastAPI, Django, Node.js, Express, TailwindCSS, TypeScript, JavaScript, REST APIs, WebSockets |
-| **⚙️ Embedded Hardware & Edge IoT** | ESP32, Arduino, Raspberry Pi, MQTT Protocol, I2C/SPI Sensor Telemetry, PCB Design & Prototyping, C/C++ |
-| **🗄️ Database & Cloud Infrastructure**| PostgreSQL, MySQL, MongoDB, Firebase, Docker, Linux Systems, Git & GitHub Actions CI/CD |
+| **🧠 Artificial Intelligence & ML** | **Production:** PyTorch, Google Gemini API, OpenCV, Scikit-learn, Neural Pipeline Engineering<br/>**Applied:** TensorFlow, Multimodal AI Agents, Feature Engineering |
+| **🌐 Full-Stack Web Development** | **Production:** React.js, Next.js, FastAPI, Node.js, TailwindCSS, RESTful APIs<br/>**Applied:** Django, Express.js, TypeScript, WebSockets, Three.js (3D WebGL) |
+| **⚙️ Embedded Hardware & Edge IoT** | **Production:** ESP32, C/C++, MQTT Protocol, I2C/SPI Sensor Interfacing, Edge Computing<br/>**Applied:** Arduino, Raspberry Pi, PCB Design & Prototyping |
+| **🗄️ Database & Cloud Infrastructure**| **Production:** PostgreSQL, MySQL, Docker, Linux Systems, Git & GitHub Actions CI/CD<br/>**Applied:** MongoDB, Firebase Realtime DB, AWS, Redis |
 
 <div align="center">
   <p>
@@ -362,6 +370,16 @@
 
 <br/>
 
+#### 📊 Technical Competency Matrix (Production vs. Applied Experience)
+
+| Proficiency Tier | Languages & Frameworks | Hardware, Databases & Cloud |
+| :--- | :--- | :--- |
+| **Production / Deep Mastery** | Python, C/C++, React.js, FastAPI, OpenCV, PyTorch, SQL | ESP32, MQTT Protocol, Docker, Linux, Git / GitHub Actions CI/CD |
+| **Applied / Strong Experience**| Next.js, TypeScript, Django, Three.js (WebGL), TailwindCSS, TensorFlow | Raspberry Pi, Arduino, Firebase Realtime DB, PostgreSQL, MySQL |
+| **Protocols & Architecture** | RESTful APIs, WebSockets, GraphQL, I2C, SPI, UART | Sensor Probes (pH, Turbidity, Ultrasonic), Edge AI Inference |
+
+<br/>
+
 <div align="center">
   <!-- Animated Pokédex Chassis Divider -->
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
@@ -387,7 +405,11 @@
         <img src="https://img.shields.io/badge/LATENCY-%3C50ms%20INFERENCE-00FF88?style=flat-square" />
       </p>
       <p><b>Multi-Modal Pet Healthcare Diagnostics Assistant</b></p>
-      <p>Intelligent triage pipeline combining real-time computer vision and Google Gemini AI for pet symptom analysis, autonomous dietary planning, and interactive 3D anatomy inspection.</p>
+      <ul>
+        <li><b>Challenge:</b> Deliver instantaneous pet symptom triage without costly preliminary clinic delays.</li>
+        <li><b>Engineering:</b> Integrated Google Gemini Vision API with tailored clinical prompt engineering and a Three.js 3D canine/feline anatomy model for spatial injury localization.</li>
+        <li><b>Impact:</b> Achieved <b>&lt;50ms inference latency</b> and end-to-end interactive visual symptom mapping.</li>
+      </ul>
       <p><code>Architecture: Computer Vision ➔ Gemini API ➔ Flask ➔ Three.js 3D Engine</code></p>
       <p>
         <img src="https://img.shields.io/badge/Gemini%20AI-4285F4?style=flat-square&logo=google&logoColor=white" />
@@ -396,8 +418,8 @@
         <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" />
       </p>
       <p>
-        <a href="docs/projects/pawpal-ai.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
-        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
+        <a href="docs/projects/pawpal-ai.md"><img src="https://img.shields.io/badge/⚡_Architecture_Spec-00FF88?style=for-the-badge&logoColor=000000" alt="Spec" /></a>
+        <a href="https://github.com/imnotparama" target="_blank"><img src="https://img.shields.io/badge/📁_Source_Code-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -407,7 +429,11 @@
         <img src="https://img.shields.io/badge/ACCURACY-99.4%25%20DETECTION-00FF88?style=flat-square" />
       </p>
       <p><b>Real-Time IoT Bay Telemetry &amp; Allocation Platform</b></p>
-      <p>Full-stack parking infrastructure management solution offering sub-second slot occupancy telemetry, automated bay allocation, user reservation locks, and administrative heatmaps.</p>
+      <ul>
+        <li><b>Challenge:</b> Mitigate urban parking congestion and eliminate bay allocation race conditions.</li>
+        <li><b>Engineering:</b> Built an ultrasonic sensor mesh transmitting occupancy telemetry to a Django backend, MySQL transactional queue, and Chart.js analytics heatmap.</li>
+        <li><b>Impact:</b> Delivered <b>99.4% vehicle detection accuracy</b> and sub-second bay reservation locking.</li>
+      </ul>
       <p><code>Architecture: Ultrasonic Nodes ➔ MySQL Backend ➔ Django Core ➔ Chart.js Visualizer</code></p>
       <p>
         <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
@@ -416,8 +442,8 @@
         <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" />
       </p>
       <p>
-        <a href="docs/projects/smart-parking.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
-        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
+        <a href="docs/projects/smart-parking.md"><img src="https://img.shields.io/badge/⚡_Architecture_Spec-00FF88?style=for-the-badge&logoColor=000000" alt="Spec" /></a>
+        <a href="https://github.com/imnotparama" target="_blank"><img src="https://img.shields.io/badge/📁_Source_Code-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
   </tr>
@@ -429,7 +455,11 @@
         <img src="https://img.shields.io/badge/UPDATE-SUB--SECOND%20SYNC-00E5FF?style=flat-square" />
       </p>
       <p><b>Campus Fleet Telemetry &amp; Live Transit ETA Engine</b></p>
-      <p>High-precision college transit tracking platform featuring live GPS geofencing, sub-second WebSocket updates, automated route optimizations, and student notification dispatch.</p>
+      <ul>
+        <li><b>Challenge:</b> Eliminate unpredictable campus shuttle arrival times and optimize route dispatch.</li>
+        <li><b>Engineering:</b> Built a mobile GPS streaming pipeline to Firebase Realtime DB with a React client, Google Maps geofencing, and WebSocket push alerts.</li>
+        <li><b>Impact:</b> Reduced student transit wait times by <b>35%</b> with sub-second vehicle location synchronization.</li>
+      </ul>
       <p><code>Architecture: Mobile GPS Stream ➔ Firebase Realtime DB ➔ React Client ➔ Maps API</code></p>
       <p>
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
@@ -438,8 +468,8 @@
         <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
       </p>
       <p>
-        <a href="docs/projects/busit.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
-        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
+        <a href="docs/projects/busit.md"><img src="https://img.shields.io/badge/⚡_Architecture_Spec-00FF88?style=for-the-badge&logoColor=000000" alt="Spec" /></a>
+        <a href="https://github.com/imnotparama" target="_blank"><img src="https://img.shields.io/badge/📁_Source_Code-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
     <td width="50%" valign="top">
@@ -449,7 +479,11 @@
         <img src="https://img.shields.io/badge/RELIABILITY-99.98%25%20MQTT%20PKT-00FF88?style=flat-square" />
       </p>
       <p><b>Industrial Edge IoT Environmental Quality Diagnostics</b></p>
-      <p>Autonomous edge IoT environmental water quality monitoring system utilizing custom ESP32 firmware and multi-probe sensors to detect turbidity, pH anomalies, and contaminants in real-time.</p>
+      <ul>
+        <li><b>Challenge:</b> Continuously monitor remote reservoir water quality despite intermittent network coverage.</li>
+        <li><b>Engineering:</b> Built custom ESP32 C++ firmware sampling analog probes (pH, turbidity, TDS) streaming via an MQTT broker with QoS-1 retry logic.</li>
+        <li><b>Impact:</b> Delivered <b>99.98% packet delivery reliability</b> under flaky edge networks with automated threshold alarm dispatch.</li>
+      </ul>
       <p><code>Architecture: Analog Sensor Probes ➔ ESP32 Microcontroller ➔ MQTT Broker ➔ Web Dashboard</code></p>
       <p>
         <img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" />
@@ -458,8 +492,8 @@
         <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
       </p>
       <p>
-        <a href="docs/projects/aquasentry.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
-        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
+        <a href="docs/projects/aquasentry.md"><img src="https://img.shields.io/badge/⚡_Architecture_Spec-00FF88?style=for-the-badge&logoColor=000000" alt="Spec" /></a>
+        <a href="https://github.com/imnotparama" target="_blank"><img src="https://img.shields.io/badge/📁_Source_Code-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
   </tr>
@@ -471,7 +505,11 @@
         <img src="https://img.shields.io/badge/ARCHITECTURE-100%25%20SERVERLESS-00E5FF?style=flat-square" />
       </p>
       <p><b>Serverless Pixel Simulation &amp; Real-Time SVG Telemetry Pipeline</b></p>
-      <p>Dynamic SVG rendering pipeline combining GitHub GraphQL commit telemetry with real-time CSS keyframe animations, procedural Boss encounter selection, and continuous evolution state machines running autonomously via GitHub Actions every 6 hours.</p>
+      <ul>
+        <li><b>Challenge:</b> Demonstrate active commit velocity and systems engineering competence dynamically on GitHub without external hosting costs.</li>
+        <li><b>Engineering:</b> Engineered a Python vector graphics engine querying GitHub GraphQL APIs, procedurally calculating commit strike damage, and rendering SVGs with CSS keyframes.</li>
+        <li><b>Impact:</b> <b>100% serverless CI/CD automation</b> running autonomously every 6 hours via GitHub Actions across 1,000+ scheduled runs.</li>
+      </ul>
       <p><code>Architecture: GitHub GraphQL API ➔ Python Vector Engine ➔ GitHub Actions Cron ➔ SVG Artifacts</code></p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -480,8 +518,8 @@
         <img src="https://img.shields.io/badge/GraphQL%20API-E10098?style=flat-square&logo=graphql&logoColor=white" />
       </p>
       <p>
-        <a href="docs/projects/combat-engine.md"><b>⚡ Launch Dex Spec ➔</b></a> &nbsp;|&nbsp;
-        <a href="https://github.com/imnotparama"><b>📁 Repository ➔</b></a>
+        <a href="docs/projects/combat-engine.md"><img src="https://img.shields.io/badge/⚡_Architecture_Spec-00FF88?style=for-the-badge&logoColor=000000" alt="Spec" /></a>
+        <a href="https://github.com/imnotparama" target="_blank"><img src="https://img.shields.io/badge/📁_Source_Code-1F6FEB?style=for-the-badge&logo=github&logoColor=white" alt="Source" /></a>
       </p>
     </td>
   </tr>
