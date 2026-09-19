@@ -40,9 +40,9 @@ To maximize your recruiter conversion rate, configure your 6 pinned repositories
 
 ---
 
-### 5. 🎮 `autonomous-combat-engine`
-- **Repository Name:** `autonomous-combat-engine`
-- **Description:** Serverless Pixel Simulation & Real-Time SVG Telemetry Pipeline running autonomously via GitHub Actions & GraphQL API (1,000+ runs).
+### 5. ⚡ `autonomous-telemetry-pipeline`
+- **Repository Name:** `autonomous-telemetry-pipeline`
+- **Description:** Serverless Vector Graphics & Real-Time Telemetry Pipeline running autonomously via GitHub Actions & GraphQL API (1,000+ runs).
 - **Website URL:** `https://github.com/imnotparama/imnotparama/blob/main/docs/projects/combat-engine.md`
 - **GitHub Topics:** `python`, `graphql`, `github-actions`, `svg-animations`, `ci-cd`, `serverless`
 

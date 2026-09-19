@@ -58,7 +58,6 @@
     <a href="#trainer-card"><img src="https://img.shields.io/badge/🪪_Trainer_Card-161B22?style=flat-square&logoColor=white" alt="Trainer Card" /></a>
     <a href="#specimen-matrix"><img src="https://img.shields.io/badge/📱_Specimen-161B22?style=flat-square&logoColor=white" alt="Specimen" /></a>
     <a href="#evolution-matrix"><img src="https://img.shields.io/badge/🧬_Evolution-161B22?style=flat-square&logoColor=white" alt="Evolution" /></a>
-    <a href="#combat-arena"><img src="https://img.shields.io/badge/⚔️_Combat-161B22?style=flat-square&logoColor=white" alt="Combat" /></a>
     <a href="#habitat-scanner"><img src="https://img.shields.io/badge/🗺️_Scanner-161B22?style=flat-square&logoColor=white" alt="Scanner" /></a>
     <a href="#arsenal"><img src="https://img.shields.io/badge/🎒_Arsenal-161B22?style=flat-square&logoColor=white" alt="Arsenal" /></a>
     <a href="#projects"><img src="https://img.shields.io/badge/📜_Projects-161B22?style=flat-square&logoColor=white" alt="Projects" /></a>
@@ -244,55 +243,6 @@
 
 <br/>
 
-<!-- ================================================================= -->
-<!-- THE SIGNATURE FEATURE // DEX COMBAT SIMULATION                    -->
-<!-- ================================================================= -->
-
-<a name="combat-arena"></a>
-<div align="center">
-
-## ⚔️ Dex Combat Arena // Real-Time Boss Encounter
-
-> ⚡ **Serverless Combat Telemetry:** Every GitHub commit inflicts direct strike damage against the daily raid boss.  
-> Experience points level up your battle companion across ascending tier classes (*Base ➔ Stage I ➔ Stage II ➔ Mega Apex Form*).  
-> 🌟 **Legendary Weekend Raids:** Ho-Oh and Lugia descend only on Saturdays & Sundays.
-
-<br/>
-
-<!-- Live Animated Battle SVG -->
-<a href="https://github.com/imnotparama/imnotparama">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokemon_battle.svg" width="85%" alt="Dex Real-Time Raid Arena" />
-</a>
-
-<br/><br/>
-
-<details>
-<summary><b>🎮 Click to reveal Dex Combat Mechanics &amp; CI/CD Engine</b></summary>
-
-<br/>
-
-| Dex Engine Metric | System Implementation |
-| :--- | :--- |
-| **Encounter Roster** | Weekly rotation (*Gengar, Charizard, Dragonite, Tyranitar, Lucario, Rayquaza, Mewtwo*) on a two-week parity cycle |
-| **Legendary Weekend Raids** | Ho-Oh (Sat) & Lugia (Sun) descend with golden glow — weekend check-ins rewarded |
-| **Strike Power (HP)** | Exact 365-day contribution telemetry (GitHub GraphQL) deals proportional damage to the Boss HP gauge |
-| **Boss Tier Scaling** | The raid never ends: past 500 commits the next tier summons a fresh boss with a bigger HP pool (*Rookie ➔ Elite ➔ Champion ➔ Mega ➔ Legend*) |
-| **EXP & Tier Evolution**| Commit volume accumulates EXP to level up combat stats and evolve sprite tiers |
-| **Pixel Combat Engine** | Retro Gen-V animated sprites rendered crisp via CSS `image-rendering: pixelated` |
-| **Autonomous CI/CD** | Automated GitHub Actions workflow executes the Python combat engine every 6 hours |
-
-</details>
-
-</div>
-
-<br/>
-
-<div align="center">
-  <!-- Animated Pokédex Chassis Divider -->
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
-</div>
-
-<br/>
 
 <!-- ================================================================= -->
 <!-- DEX HABITAT MAP SCANNER // MATRIX TRAVERSAL                       -->
@@ -499,15 +449,15 @@
   </tr>
   <tr>
     <td colspan="2" valign="top">
-      <h3 align="left">🎮 Autonomous Combat Engine</h3>
+      <h3 align="left">⚡ Autonomous SVG Telemetry Engine</h3>
       <p>
         <img src="https://img.shields.io/badge/AFFINITY-DRAGON%20%2F%20CI--CD-E91E63?style=flat-square" />
         <img src="https://img.shields.io/badge/ARCHITECTURE-100%25%20SERVERLESS-00E5FF?style=flat-square" />
       </p>
-      <p><b>Serverless Pixel Simulation &amp; Real-Time SVG Telemetry Pipeline</b></p>
+      <p><b>Serverless Vector Graphics &amp; Real-Time Telemetry Pipeline</b></p>
       <ul>
-        <li><b>Challenge:</b> Demonstrate active commit velocity and systems engineering competence dynamically on GitHub without external hosting costs.</li>
-        <li><b>Engineering:</b> Engineered a Python vector graphics engine querying GitHub GraphQL APIs, procedurally calculating commit strike damage, and rendering SVGs with CSS keyframes.</li>
+        <li><b>Challenge:</b> Automatically render real-time developer metrics and dynamic vector assets on GitHub without external hosting costs or uptime risks.</li>
+        <li><b>Engineering:</b> Engineered a Python vector graphics engine querying GitHub GraphQL APIs to render automated animated SVG graphics with CSS keyframes via GitHub Actions.</li>
         <li><b>Impact:</b> <b>100% serverless CI/CD automation</b> running autonomously every 6 hours via GitHub Actions across 1,000+ scheduled runs.</li>
       </ul>
       <p><code>Architecture: GitHub GraphQL API ➔ Python Vector Engine ➔ GitHub Actions Cron ➔ SVG Artifacts</code></p>
