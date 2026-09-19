@@ -13,7 +13,7 @@
 
   <!-- Pokédex LCD Dynamic Typing Subtitle -->
   <a href="https://github.com/imnotparama">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&duration=2800&pause=900&color=00FF88&center=true&vCenter=true&multiline=false&width=750&height=40&lines=DEX+ENTRY+%23029%3A+PARAMESHWARAN+S;ROLE%3A+AI+SYSTEMS+ARCHITECT+%E2%80%A2+DATA+SCIENCE+%E2%80%A2+IoT;HABITAT%3A+CHENNAI%2C+IN+(SRMIST);PASSIVE%3A+AUTONOMOUS+COMMIT+TELEMETRY+%26+RAID+ENGINE" alt="Dex Subtitle" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&duration=2800&pause=900&color=00FF88&center=true&vCenter=true&multiline=false&width=750&height=40&lines=DEX+ENTRY+%23010407%3A+PARAMESHWARAN+S;ROLE%3A+AI+SYSTEMS+ARCHITECT+%E2%80%A2+DATA+SCIENCE+%E2%80%A2+IoT;HABITAT%3A+CHENNAI%2C+IN+(SRMIST);PASSIVE%3A+AUTONOMOUS+COMMIT+TELEMETRY+%26+RAID+ENGINE" alt="Dex Subtitle" />
   </a>
 
   <br/>
@@ -27,7 +27,7 @@
       <img src="https://img.shields.io/badge/CI_PIPELINE-PASSING-00E5FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Pipeline" />
     </a>
     <img src="https://komarev.com/ghpvc/?username=imnotparama&style=for-the-badge&color=DC0A2D&label=DEX+SCANS" alt="Dex Scans" />
-    <img src="https://img.shields.io/badge/DEX_ID-%23029--ECE-1F6FEB?style=for-the-badge&logo=electron&logoColor=white" alt="Dex ID" />
+    <img src="https://img.shields.io/badge/DEX_ID-%23010407-1F6FEB?style=for-the-badge&logo=electron&logoColor=white" alt="Dex ID" />
     <img src="https://img.shields.io/badge/RANK-CHAMPION-FFD700?style=for-the-badge&logo=sublime-text&logoColor=000000" alt="Rank" />
     <img src="https://img.shields.io/badge/REGION-CHENNAI%2C_IN-7000FF?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Region" />
   </p>
@@ -176,7 +176,7 @@
 <!-- ================================================================= -->
 
 <a name="architect-profile"></a>
-### 🏛️ `> dex.load_architect_profile()`
+### 🏛️ `> dex.load_architect_profile(#010407)`
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/specimen_card.svg" width="100%" alt="Dex Architect Specification #029" />
@@ -189,7 +189,7 @@
 
 ```yaml
 ╔══════════════════════════════════════════════════════════════════════╗
-║ DEX ARCHITECT SPECIFICATION // PARAMESHWARAN S                      ║
+║ DEX ARCHITECT SPECIFICATION // PARAMESHWARAN S (#010407)                      ║
 ╠══════════════════════════════════════════════════════════════════════╣
 ║ CANDIDATE : Parameshwaran S (Parama)                                 ║
 ║ ROLE      : AI Systems Architect • Data Scientist • Full-Stack      ║

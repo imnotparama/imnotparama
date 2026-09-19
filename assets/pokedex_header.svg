@@ -199,8 +199,8 @@
 
   <!-- ==================== OLED SCREEN CONTENT ==================== -->
   <!-- Top Status Bar on Screen -->
-  <text x="65" y="126" class="dex-mono" font-size="10" font-weight="bold" fill="#00FF88" letter-spacing="1">● DEX ENTRY #029</text>
-  <text x="210" y="126" class="dex-mono" font-size="10" fill="#58A6FF">SPECIES: ARCHITECT / RESEARCHER</text>
+  <text x="65" y="126" class="dex-mono" font-size="10" font-weight="bold" fill="#00FF88" letter-spacing="1">● DEX ENTRY #010407</text>
+  <text x="210" y="126" class="dex-mono" font-size="10" fill="#58A6FF">ROLE: AI SYSTEMS ARCHITECT</text>
   <text x="560" y="126" class="dex-mono" font-size="10" fill="#8B949E">REGION: CHENNAI, IN (SRMIST)</text>
 
   <line x1="65" y1="133" x2="835" y2="133" stroke="#00E5FF" stroke-width="1" opacity="0.3" />
