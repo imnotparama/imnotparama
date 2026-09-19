@@ -13,22 +13,22 @@
 
   <!-- Pokédex LCD Dynamic Typing Subtitle -->
   <a href="https://github.com/imnotparama">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=900&color=00FF88&center=true&vCenter=true&multiline=false&width=680&height=45&lines=DEX+ENTRY+%23029%3A+PARAMESHWARAN+S;TYPE%3A+AI+ENGINEER+%E2%80%A2+DATA+SCIENCE+%E2%80%A2+FULL+STACK;HABITAT%3A+CHENNAI%2C+IN+(SRM+INSTITUTE+OF+SCIENCE+%26+TECH);PASSIVE%3A+AUTONOMOUS+COMMIT+TELEMETRY+%26+RAID+ENGINE" alt="Dex Subtitle" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&duration=2800&pause=900&color=00FF88&center=true&vCenter=true&multiline=false&width=750&height=40&lines=DEX+ENTRY+%23029%3A+PARAMESHWARAN+S;ROLE%3A+AI+SYSTEMS+ARCHITECT+%E2%80%A2+DATA+SCIENCE+%E2%80%A2+IoT;HABITAT%3A+CHENNAI%2C+IN+(SRMIST);PASSIVE%3A+AUTONOMOUS+COMMIT+TELEMETRY+%26+RAID+ENGINE" alt="Dex Subtitle" />
   </a>
 
   <br/>
 
   <!-- Pokédex Hardware Status Indicators -->
   <p align="center">
-    <a href="https://github.com/imnotparama/imnotparama/actions/workflows/ci-health.yml">
-      <img src="https://github.com/imnotparama/imnotparama/actions/workflows/ci-health.yml/badge.svg" alt="CI Pipeline Health" />
-    </a>
     <a href="https://imnotparama.github.io/imnotparama/" target="_blank">
       <img src="https://img.shields.io/badge/LIVE_TERMINAL-ONLINE%20%E2%96%B6-00FF88?style=for-the-badge&logo=googlechrome&logoColor=000000" alt="Live Dex Terminal" />
     </a>
+    <a href="https://github.com/imnotparama/imnotparama/actions/workflows/ci-health.yml">
+      <img src="https://img.shields.io/badge/CI_PIPELINE-PASSING-00E5FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Pipeline" />
+    </a>
     <img src="https://komarev.com/ghpvc/?username=imnotparama&style=for-the-badge&color=DC0A2D&label=DEX+SCANS" alt="Dex Scans" />
-    <img src="https://img.shields.io/badge/DEX_ID-%23029--ECE-00E5FF?style=for-the-badge&logo=electron&logoColor=000000" alt="Dex ID" />
-    <img src="https://img.shields.io/badge/TRAINER_RANK-CHAMPION-FFD700?style=for-the-badge&logo=sublime-text&logoColor=000000" alt="Rank" />
+    <img src="https://img.shields.io/badge/DEX_ID-%23029--ECE-1F6FEB?style=for-the-badge&logo=electron&logoColor=white" alt="Dex ID" />
+    <img src="https://img.shields.io/badge/RANK-CHAMPION-FFD700?style=for-the-badge&logo=sublime-text&logoColor=000000" alt="Rank" />
     <img src="https://img.shields.io/badge/REGION-CHENNAI%2C_IN-7000FF?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Region" />
   </p>
 
@@ -51,28 +51,19 @@
     </a>
   </p>
 
-  <!-- Tactile Handheld Gamepad Action Bar -->
-  <a href="#-executive-dossier--recruiter-summary">
-    <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/gamepad_nav.svg" width="100%" alt="Tactile Handheld Gamepad Navigation" />
-  </a>
-
-  <br/><br/>
-
-  <!-- Quick-Jump Anchor Navigation Bar -->
+  <!-- Quick-Jump Navigation Hub (Pill Buttons) -->
   <p align="center">
-    <code>
-      <a href="#executive-dossier">📋 Executive Dossier</a> •
-      <a href="#active-quest">🎯 Active Quest</a> •
-      <a href="#trainer-card">🪪 Trainer Card</a> •
-      <a href="#specimen-matrix">📱 Specimen Matrix</a> •
-      <a href="#evolution-matrix">🧬 Evolution Matrix</a> •
-      <a href="#combat-arena">⚔️ Combat Arena</a> •
-      <a href="#habitat-scanner">🗺️ Habitat Scanner</a> •
-      <a href="#arsenal">🎒 Arsenal</a> •
-      <a href="#projects">📜 Projects</a> •
-      <a href="#synergies">⚡ Synergies</a> •
-      <a href="#telemetry">📊 Telemetry</a>
-    </code>
+    <a href="#executive-dossier"><img src="https://img.shields.io/badge/📋_Dossier-161B22?style=flat-square&logoColor=white" alt="Dossier" /></a>
+    <a href="#active-quest"><img src="https://img.shields.io/badge/🎯_Quest-161B22?style=flat-square&logoColor=white" alt="Quest" /></a>
+    <a href="#trainer-card"><img src="https://img.shields.io/badge/🪪_Trainer_Card-161B22?style=flat-square&logoColor=white" alt="Trainer Card" /></a>
+    <a href="#specimen-matrix"><img src="https://img.shields.io/badge/📱_Specimen-161B22?style=flat-square&logoColor=white" alt="Specimen" /></a>
+    <a href="#evolution-matrix"><img src="https://img.shields.io/badge/🧬_Evolution-161B22?style=flat-square&logoColor=white" alt="Evolution" /></a>
+    <a href="#combat-arena"><img src="https://img.shields.io/badge/⚔️_Combat-161B22?style=flat-square&logoColor=white" alt="Combat" /></a>
+    <a href="#habitat-scanner"><img src="https://img.shields.io/badge/🗺️_Scanner-161B22?style=flat-square&logoColor=white" alt="Scanner" /></a>
+    <a href="#arsenal"><img src="https://img.shields.io/badge/🎒_Arsenal-161B22?style=flat-square&logoColor=white" alt="Arsenal" /></a>
+    <a href="#projects"><img src="https://img.shields.io/badge/📜_Projects-161B22?style=flat-square&logoColor=white" alt="Projects" /></a>
+    <a href="#synergies"><img src="https://img.shields.io/badge/⚡_Synergies-161B22?style=flat-square&logoColor=white" alt="Synergies" /></a>
+    <a href="#telemetry"><img src="https://img.shields.io/badge/📊_Telemetry-161B22?style=flat-square&logoColor=white" alt="Telemetry" /></a>
   </p>
 
   <!-- Animated Pokédex Chassis Divider -->
