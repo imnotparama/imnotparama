@@ -87,7 +87,7 @@
 > ### 💼 Recruiter Fast-Track // Executive Snapshot
 > - **Target Roles:** AI/ML Systems Engineer • Full-Stack Software Engineer • Embedded Edge IoT Architect
 > - **Availability:** Graduating May 2026 (Open to Summer 2025/2026 Internships & Full-Time Roles)
-> - **Location:** Chennai, India (Open to Relocation & Worldwide Remote)
+> - **Location & Timezone:** Chennai, India (IST / UTC+05:30) • Open to Worldwide Remote (US/EU Async Overlap) & Relocation
 > - **Education:** B.Tech in Electronics & Communication Engineering (Specialization: Data Science) — SRMIST
 > - **Core Stack:** Python (PyTorch, OpenCV) • C/C++ (ESP32, MQTT) • TypeScript/React/Next.js • FastAPI/Django • Docker/CI-CD
 > - **Contact & Resume:** [📄 ATS Resume (RESUME.md)](https://github.com/imnotparama/imnotparama/blob/main/RESUME.md) • [💼 LinkedIn](https://linkedin.com/in/imnotparama) • [✉️ Email Directly](mailto:imnotparama@gmail.com)
@@ -128,6 +128,8 @@
 <!-- ================================================================= -->
 
 <a name="active-quest"></a>
+<div align="center">
+
 ### 🎯 `> dex.get_active_quest()`
 
 ```yaml
@@ -141,6 +143,8 @@
 ║ PROTOCOL STATUS: 94.8% SYSTEM LOAD // ALL SYNAPTIC CORES ENGAGED      ║
 ╚══════════════════════════════════════════════════════════════════════╝
 ```
+
+</div>
 
 <br/>
 
@@ -269,40 +273,42 @@
 <!-- ================================================================= -->
 
 <a name="arsenal"></a>
+<div align="center">
+
 ### 🎒 `> dex.open_trainer_bag()`
 
 <br/>
 
-#### ⚡ Key Items Pocket // Core Scripting & Languages
-<p align="left">
+<h4>⚡ Key Items Pocket // Core Scripting &amp; Languages</h4>
+<p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=python,js,ts,c,cpp,java,html,css,bash,sql&theme=dark" alt="Languages" />
   </a>
 </p>
 
-#### 🧠 Neural Machines Pocket // AI & Machine Learning
-<p align="left">
+<h4>🧠 Neural Machines Pocket // AI &amp; Machine Learning</h4>
+<p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=py,tensorflow,pytorch,opencv,sklearn,pandas,numpy,scipy,matplotlib&theme=dark" alt="AI and ML Stack" />
   </a>
 </p>
 
-#### 🌊 Fluid UI Pocket // Frontend Engineering TMs
-<p align="left">
+<h4>🌊 Fluid UI Pocket // Frontend Engineering TMs</h4>
+<p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,redux,vite,threejs,figma&theme=dark" alt="Frontend Stack" />
   </a>
 </p>
 
-#### 🔥 Server Machinery Pocket // Backend & Cloud Infrastructure
-<p align="left">
+<h4>🔥 Server Machinery Pocket // Backend &amp; Cloud Infrastructure</h4>
+<p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=django,flask,fastapi,nodejs,express,mysql,postgres,mongodb,firebase,docker,linux,aws&theme=dark" alt="Backend & Cloud Stack" />
   </a>
 </p>
 
-#### ⚙️ Silicon Hardware Pocket // PCB & Embedded Edge IoT
-<p align="left">
+<h4>⚙️ Silicon Hardware Pocket // PCB &amp; Embedded Edge IoT</h4>
+<p align="center">
   <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
   <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" />
   <img src="https://img.shields.io/badge/Raspberry%20Pi-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" />
@@ -311,8 +317,8 @@
   <img src="https://img.shields.io/badge/Sensors%20%26%20Telemetry-00E5FF?style=for-the-badge" alt="Telemetry" />
 </p>
 
-#### 🛠️ Utility Tool Belt // Developer Workflows & CI/CD
-<p align="left">
+<h4>🛠️ Utility Tool Belt // Developer Workflows &amp; CI/CD</h4>
+<p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,github,githubactions,vscode,postman,powershell,linux&theme=dark" alt="Dev Tools" />
   </a>
@@ -320,13 +326,15 @@
 
 <br/>
 
-#### 📊 Technical Competency Matrix (Production vs. Applied Experience)
+<h4>📊 Technical Competency Matrix (Production vs. Applied Experience)</h4>
 
 | Proficiency Tier | Languages & Frameworks | Hardware, Databases & Cloud |
 | :--- | :--- | :--- |
 | **Production / Deep Mastery** | Python, C/C++, React.js, FastAPI, OpenCV, PyTorch, SQL | ESP32, MQTT Protocol, Docker, Linux, Git / GitHub Actions CI/CD |
 | **Applied / Strong Experience**| Next.js, TypeScript, Django, Three.js (WebGL), TailwindCSS, TensorFlow | Raspberry Pi, Arduino, Firebase Realtime DB, PostgreSQL, MySQL |
 | **Protocols & Architecture** | RESTful APIs, WebSockets, GraphQL, I2C, SPI, UART | Sensor Probes (pH, Turbidity, Ultrasonic), Edge AI Inference |
+
+</div>
 
 <br/>
 
@@ -528,20 +536,13 @@
 
 <!-- Live GitHub Stats & Streak Telemetry -->
 <div align="center">
-  <table border="0">
-    <tr>
-      <td valign="top" align="center">
-        <a href="https://github.com/imnotparama">
-          <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00E5FF&title_color=00FF88&icon_color=00E5FF&text_color=C9D1D9" alt="Dex Stats" />
-        </a>
-      </td>
-      <td valign="top" align="center">
-        <a href="https://github.com/imnotparama">
-          <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=00E5FF&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
-        </a>
-      </td>
-    </tr>
-  </table>
+  <a href="https://github.com/imnotparama">
+    <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00E5FF&title_color=00FF88&icon_color=00E5FF&text_color=C9D1D9" alt="Dex Stats" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/imnotparama">
+    <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=00E5FF&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
+  </a>
 </div>
 
 <br/>
