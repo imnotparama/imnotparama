@@ -523,6 +523,25 @@
 <!-- Native Verified Achievement Trophy Cabinet -->
 <div align="center">
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/trophies.svg" width="100%" alt="Dex Achievement Trophies" />
+
+<br/><br/>
+
+<details>
+<summary><b>🏅 View Verified Dex Gym League Badges Registry (8/8 Unlocked)</b></summary>
+<br/>
+
+| Badge Emblem | Technical Domain | Pokémon Type Theme | Architectural Lore |
+| :---: | :--- | :---: | :--- |
+| **☕ Duke Ember** | **Java & Enterprise OOP** | `Fire / Steel` | JVM bytecode execution, multithreading, and type-safe architecture |
+| **🐍 Viper Synapse** | **Python & Deep Learning** | `Dragon / Psychic` | PyTorch, TensorFlow, OpenCV, and deep neural weight matrices |
+| **⚡ Silicon Overclock** | **C/C++ Embedded Edge** | `Electric / Steel` | Bare-metal firmware, FreeRTOS, ESP32, and hardware bus protocols |
+| **⚛️ Prismatic Quantum** | **TypeScript & React** | `Psychic / Light` | Next.js hydration, strict type interfaces, and WebGL state reactivity |
+| **🔥 Forge Cluster** | **Cloud & DevOps Infra** | `Fire / Dark` | Containerized microservices, Docker, Linux, CI/CD, and DB engines |
+| **👁️ Cyber Aegis** | **Computer Vision & Edge AI** | `Steel / Psychic` | Real-time YOLO object detection, OpenCV telemetry, and edge inference |
+| **🌐 Hydro Telemetry** | **IoT Aqua & Sensor Probes** | `Water / Electric` | Distributed sensory arrays (pH, Turbidity, Ultrasonic) via MQTT |
+| **👑 Apex Dex Champion** | **Grand Master Polymath** | `Legendary / Dragon` | Unified full-stack, hardware, and AI system orchestration |
+
+</details>
 </div>
 
 <br/>

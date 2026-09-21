@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="100%" height="140" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 145" width="100%" height="145" fill="none">
   <defs>
     <!-- Background & Container Gradients -->
     <linearGradient id="trophyCabinetBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -8,16 +8,22 @@
     </linearGradient>
     <linearGradient id="trophyBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFD700" />
-      <stop offset="35%" stop-color="#00F0FF" />
-      <stop offset="70%" stop-color="#A371F7" />
-      <stop offset="100%" stop-color="#00FF88" />
+      <stop offset="25%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#A371F7" />
+      <stop offset="75%" stop-color="#00FF88" />
+      <stop offset="100%" stop-color="#FF1744" />
     </linearGradient>
 
-    <!-- Metal Gradients -->
+    <!-- Metal & Element Gradients -->
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFF3B0" />
       <stop offset="50%" stop-color="#FFD700" />
       <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <linearGradient id="rubyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A80" />
+      <stop offset="50%" stop-color="#FF1744" />
+      <stop offset="100%" stop-color="#B71C1C" />
     </linearGradient>
     <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#E0FFFF" />
@@ -29,7 +35,7 @@
       <stop offset="50%" stop-color="#BA68C8" />
       <stop offset="100%" stop-color="#6A1B9A" />
     </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#E8F5E9" />
       <stop offset="50%" stop-color="#00E676" />
       <stop offset="100%" stop-color="#1B5E20" />
@@ -38,6 +44,16 @@
       <stop offset="0%" stop-color="#E3F2FD" />
       <stop offset="50%" stop-color="#2196F3" />
       <stop offset="100%" stop-color="#0D47A1" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E1" />
+      <stop offset="50%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#E65100" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2F1" />
+      <stop offset="50%" stop-color="#00BFA5" />
+      <stop offset="100%" stop-color="#004D40" />
     </linearGradient>
     <linearGradient id="apexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FF80AB" />
@@ -61,17 +77,19 @@
 
     <style>
       @keyframes gleamPulse {
-        0%, 100% { filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4)); transform: translateY(0); }
-        50% { filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.7)); transform: translateY(-3px); }
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4)); opacity: 0.95; }
+        50% { filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.7)); opacity: 1; }
       }
-      .trophy-item {
-        animation: gleamPulse 4s ease-in-out infinite;
+      .trophy-pulse {
+        animation: gleamPulse 3.5s ease-in-out infinite;
       }
-      .trophy-item:nth-child(2) { animation-delay: 0.7s; }
-      .trophy-item:nth-child(3) { animation-delay: 1.4s; }
-      .trophy-item:nth-child(4) { animation-delay: 2.1s; }
-      .trophy-item:nth-child(5) { animation-delay: 2.8s; }
-      .trophy-item:nth-child(6) { animation-delay: 3.5s; }
+      .trophy-podium:nth-of-type(2) .trophy-pulse { animation-delay: 0.4s; }
+      .trophy-podium:nth-of-type(3) .trophy-pulse { animation-delay: 0.8s; }
+      .trophy-podium:nth-of-type(4) .trophy-pulse { animation-delay: 1.2s; }
+      .trophy-podium:nth-of-type(5) .trophy-pulse { animation-delay: 1.6s; }
+      .trophy-podium:nth-of-type(6) .trophy-pulse { animation-delay: 2.0s; }
+      .trophy-podium:nth-of-type(7) .trophy-pulse { animation-delay: 2.4s; }
+      .trophy-podium:nth-of-type(8) .trophy-pulse { animation-delay: 2.8s; }
       .trophy-title {
         font-family: 'Segoe UI', system-ui, sans-serif;
         font-weight: 800;
@@ -84,102 +102,161 @@
   </defs>
 
   <!-- Outer Glass Frame -->
-  <rect x="2" y="2" width="896" height="136" rx="12" fill="url(#trophyCabinetBg)" stroke="url(#trophyBorder)" stroke-width="1.8" />
-  <rect x="2" y="2" width="896" height="136" rx="12" fill="url(#trophyScan)" pointer-events="none" />
+  <rect x="2" y="2" width="896" height="141" rx="12" fill="url(#trophyCabinetBg)" stroke="url(#trophyBorder)" stroke-width="1.8" />
+  <rect x="2" y="2" width="896" height="141" rx="12" fill="url(#trophyScan)" pointer-events="none" />
 
   <!-- Top Cabinet Header -->
   <rect x="2" y="2" width="896" height="24" rx="12" fill="#141E2E" />
   <rect x="2" y="14" width="896" height="12" fill="#141E2E" />
   <line x1="2" y1="26" x2="898" y2="26" stroke="#212A38" stroke-width="1" />
-  <text x="20" y="17" class="trophy-mono" font-size="10" font-weight="bold" fill="#FFD700" letter-spacing="1">🏆 DEX HALL OF FAME // VERIFIED ACHIEVEMENTS CABINET</text>
-  <text x="880" y="17" text-anchor="end" class="trophy-mono" font-size="9.5" fill="#00FF88">TIER: S-RANK MASTER (6/6 UNLOCKED)</text>
+  <text x="20" y="17" class="trophy-mono" font-size="10" font-weight="bold" fill="#FFD700" letter-spacing="1">🏆 DEX GYM LEAGUE // VERIFIED SKILL BADGES CABINET</text>
+  <text x="880" y="17" text-anchor="end" class="trophy-mono" font-size="9.5" fill="#00FF88">TIER: S-RANK CHAMPION (8/8 UNLOCKED)</text>
 
-  <!-- ==================== 6 TROPHY PODIUMS ==================== -->
+  <!-- ==================== 8 SKILL-BASED GYM BADGES ==================== -->
 
-  <!-- Trophy 1: Hackathon Victor -->
-  <g transform="translate(30, 36)" class="trophy-item">
-    <!-- Pedestal Base -->
-    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#FFD700" stroke-width="1" opacity="0.6" />
-    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#FFD700" stroke-width="1" />
-    <!-- Icon: Trophy Cup -->
-    <path d="M 50 42 L 80 42 L 77 62 C 77 70, 53 70, 53 62 Z" fill="url(#goldGrad)" />
-    <path d="M 50 46 C 42 46, 42 56, 51 58" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
-    <path d="M 80 46 C 88 46, 88 56, 79 58" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
-    <rect x="62" y="68" width="6" height="12" fill="url(#goldGrad)" />
-    <!-- Label -->
-    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">HACKATHON</text>
-    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#FFD700">VICTOR</text>
+  <!-- Badge 1: Duke Ember Badge (Java / OOP Architecture) -->
+  <g transform="translate(18, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <!-- Pedestal Base -->
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#FF5722" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#FF5722" stroke-width="1" />
+      <!-- Icon: Stylized Coffee Cup & Rising Cyber-Steam -->
+      <path d="M 37 44 L 59 44 L 56 64 C 56 70, 40 70, 40 64 Z" fill="url(#rubyGrad)" />
+      <ellipse cx="48" cy="44" rx="11" ry="2.5" fill="url(#goldGrad)" />
+      <path d="M 59 47 C 65 47, 65 57, 57 59" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+      <path d="M 43 39 C 41 34, 45 30, 43 25" fill="none" stroke="#FFD700" stroke-width="1.4" stroke-linecap="round" />
+      <path d="M 48 38 C 50 33, 46 29, 48 23" fill="none" stroke="#FF5722" stroke-width="1.4" stroke-linecap="round" />
+      <path d="M 53 39 C 51 34, 55 30, 53 25" fill="none" stroke="#FFD700" stroke-width="1.4" stroke-linecap="round" />
+      <polygon points="48,50 51,55 48,60 45,55" fill="#FFFFFF" opacity="0.9" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">JAVA OOP</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#FF7043">DUKE EMBER</text>
+    </g>
   </g>
 
-  <!-- Trophy 2: Commit Striker -->
-  <g transform="translate(175, 36)" class="trophy-item">
-    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#00E5FF" stroke-width="1" opacity="0.6" />
-    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#00E5FF" stroke-width="1" />
-    <!-- Icon: Lightning Strike -->
-    <polygon points="68,36 54,58 64,58 60,74 76,52 66,52" fill="url(#cyanGrad)" filter="url(#trophyGlow)" />
-    <!-- Label -->
-    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">COMMIT</text>
-    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#00E5FF">STRIKER</text>
+  <!-- Badge 2: Viper Synapse Badge (Python / Neural AI) -->
+  <g transform="translate(128, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#00E5FF" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#00E5FF" stroke-width="1" />
+      <!-- Icon: Dual Intertwined Serpentine Helix + Neural Nodes -->
+      <path d="M 38 64 C 36 51, 58 47, 56 35 C 54 27, 44 27, 42 35" fill="none" stroke="url(#cyanGrad)" stroke-width="2.8" stroke-linecap="round" />
+      <path d="M 58 64 C 60 51, 38 47, 40 35 C 42 27, 52 27, 54 35" fill="none" stroke="url(#goldGrad)" stroke-width="2.8" stroke-linecap="round" />
+      <circle cx="48" cy="49" r="3.2" fill="#00FF88" />
+      <circle cx="38" cy="35" r="2.4" fill="#00E5FF" />
+      <circle cx="58" cy="35" r="2.4" fill="#FFD700" />
+      <circle cx="48" cy="27" r="2.8" fill="#FFFFFF" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">PYTHON AI</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#00E5FF">VIPER SYNAPSE</text>
+    </g>
   </g>
 
-  <!-- Trophy 3: Neural Pioneer -->
-  <g transform="translate(320, 36)" class="trophy-item">
-    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#BA68C8" stroke-width="1" opacity="0.6" />
-    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#BA68C8" stroke-width="1" />
-    <!-- Icon: Synaptic Nodes -->
-    <circle cx="65" cy="46" r="7" fill="url(#purpleGrad)" />
-    <circle cx="52" cy="62" r="5" fill="url(#purpleGrad)" />
-    <circle cx="78" cy="62" r="5" fill="url(#purpleGrad)" />
-    <line x1="65" y1="46" x2="52" y2="62" stroke="#BA68C8" stroke-width="2" />
-    <line x1="65" y1="46" x2="78" y2="62" stroke="#BA68C8" stroke-width="2" />
-    <line x1="52" y1="62" x2="78" y2="62" stroke="#BA68C8" stroke-width="2" />
-    <!-- Label -->
-    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">NEURAL</text>
-    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#BA68C8">PIONEER</text>
+  <!-- Badge 3: Silicon Overclock Badge (C/C++ & Embedded Edge) -->
+  <g transform="translate(238, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#00E676" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#00E676" stroke-width="1" />
+      <!-- Icon: Octagonal Microchip Die & Emerald Circuit Bus -->
+      <polygon points="40,36 56,36 64,44 64,60 56,68 40,68 32,60 32,44" fill="url(#emeraldGrad)" />
+      <rect x="38" y="42" width="20" height="20" rx="3" fill="#042010" stroke="#00E676" stroke-width="1.2" />
+      <polygon points="50,44 44,52 48,52 46,60 52,51 48,51" fill="#76FF03" />
+      <line x1="28" y1="47" x2="32" y2="47" stroke="#00E676" stroke-width="1.5" />
+      <line x1="28" y1="57" x2="32" y2="57" stroke="#00E676" stroke-width="1.5" />
+      <line x1="64" y1="47" x2="68" y2="47" stroke="#00E676" stroke-width="1.5" />
+      <line x1="64" y1="57" x2="68" y2="57" stroke="#00E676" stroke-width="1.5" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">C/C++ EDGE</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#00E676">SILICON CORE</text>
+    </g>
   </g>
 
-  <!-- Trophy 4: Silicon Crafter -->
-  <g transform="translate(465, 36)" class="trophy-item">
-    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#00E676" stroke-width="1" opacity="0.6" />
-    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#00E676" stroke-width="1" />
-    <!-- Icon: Microchip -->
-    <rect x="52" y="44" width="26" height="26" rx="4" fill="url(#greenGrad)" />
-    <rect x="58" y="50" width="14" height="14" rx="2" fill="#062912" />
-    <line x1="48" y1="50" x2="52" y2="50" stroke="#00E676" stroke-width="2" />
-    <line x1="48" y1="57" x2="52" y2="57" stroke="#00E676" stroke-width="2" />
-    <line x1="48" y1="64" x2="52" y2="64" stroke="#00E676" stroke-width="2" />
-    <line x1="78" y1="50" x2="82" y2="50" stroke="#00E676" stroke-width="2" />
-    <line x1="78" y1="57" x2="82" y2="57" stroke="#00E676" stroke-width="2" />
-    <line x1="78" y1="64" x2="82" y2="64" stroke="#00E676" stroke-width="2" />
-    <!-- Label -->
-    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">SILICON</text>
-    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#00E676">CRAFTER</text>
+  <!-- Badge 4: Prismatic Quantum Badge (TypeScript / React Frontend) -->
+  <g transform="translate(348, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#00F0FF" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#00F0FF" stroke-width="1" />
+      <!-- Icon: Hexagonal Faceted Crystal Prism + Orbiting Rings -->
+      <polygon points="48,32 62,40 62,58 48,66 34,58 34,40" fill="url(#purpleGrad)" stroke="#00F0FF" stroke-width="1.5" />
+      <line x1="48" y1="32" x2="48" y2="66" stroke="#FFFFFF" stroke-width="1" opacity="0.6" />
+      <line x1="34" y1="40" x2="62" y2="58" stroke="#FFFFFF" stroke-width="0.8" opacity="0.4" />
+      <line x1="34" y1="58" x2="62" y2="40" stroke="#FFFFFF" stroke-width="0.8" opacity="0.4" />
+      <ellipse cx="48" cy="49" rx="19" ry="6.5" fill="none" stroke="#00F0FF" stroke-width="1.2" transform="rotate(-28 48 49)" />
+      <circle cx="48" cy="49" r="3" fill="#FFFFFF" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">TYPESCRIPT</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#00F0FF">PRISM REACT</text>
+    </g>
   </g>
 
-  <!-- Trophy 5: Full-Stack Architect -->
-  <g transform="translate(610, 36)" class="trophy-item">
-    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#2196F3" stroke-width="1" opacity="0.6" />
-    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#2196F3" stroke-width="1" />
-    <!-- Icon: Orbital Layers -->
-    <circle cx="65" cy="57" r="10" fill="url(#blueGrad)" />
-    <ellipse cx="65" cy="57" rx="18" ry="6" fill="none" stroke="#64B5F6" stroke-width="1.5" transform="rotate(-25 65 57)" />
-    <ellipse cx="65" cy="57" rx="18" ry="6" fill="none" stroke="#64B5F6" stroke-width="1.5" transform="rotate(35 65 57)" />
-    <!-- Label -->
-    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">FULL-STACK</text>
-    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#2196F3">ARCHITECT</text>
+  <!-- Badge 5: Forge Cluster Badge (Backend / Cloud / DevOps) -->
+  <g transform="translate(458, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#FF9100" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#FF9100" stroke-width="1" />
+      <!-- Icon: Industrial Reactor & Tiered Cloud Discs -->
+      <ellipse cx="48" cy="38" rx="13" ry="4" fill="#141E2E" stroke="#FF9100" stroke-width="1.2" />
+      <rect x="39" y="41" width="18" height="23" rx="3" fill="url(#amberGrad)" />
+      <ellipse cx="48" cy="52" rx="5" ry="5.5" fill="#D50000" stroke="#FFD700" stroke-width="1" />
+      <path d="M 48 48 C 45 51, 45 54, 48 56 C 51 54, 51 51, 48 48 Z" fill="#FFF3B0" />
+      <ellipse cx="48" cy="65" rx="15" ry="4" fill="none" stroke="#FF9100" stroke-width="1.2" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">CLOUD ARCH</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#FF9100">FORGE CLUSTER</text>
+    </g>
   </g>
 
-  <!-- Trophy 6: Apex Dex Master -->
-  <g transform="translate(755, 36)" class="trophy-item">
-    <ellipse cx="65" cy="88" rx="42" ry="7" fill="#0D1520" stroke="#FF1744" stroke-width="1" opacity="0.6" />
-    <rect x="35" y="80" width="60" height="12" rx="3" fill="#182333" stroke="#FF1744" stroke-width="1" />
-    <!-- Icon: Apex Crown -->
-    <polygon points="50,66 50,48 57,56 65,42 73,56 80,48 80,66" fill="url(#apexGrad)" filter="url(#trophyGlow)" />
-    <circle cx="50" cy="48" r="2" fill="#FFD700" />
-    <circle cx="65" cy="42" r="2.5" fill="#FFD700" />
-    <circle cx="80" cy="48" r="2" fill="#FFD700" />
-    <!-- Label -->
-    <text x="65" y="89" text-anchor="middle" class="trophy-title" font-size="8.5" fill="#FFFFFF">APEX DEX</text>
-    <text x="65" y="99" text-anchor="middle" class="trophy-mono" font-size="7.5" fill="#FF1744">MASTER</text>
+  <!-- Badge 6: Cyber Aegis Badge (Computer Vision & Edge AI) -->
+  <g transform="translate(568, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#00FF88" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#00FF88" stroke-width="1" />
+      <!-- Icon: Cybernetic Camera Aperture & Targeting Reticle -->
+      <circle cx="48" cy="50" r="16" fill="#08141E" stroke="url(#tealGrad)" stroke-width="1.8" />
+      <circle cx="48" cy="50" r="8" fill="url(#emeraldGrad)" />
+      <circle cx="48" cy="50" r="3" fill="#FFFFFF" />
+      <line x1="48" y1="31" x2="48" y2="37" stroke="#00FF88" stroke-width="1.6" />
+      <line x1="48" y1="63" x2="48" y2="69" stroke="#00FF88" stroke-width="1.6" />
+      <line x1="29" y1="50" x2="35" y2="50" stroke="#00FF88" stroke-width="1.6" />
+      <line x1="61" y1="50" x2="67" y2="50" stroke="#00FF88" stroke-width="1.6" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">VISION AI</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#00FF88">CYBER AEGIS</text>
+    </g>
+  </g>
+
+  <!-- Badge 7: Hydro Telemetry Badge (IoT Aqua Sense / Probes) -->
+  <g transform="translate(678, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#00B4D8" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#00B4D8" stroke-width="1" />
+      <!-- Icon: Teardrop Crystal & Concentric Telemetry Sonar Waves -->
+      <path d="M 48 34 C 48 34, 38 48, 38 55 C 38 61, 42 66, 48 66 C 54 66, 58 61, 58 55 C 58 48, 48 34, 48 34 Z" fill="url(#cyanGrad)" stroke="#90E0EF" stroke-width="1.2" />
+      <path d="M 32 46 A 18 18 0 0 0 32 62" fill="none" stroke="#00E5FF" stroke-width="1.4" stroke-linecap="round" />
+      <path d="M 64 46 A 18 18 0 0 1 64 62" fill="none" stroke="#00E5FF" stroke-width="1.4" stroke-linecap="round" />
+      <line x1="45" y1="58" x2="45" y2="54" stroke="#FFFFFF" stroke-width="1.4" />
+      <line x1="48" y1="58" x2="48" y2="50" stroke="#FFFFFF" stroke-width="1.4" />
+      <line x1="51" y1="58" x2="51" y2="53" stroke="#FFFFFF" stroke-width="1.4" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">IOT SENSORS</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#00B4D8">HYDRO SENSE</text>
+    </g>
+  </g>
+
+  <!-- Badge 8: Apex Dex Champion Crest (Grand Master) -->
+  <g transform="translate(788, 34)" class="trophy-podium">
+    <g class="trophy-pulse">
+      <ellipse cx="48" cy="90" rx="38" ry="7" fill="#0D1520" stroke="#FFD700" stroke-width="1" opacity="0.7" />
+      <rect x="20" y="82" width="56" height="12" rx="3" fill="#182333" stroke="#FFD700" stroke-width="1" />
+      <!-- Icon: Sovereign Champion Crown & Wing Blades + Tri-Gem -->
+      <path d="M 48 66 L 31 52 L 33 40 L 48 54 L 63 40 L 65 52 Z" fill="url(#goldGrad)" stroke="#FFD700" stroke-width="1" />
+      <polygon points="36,54 36,40 42,47 48,34 54,47 60,40 60,54" fill="url(#apexGrad)" filter="url(#trophyGlow)" />
+      <circle cx="36" cy="40" r="2.2" fill="#00E5FF" />
+      <circle cx="48" cy="34" r="2.8" fill="#00FF88" />
+      <circle cx="60" cy="40" r="2.2" fill="#FF1744" />
+      <!-- Label -->
+      <text x="48" y="91" text-anchor="middle" class="trophy-title" font-size="7.5" fill="#FFFFFF">APEX DEX</text>
+      <text x="48" y="101" text-anchor="middle" class="trophy-mono" font-size="7" fill="#FFD700">GRAND MASTER</text>
+    </g>
   </g>
 </svg>
