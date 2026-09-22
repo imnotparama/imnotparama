@@ -88,9 +88,9 @@
 > - **Target Roles:** AI/ML Systems Engineer • Full-Stack Software Engineer • Embedded Edge IoT Architect
 > - **Availability:** Graduating May 2026 (Open to Summer 2025/2026 Internships & Full-Time Roles)
 > - **Location & Timezone:** Chennai, India (IST / UTC+05:30) • Open to Worldwide Remote (US/EU Async Overlap) & Relocation
-> - **Education:** B.Tech in Electronics & Communication Engineering (Specialization: Data Science) — SRMIST
+> - **Education:** B.Tech in Electronics & Communication Engineering (Specialization: Data Science) — SRMIST (GPA: 9.0+/10)
 > - **Core Stack:** Python (PyTorch, OpenCV) • C/C++ (ESP32, MQTT) • TypeScript/React/Next.js • FastAPI/Django • Docker/CI-CD
-> - **Contact & Resume:** [📄 ATS Resume (RESUME.md)](https://github.com/imnotparama/imnotparama/blob/main/RESUME.md) • [💼 LinkedIn](https://linkedin.com/in/imnotparama) • [✉️ Email Directly](mailto:imnotparama@gmail.com)
+> - **Contact & Resume:** [📄 ATS Resume (RESUME.md)](https://github.com/imnotparama/imnotparama/blob/main/RESUME.md) • [📥 Direct Raw Resume](https://raw.githubusercontent.com/imnotparama/imnotparama/main/RESUME.md) • [💼 LinkedIn](https://linkedin.com/in/imnotparama) • [✉️ Email Directly](mailto:imnotparama@gmail.com)
 
 > [!NOTE]
 > **💡 Systems Architecture Note for Technical Interviewers & Hiring Managers:**  
@@ -110,11 +110,17 @@
     <a href="https://github.com/imnotparama/imnotparama/blob/main/RESUME.md" target="_blank">
       <img src="https://img.shields.io/badge/📄%20View%20Full%20Resume%20(CV)-00FF88?style=for-the-badge&logoColor=000000" alt="View Resume" />
     </a>
+    <a href="https://raw.githubusercontent.com/imnotparama/imnotparama/main/RESUME.md" target="_blank">
+      <img src="https://img.shields.io/badge/📥%20Download%20Raw%20Resume-00E5FF?style=for-the-badge&logoColor=000000" alt="Download Resume" />
+    </a>
     <a href="https://linkedin.com/in/imnotparama" target="_blank">
       <img src="https://img.shields.io/badge/💼%20LinkedIn%20Profile-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
     <a href="mailto:imnotparama@gmail.com">
       <img src="https://img.shields.io/badge/✉️%20Email%20Directly-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    </a>
+    <a href="https://github.com/imnotparama/imnotparama/blob/main/docs/PINNED_REPOSITORIES_GUIDE.md" target="_blank">
+      <img src="https://img.shields.io/badge/⭐%20Flagship%20Projects%20Guide-FFD700?style=for-the-badge&logoColor=000000" alt="Pinned Repos Guide" />
     </a>
   </p>
 </div>
