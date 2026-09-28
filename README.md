@@ -189,7 +189,7 @@
 ### 🏛️ `> dex.load_architect_profile(#010407)`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/specimen_card.svg" width="100%" alt="Dex Architect Specification #029" />
+  <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/specimen_card.svg" width="100%" alt="Dex Architect Specification #010407" />
 </div>
 
 <br/>
