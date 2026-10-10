@@ -230,10 +230,10 @@
     <text x="35" y="416" font-size="28" font-weight="bold" fill="#00ff66" class="stat-glow">0</text>
 
     <text x="185" y="392" font-size="11" fill="#8B949E">Total (365d)</text>
-    <text x="185" y="416" font-size="28" font-weight="bold" fill="#C9D1D9" class="stat-glow">802</text>
+    <text x="185" y="416" font-size="28" font-weight="bold" fill="#C9D1D9" class="stat-glow">800</text>
 
     <text x="340" y="392" font-size="11" fill="#8B949E">Repos</text>
-    <text x="340" y="416" font-size="28" font-weight="bold" fill="#C9D1D9" class="stat-glow">20</text>
+    <text x="340" y="416" font-size="28" font-weight="bold" fill="#C9D1D9" class="stat-glow">16</text>
 
     <text x="545" y="416" text-anchor="end" font-size="14" font-weight="bold" fill="#00ff66" opacity="0.5">@imnotparama</text>
     
@@ -245,7 +245,7 @@
     
 
     <text x="290" y="498" text-anchor="middle" font-size="9" fill="#8B949E" opacity="0.4">
-      Live Combat Simulation Engine | Updated 2026-10-10 04:21 UTC
+      Live Combat Simulation Engine | Updated 2026-10-10 11:55 UTC
     </text>
     
 <circle cx="30" cy="130" r="2.0" fill="#00ff66" opacity="0" class="p1"/>
