@@ -559,28 +559,6 @@
 
 <br/>
 
-<!-- Live GitHub Stats & Streak Telemetry -->
-<div align="center">
-  <a href="https://github.com/imnotparama">
-    <img src="https://github-readme-stats.vercel.app/api?username=imnotparama&show_icons=true&theme=tokyonight&hide_border=false&border_radius=10&bg_color=0D1117&border_color=00E5FF&title_color=00FF88&icon_color=00E5FF&text_color=C9D1D9" alt="Dex Stats" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/imnotparama">
-    <img src="https://streak-stats.demolab.com?user=imnotparama&theme=tokyonight&hide_border=false&border_radius=10&date_format=j%20M%5B%20Y%5D&background=0D1117&border=00E5FF&stroke=00FF88&ring=00E5FF&fire=FF1744&currStreakLabel=00FF88" alt="Streak Stats" />
-  </a>
-</div>
-
-<br/>
-
-<!-- Interactive Activity Graph -->
-<div align="center">
-  <a href="https://github.com/imnotparama">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=imnotparama&theme=github-compact&color=00ff88&line=00e5ff&point=ff1744&area=true&hide_border=false&border_color=00E5FF&bg_color=0D1117" width="100%" alt="Dex Activity Graph" />
-  </a>
-</div>
-
-<br/>
-
 <div align="center">
   <!-- Animated Pokédex Chassis Divider -->
   <img src="https://raw.githubusercontent.com/imnotparama/imnotparama/main/assets/pokedex_divider.svg" width="100%" alt="Dex Divider" />
